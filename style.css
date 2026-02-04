@@ -82,7 +82,7 @@ nav a:hover {
 
 .hero {
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.2)), url(/img/bg-img.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.2)), url(/img/auto-verde.jpg);
     background-size: cover;
     background-position: center;
     display: flex;
