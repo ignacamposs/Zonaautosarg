@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo-zonaautos.avif" alt="Logo Zona Autos" class="logo-img">
+                </a>
+            </div>
+
+            <nav>
+                <button class="menu-toggle" aria-label="Abrir menú">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+
+                <ul class="nav-links">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="catalogo.html">Autos Usados</a></li>
+                    <li><a href="#">0 km</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="catalogo-container container">
+        <aside class="sidebar-filtros">
+            <h2>Filtros</h2>
+            
+            <div class="filter-group">
+                <label for="marca">Marca 🏷️</label>
+                <select id="marca" name="marca">
+                    <option value="">Todas las marcas</option>
+                    <option value="toyota">Toyota</option>
+                    <option value="ford">Ford</option>
+                    <option value="mercedes">Mercedes-Benz</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label>Precio (USD) 💰</label>
+                <div class="price-inputs">
+                    <input type="number" placeholder="Mín" id="precio-min">
+                    <input type="number" placeholder="Máx" id="precio-max">
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <label for="anio">Año 📅</label>
+                <select id="anio" name="anio">
+                    <option value="">Todos los años</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                </select>
+            </div>
+
+            <button class="btn-filter">Aplicar Filtros 🔍</button>
+        </aside>
+
+        <main class="resultados-grid">
+            <header class="resultados-header">
+                <p>Se encontraron 9 vehículos</p>
+                <div class="ordenar-contenedor">
+                    <select id="ordenar">
+                        <option value="recientes">Más nuevos primero</option>
+                        <option value="precio-menor">Precio: Menor a Mayor</option>
+                    </select>
+                </div>
+            </header>
+            
+            <div class="cars-grid">
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="img/toyota.jpg" alt="Auto">
+                        <span class="tag">Usado</span>
+                    </div>
+                    <div class="car-info">
+                        <h3>Toyota Hilux 2023</h3>
+                        <p class="price">USD 45.000</p>
+                        <div class="car-specs">
+                            <span class="spec-item">4x4</span>
+                            <span class="spec-item">Diesel</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="img/Fiat.jpg" alt="Auto">
+                        <span class="tag">Usado</span>
+                    </div>
+                    <div class="car-info">
+                        <h3>Fiat 500X 2023</h3>
+                        <p class="price">USD 35.000</p>
+                        <div class="car-specs">
+                            <span class="spec-item">4x4</span>
+                            <span class="spec-item">Diesel</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="img/honda.jpg" alt="Auto">
+                        <span class="tag">Usado</span>
+                    </div>
+                    <div class="car-info">
+                        <h3>Honda CR-V 2023</h3>
+                        <p class="price">USD 45.000</p>
+                        <div class="car-specs">
+                            <span class="spec-item">4x4</span>
+                            <span class="spec-item">Diesel</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="img/hyundai.jpg" alt="Auto">
+                        <span class="tag">Usado</span>
+                    </div>
+                    <div class="car-info">
+                        <h3>Hyundai Tucson 2023</h3>
+                        <p class="price">USD 45.000</p>
+                        <div class="car-specs">
+                            <span class="spec-item">4x4</span>
+                            <span class="spec-item">Diesel</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="img/mercedes-benz.jpg" alt="Auto">
+                        <span class="tag">Usado</span>
+                    </div>
+                    <div class="car-info">
+                        <h3>Mercedes-Benz GLE 2023</h3>
+                        <p class="price">USD 65.000</p>
+                        <div class="car-specs">
+                            <span class="spec-item">4x4</span>
+                            <span class="spec-item">Diesel</span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </main>
+    </div>
+    <div class="pagination container">
+        <a href="#">&laquo; Anterior</a>
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">Siguiente &raquo;</a>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <img src="img/logo-zonaautos.avif"alt="Logo Zona Autos" class="logo-footer">
+                <p>Líderes en confianza y calidad automotriz desde 2010. 🏎️</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Explorar</h3>
+                <ul>
+                    <li><a href="#">Usados Seleccionados</a></li>
+                    <li><a href="#">Financiación</a></li>
+                    <li><a href="#">Vende tu Auto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contacto</h3>
+                <p>📍 Av. Libertador 1234, CABA</p>
+                <p>📞 +54 11 4567-8900</p>
+                <p>📧 info@zonaautos.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ignacio Campos -todos los derechos reservados. </p>
+        </div>
+    </footer>
+
+
+
+    <script src="index.js"></script>
+</div>
+</body>
+</html>
