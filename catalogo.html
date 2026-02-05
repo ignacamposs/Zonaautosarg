@@ -5,191 +5,170 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catalogo</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header>
-        <div class="nav-container">
+<body class="bg-[#282828]">
+ <header class="relative w-full">
+        <div class="fixed top-5 left-1/2 -translate-x-1/2 flex justify-between items-center bg-[#282828] px-5 py-3 rounded-full w-[92%] max-w-[1200px] shadow-2xl z-[110] border border-white/5">
+            
             <div class="logo">
                 <a href="index.html">
-                    <img src="img/logo-zonaautos.avif" alt="Logo Zona Autos" class="logo-img">
+                    <img src="img/logo-zonaautos.avif" alt="Logo" class="h-8 md:h-10 w-auto">
                 </a>
             </div>
 
-            <nav>
-                <button class="menu-toggle" aria-label="Abrir menú">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </button>
-
-                <ul class="nav-links">
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="catalogo.html">Autos Usados</a></li>
-                    <li><a href="#">0 km</a></li>
-                    <li><a href="#">Contacto</a></li>
+            <nav class="hidden md:block">
+                <ul class="flex items-center gap-8 text-white">
+                    <li><a href="#" class="bg-[#1a1a1a] px-4 py-2 rounded-full font-bold">Inicio</a></li>
+                    <li><a href="catalogo.html" class="text-white/80 hover:text-white transition-colors">Autos Usados</a></li>
+                    <li><a href="#" class="text-white/80 hover:text-white transition-colors">0 km</a></li>
+                    <li><a href="#" class="text-white/80 hover:text-white transition-colors">Contacto</a></li>
                 </ul>
             </nav>
+
+            <button id="menu-btn" class="flex flex-col gap-1.5 md:hidden p-2 z-[120]" aria-label="Abrir menú">
+                <span class="w-6 h-0.5 bg-white rounded-full"></span>
+                <span class="w-6 h-0.5 bg-white rounded-full"></span>
+                <span class="w-6 h-0.5 bg-white rounded-full"></span>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden fixed top-24 left-1/2 -translate-x-1/2 w-[90%] bg-[#282828] rounded-3xl p-6 z-[105] md:hidden shadow-2xl flex-col gap-5 text-center transition-all duration-300">
+            <a href="#" class="text-white text-lg font-bold py-2 border-b border-white/5">Inicio</a>
+            <a href="catalogo.html" class="text-white/80 text-lg py-2 border-b border-white/5">Autos Usados</a>
+            <a href="#" class="text-white/80 text-lg py-2 border-b border-white/5">0 km</a>
+            <a href="#" class="text-white/80 text-lg py-2">Contacto</a>
         </div>
     </header>
+    
 
-    <div class="catalogo-container container">
-        <aside class="sidebar-filtros">
-            <h2>Filtros</h2>
-            
-            <div class="filter-group">
-                <label for="marca">Marca 🏷️</label>
-                <select id="marca" name="marca">
-                    <option value="">Todas las marcas</option>
-                    <option value="toyota">Toyota</option>
-                    <option value="ford">Ford</option>
-                    <option value="mercedes">Mercedes-Benz</option>
-                </select>
+    <main class="max-w-[1600px] mx-auto mt-20 md:mt-32 p-5 md:p-10 grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-10 " >
+        <aside class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 h-fit sticky top-28">
+        <h3 class="text-xl font-bold mb-6 text-gray-800">Filtros</h3>
+
+        <div class="mb-6">
+            <label class="block text-xs font-bold text-gray-400 uppercase mb-2">Marca</label>
+            <select class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-orange-500 transition-colors">
+                <option>Todas las marcas</option>
+                <option>Audi</option>
+                <option>Mercedes-Benz</option>
+                <option>Toyota</option>
+            </select>
+        </div>
+
+        <div class="mb-6">
+            <label class="block text-xs font-bold text-gray-400 uppercase mb-2">Precio (USD)</label>
+            <div class="flex gap-2">
+                <input type="number" placeholder="Min" class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl outline-none text-sm">
+                <input type="number" placeholder="Max" class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl outline-none text-sm">
             </div>
+        </div>
 
-            <div class="filter-group">
-                <label>Precio (USD) 💰</label>
-                <div class="price-inputs">
-                    <input type="number" placeholder="Mín" id="precio-min">
-                    <input type="number" placeholder="Máx" id="precio-max">
-                </div>
-            </div>
-
-            <div class="filter-group">
-                <label for="anio">Año 📅</label>
-                <select id="anio" name="anio">
-                    <option value="">Todos los años</option>
-                    <option value="2024">2024</option>
-                    <option value="2023">2023</option>
-                    <option value="2022">2022</option>
-                </select>
-            </div>
-
-            <button class="btn-filter">Aplicar Filtros 🔍</button>
+        <button class="w-full bg-orange-600 text-white py-3 rounded-xl font-bold hover:bg-orange-700 transition-all shadow-lg shadow-orange-600/20 active:scale-95">
+            Aplicar Filtros
+        </button>
         </aside>
 
-        <main class="resultados-grid">
-            <header class="resultados-header">
-                <p>Se encontraron 9 vehículos</p>
-                <div class="ordenar-contenedor">
-                    <select id="ordenar">
-                        <option value="recientes">Más nuevos primero</option>
-                        <option value="precio-menor">Precio: Menor a Mayor</option>
-                    </select>
-                </div>
-            </header>
+        <section class="results-grid">
+        <div class="flex flex-col sm:flex-row justify-between items-center mb-8 pb-4 border-b border-gray-700">
+            <h2 class="text-white text-xl font-medium mb-4 sm:mb-0">Mostrando <span class="font-bold text-orange-500">12</span> autos usados</h2>
             
-            <div class="cars-grid">
-                <div class="car-card">
-                    <div class="car-image">
-                        <img src="img/toyota.jpg" alt="Auto">
-                        <span class="tag">Usado</span>
-                    </div>
-                    <div class="car-info">
-                        <h3>Toyota Hilux 2023</h3>
-                        <p class="price">USD 45.000</p>
-                        <div class="car-specs">
-                            <span class="spec-item">4x4</span>
-                            <span class="spec-item">Diesel</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="car-card">
-                    <div class="car-image">
-                        <img src="img/Fiat.jpg" alt="Auto">
-                        <span class="tag">Usado</span>
-                    </div>
-                    <div class="car-info">
-                        <h3>Fiat 500X 2023</h3>
-                        <p class="price">USD 35.000</p>
-                        <div class="car-specs">
-                            <span class="spec-item">4x4</span>
-                            <span class="spec-item">Diesel</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="car-card">
-                    <div class="car-image">
-                        <img src="img/honda.jpg" alt="Auto">
-                        <span class="tag">Usado</span>
-                    </div>
-                    <div class="car-info">
-                        <h3>Honda CR-V 2023</h3>
-                        <p class="price">USD 45.000</p>
-                        <div class="car-specs">
-                            <span class="spec-item">4x4</span>
-                            <span class="spec-item">Diesel</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="car-card">
-                    <div class="car-image">
-                        <img src="img/hyundai.jpg" alt="Auto">
-                        <span class="tag">Usado</span>
-                    </div>
-                    <div class="car-info">
-                        <h3>Hyundai Tucson 2023</h3>
-                        <p class="price">USD 45.000</p>
-                        <div class="car-specs">
-                            <span class="spec-item">4x4</span>
-                            <span class="spec-item">Diesel</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="car-card">
-                    <div class="car-image">
-                        <img src="img/mercedes-benz.jpg" alt="Auto">
-                        <span class="tag">Usado</span>
-                    </div>
-                    <div class="car-info">
-                        <h3>Mercedes-Benz GLE 2023</h3>
-                        <p class="price">USD 65.000</p>
-                        <div class="car-specs">
-                            <span class="spec-item">4x4</span>
-                            <span class="spec-item">Diesel</span>
-                        </div>
-                    </div>
-                </div>
-                </div>
-        </main>
-    </div>
-    <div class="pagination container">
-        <a href="#">&laquo; Anterior</a>
-        <a href="#" class="active">1</a>
-        <a href="#">2</a>
-        <a href="#">3</a>
-        <a href="#">Siguiente &raquo;</a>
-    </div>
-    <footer>
-        <div class="footer-container">
-            <div class="footer-info">
-                <img src="img/logo-zonaautos.avif"alt="Logo Zona Autos" class="logo-footer">
-                <p>Líderes en confianza y calidad automotriz desde 2010. 🏎️</p>
+            <div class="flex items-center gap-3">
+                <span class="text-gray-400 text-sm italic">Ordenar por:</span>
+                <select class="bg-[#282828] text-white border border-gray-700 p-2 rounded-lg outline-none text-sm">
+                    <option>Menor precio</option>
+                    <option>Mayor precio</option>
+                    <option>Más nuevos</option>
+                </select>
+            </div>
+        </div>
+        <section class="bg-[#282828] py-16 px-[5%]">
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            
+            <div class="group relative h-[400px] rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_15px_35px_rgba(0,0,0,0.4)]">
+                
+                <img src="img/mercedes.jpg" alt="Mercedes Benz" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                
+                <span class="absolute bottom-5 left-5 z-10 text-white font-bold text-xl drop-shadow-lg">
+                    Mercedes-Benz
+                </span>
             </div>
 
-            <div class="footer-links">
-                <h3>Explorar</h3>
-                <ul>
-                    <li><a href="#">Usados Seleccionados</a></li>
-                    <li><a href="#">Financiación</a></li>
-                    <li><a href="#">Vende tu Auto</a></li>
+            <div class="group relative h-[400px] rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_15px_35px_rgba(0,0,0,0.4)]">
+                <img src="img/hyundai.jpg" alt="Hyundai" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <span class="absolute bottom-5 left-5 z-10 text-white font-bold text-xl drop-shadow-lg">
+                    Hyundai
+                </span>
+            </div>
+
+            <div class="group relative h-[400px] rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_15px_35px_rgba(0,0,0,0.4)]">
+                
+                <img src="img/toyota.jpg" alt="Toyota" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                
+                <span class="absolute bottom-5 left-5 z-10 text-white font-bold text-xl drop-shadow-lg">
+                    Toyota
+                </span>
+            </div>
+
+            <div class="group relative h-[400px] rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_15px_35px_rgba(0,0,0,0.4)]">
+                <img src="img/audi.jpg" alt="Audi" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <span class="absolute bottom-5 left-5 z-10 text-white font-bold text-xl drop-shadow-lg">
+                    Audi
+                </span>
+            </div>
+
+            </div>
+    </section>
+        </section> 
+    </main>
+    
+
+<footer class="bg-[#1a1a1a] text-white pt-16 pb-6 px-[5%] border-t-4 border-[#ff6600]">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+            
+            <div class="flex flex-col items-center md:items-start">
+                <img src="img/logo-zonaautos.avif" alt="Logo Zona Autos" class="w-48 mb-6">
+                <p class="text-gray-400 leading-relaxed text-center md:text-left">
+                    Líderes en confianza y calidad automotriz desde 2010. 🏎️
+                </p>
+            </div>
+
+            <div class="text-center md:text-left">
+                <h3 class="text-lg font-bold mb-6 uppercase tracking-wider">Explorar</h3>
+                <ul class="space-y-4">
+                    <li><a href="#" class="text-gray-400 hover:text-[#ff6600] transition-colors duration-300">Usados Seleccionados</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-[#ff6600] transition-colors duration-300">Financiación</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-[#ff6600] transition-colors duration-300">Vende tu Auto</a></li>
                 </ul>
             </div>
 
-            <div class="footer-contact">
-                <h3>Contacto</h3>
-                <p>📍 Av. Libertador 1234, CABA</p>
-                <p>📞 +54 11 4567-8900</p>
-                <p>📧 info@zonaautos.com</p>
+            <div class="text-center md:text-left">
+                <h3 class="text-lg font-bold mb-6 uppercase tracking-wider">Contacto</h3>
+                <div class="space-y-4 text-gray-400">
+                    <p class="flex items-center justify-center md:justify-start gap-3">
+                        <span class="text-[#ff6600]">📍</span> Av. Libertador 1234, CABA
+                    </p>
+                    <p class="flex items-center justify-center md:justify-start gap-3">
+                        <span class="text-[#ff6600]">📞</span> +54 11 4567-8900
+                    </p>
+                    <p class="flex items-center justify-center md:justify-start gap-3">
+                        <span class="text-[#ff6600]">📧</span> info@zonaautos.com
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Ignacio Campos -todos los derechos reservados. </p>
+
+        <div class="mt-16 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+            <p>&copy; 2026 Ignacio Campos - Todos los derechos reservados.</p>
         </div>
     </footer>
-
-
-
     <script src="index.js"></script>
-</div>
 </body>
 </html>
