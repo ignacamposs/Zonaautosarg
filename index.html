@@ -1,267 +1,462 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zona Autos</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
+  </head>
+  <body>
     <header class="relative w-full">
-        <div class="fixed top-5 left-1/2 -translate-x-1/2 flex justify-between items-center bg-[#282828] px-5 py-3 rounded-full w-[92%] max-w-[1200px] shadow-2xl z-[110] border border-white/5">
-            
-            <div class="logo">
-                <a href="index.html">
-                    <img src="img/logo-zonaautos.avif" alt="Logo" class="h-8 md:h-10 w-auto">
-                </a>
-            </div>
-
-            <nav class="hidden md:block">
-                <ul class="flex items-center gap-8 text-white">
-                    <li><a href="#" class="bg-[#1a1a1a] px-4 py-2 rounded-full font-bold">Inicio</a></li>
-                    <li><a href="catalogo.html" class="text-white/80 hover:text-white transition-colors">Autos Usados</a></li>
-                    <li><a href="#" class="text-white/80 hover:text-white transition-colors">0 km</a></li>
-                    <li><a href="#" class="text-white/80 hover:text-white transition-colors">Contacto</a></li>
-                </ul>
-            </nav>
-
-            <button id="menu-btn" class="flex flex-col gap-1.5 md:hidden p-2 z-[120]" aria-label="Abrir menú">
-                <span class="w-6 h-0.5 bg-white rounded-full"></span>
-                <span class="w-6 h-0.5 bg-white rounded-full"></span>
-                <span class="w-6 h-0.5 bg-white rounded-full"></span>
-            </button>
+      <div
+        class="fixed top-5 left-1/2 -translate-x-1/2 flex justify-between items-center bg-[#282828] px-5 py-3 rounded-full w-[92%] max-w-[1200px] shadow-2xl z-[110] border border-white/5"
+      >
+        <div class="logo">
+          <a href="index.html">
+            <img
+              src="img/logo-zonaautos.avif"
+              alt="Logo"
+              class="h-8 md:h-10 w-auto"
+            />
+          </a>
         </div>
 
-        <div id="mobile-menu" class="hidden fixed top-24 left-1/2 -translate-x-1/2 w-[90%] bg-[#282828] rounded-3xl p-6 z-[105] md:hidden shadow-2xl flex-col gap-5 text-center transition-all duration-300">
-            <a href="#" class="text-white text-lg font-bold py-2 border-b border-white/5">Inicio</a>
-            <a href="catalogo.html" class="text-white/80 text-lg py-2 border-b border-white/5">Autos Usados</a>
-            <a href="#" class="text-white/80 text-lg py-2 border-b border-white/5">0 km</a>
-            <a href="#" class="text-white/80 text-lg py-2">Contacto</a>
-        </div>
+        <nav class="hidden md:block">
+          <ul class="flex items-center gap-8 text-white">
+            <li>
+              <a href="index.html" class="bg-red-700 px-4 py-2 rounded-full font-bold"
+                >Inicio</a
+              >
+            </li>
+            <li>
+              <a
+                href="catalogo.html"
+                class="text-white/80 hover:text-red-600 transition-colors"
+                >Autos Usados</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-white/80 hover:text-red-600 transition-colors"
+                >0 km</a
+              >
+            </li>
+            <li>
+              <a
+                href="contact.html"
+                class="text-white/80 hover:text-red-600 transition-colors"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <button
+          id="menu-btn"
+          class="flex flex-col gap-1.5 md:hidden p-2 z-[120]"
+          aria-label="Abrir menú"
+        >
+          <span class="w-6 h-0.5 bg-white rounded-full"></span>
+          <span class="w-6 h-0.5 bg-white rounded-full"></span>
+          <span class="w-6 h-0.5 bg-white rounded-full"></span>
+        </button>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="hidden fixed top-24 left-1/2 -translate-x-1/2 w-[90%] bg-[#282828] rounded-3xl p-6 z-[105] md:hidden shadow-2xl flex-col gap-5 text-center transition-all duration-300"
+      >
+        <a
+          href="#"
+          class="text-white text-lg font-bold py-2 border-b border-white/5"
+          >Inicio</a
+        >
+        <a
+          href="catalogo.html"
+          class="text-white/80 text-lg py-2 border-b border-white/5"
+          >Autos Usados</a
+        >
+        <a href="#" class="text-white/80 text-lg py-2 border-b border-white/5"
+          >0 km</a
+        >
+        <a href="#" class="text-white/80 text-lg py-2">Contacto</a>
+      </div>
     </header>
 
-
-    <section class="relative h-screen flex flex-col justify-end items-start p-[60px] bg-cover bg-center" 
-         style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.2)), url('img/auto-verde.jpg')">
-    
-    <div class="hero-text">
-        <h1 class="animate-fade-in transition-all duration-1000 ease-out text-white text-[clamp(32px,5vw,64px)] font-sans leading-none mb-[15px] uppercase font-bold">
-            Encontrá tu auto ideal hoy. <br> El que siempre soñaste
+    <section
+      class="relative h-screen flex flex-col justify-end items-start p-[60px] bg-cover bg-center"
+      style="
+        background-image:
+          linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)),
+          url(&quot;img/auto-verde.jpg&quot;);
+      "
+    >
+      <div class="hero-text">
+        <h1
+          class="animate-fade-in transition-all duration-1000 ease-out text-white text-[clamp(32px,5vw,64px)] font-sans leading-none mb-[15px] uppercase font-bold"
+        >
+          Encontrá tu auto ideal hoy. <br />
+          El que siempre soñaste
         </h1>
-        
-        <p class="animate-pulse text-white/80 text-[18px] max-w-[450px] transition-opacity duration-1000 delay-500">
-            Calidad, confianza y los mejores precios del mercado.
+
+        <p
+          class="animate-pulse text-white/80 text-[18px] max-w-[450px] transition-opacity duration-1000 delay-500"
+        >
+          Calidad, confianza y los mejores precios del mercado.
         </p>
-    </div>
+      </div>
 
-    <div class="self-center mt-10 flex gap-[30px] items-center bg-white p-[20px_40px] rounded-[15px] shadow-md border border-[#eee] transition-all duration-300 hover:shadow-2xl hover:-translate-y-0.5">
-    
-    <div class="flex flex-col transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)]">
-        <label class="text-[12px] font-bold text-[#888] uppercase mb-1">Marca</label>
-        <input type="text" placeholder="Ej: Toyota" class="border-none text-[16px] outline-none font-semibold">
-    </div>
-
-    <button class="bg-black text-white px-[30px] py-[12px] rounded-lg font-bold transition-colors hover:bg-[#333] active:scale-95 transition-transform">
-        BUSCAR
-    </button>
-</div>
-    
-    </section >
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-5 bg-[#282828] py-16 px-[5%]">
-        <h2 class="col-span-full text-center text-2xl font-bold text-white ">Nuestros Autos Destacados</h2>
-    <article class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">    
-        <div class="relative h-48 overflow-hidden">
-            <img src="img/audi.jpg" alt="Audi A4" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-            <span class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase">
-                Nuevo <!-- Tag de "Nuevo" -->
-            </span>
+      <div
+        class="self-center mt-10 flex gap-[30px] items-center bg-white p-[20px_40px] rounded-[15px] shadow-md border border-[#eee] transition-all duration-300 hover:shadow-2xl hover:-translate-y-0.5"
+      >
+        <div
+          class="flex flex-col transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)]"
+        >
+          <label class="text-[12px] font-bold text-[#888] uppercase mb-1"
+            >Marca</label
+          >
+          <input
+            type="text"
+            placeholder="Ej: Toyota"
+            class="border-none text-[16px] outline-none font-semibold"
+          />
         </div>
 
-        <div class="p-5">
-            <h3 class="text-xl font-bold text-gray-800 mb-3">Audi A4 Premium</h3>
-            
-            <div class="flex justify-between border-y border-gray-100 py-3 my-3 text-sm text-gray-500">
-                <div class="flex items-center gap-1">📅 2023</div>
-                <div class="flex items-center gap-1">🚀 5.000 km</div>
-                <div class="flex items-center gap-1">⛽ Nafta</div>
-            </div>
-
-            <div class="flex justify-between items-center mt-4">
-                <span class="text-2xl font-black text-gray-900 animate-pulse">USD 45.000</span>
-                <button class=" bg-gray-100 hover:bg-red-600 hover:text-white text-gray-800 px-4 py-2 rounded-lg font-bold transition-colors duration-300">
-                    Ver más
-                </button>
-            </div>
-        </div>
-    </article>
-
-    <article class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">    
-        <div class="relative h-48 overflow-hidden">
-            <img src="img/mercedes-benz.jpg" alt="Mercedes-Benz GLE" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-            <span class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase">
-                Nuevo <!-- Tag de "Nuevo" -->
-            </span>
-        </div>
-
-        <div class="p-5">
-            <h3 class="text-xl font-bold text-gray-800 mb-3">Mercedes-Benz GLE</h3>
-            
-            <div class="flex justify-between border-y border-gray-100 py-3 my-3 text-sm text-gray-500">
-                <div class="flex items-center gap-1">📅 2023</div>
-                <div class="flex items-center gap-1">🚀 5.000 km</div>
-                <div class="flex items-center gap-1">⛽ Nafta</div>
-            </div>
-
-            <div class="flex justify-between items-center mt-4">
-                <span class="text-2xl font-black text-gray-900 animate-pulse">USD 45.000</span>
-                <button class=" bg-gray-100 hover:bg-red-600 hover:text-white text-gray-800 px-4 py-2 rounded-lg font-bold transition-colors duration-300">
-                    Ver más
-                </button>
-            </div>
-        </div>
-    </article>
-
-    <article class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">    
-        <div class="relative h-48 overflow-hidden">
-            <img src="img/toyota.jpg" alt="Toyota Hilux" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-            <span class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase">
-                Nuevo <!-- Tag de "Nuevo" -->
-            </span>
-        </div>
-
-        <div class="p-5">
-            <h3 class="text-xl font-bold text-gray-800 mb-3">Toyota Hilux</h3>
-            
-            <div class="flex justify-between border-y border-gray-100 py-3 my-3 text-sm text-gray-500">
-                <div class="flex items-center gap-1">📅 2023</div>
-                <div class="flex items-center gap-1">🚀 5.000 km</div>
-                <div class="flex items-center gap-1">⛽ Nafta</div>
-            </div>
-
-            <div class="flex justify-between items-center mt-4">
-                <span class="text-2xl font-black text-gray-900 animate-pulse">USD 45.000</span>
-                <button class=" bg-gray-100 hover:bg-red-600 hover:text-white text-gray-800 px-4 py-2 rounded-lg font-bold transition-colors duration-300">
-                    Ver más
-                </button>
-            </div>
-        </div>
-    </article>
-
-    <article class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">    
-        <div class="relative h-48 overflow-hidden">
-            <img src="img/honda.jpg" alt="Honda CR-V" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-            <span class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase">
-                Nuevo <!-- Tag de "Nuevo" -->
-            </span>
-        </div>
-
-        <div class="p-5">
-            <h3 class="text-xl font-bold text-gray-800 mb-3">Honda CR-V</h3>
-            
-            <div class="flex justify-between border-y border-gray-100 py-3 my-3 text-sm text-gray-500">
-                <div class="flex items-center gap-1">📅 2023</div>
-                <div class="flex items-center gap-1">🚀 5.000 km</div>
-                <div class="flex items-center gap-1">⛽ Nafta</div>
-            </div>
-
-            <div class="flex justify-between items-center mt-4">
-                <span class="text-2xl font-black text-gray-900 animate-pulse">USD 45.000</span>
-                <button class=" bg-gray-100 hover:bg-red-600 hover:text-white text-gray-800 px-4 py-2 rounded-lg font-bold transition-colors duration-300">
-                    Ver más
-                </button>
-            </div>
-        </div>
-    </article>
-    </div>
-    
-    <section class="bg-[#282828] py-16 px-[5%]">
-        <h2 class="text-3xl font-sans font-bold text-[#eee] mb-8">Explorá por marca</h2>
-        
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            
-            <div class="group relative h-[400px] rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_15px_35px_rgba(0,0,0,0.4)]">
-                
-                <img src="img/mercedes.jpg" alt="Mercedes Benz" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                
-                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                
-                <span class="absolute bottom-5 left-5 z-10 text-white font-bold text-xl drop-shadow-lg">
-                    Mercedes-Benz
-                </span>
-            </div>
-
-            <div class="group relative h-[400px] rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_15px_35px_rgba(0,0,0,0.4)]">
-                <img src="img/hyundai.jpg" alt="Hyundai" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                <span class="absolute bottom-5 left-5 z-10 text-white font-bold text-xl drop-shadow-lg">
-                    Hyundai
-                </span>
-            </div>
-
-            <div class="group relative h-[400px] rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_15px_35px_rgba(0,0,0,0.4)]">
-                
-                <img src="img/toyota.jpg" alt="Toyota" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                
-                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                
-                <span class="absolute bottom-5 left-5 z-10 text-white font-bold text-xl drop-shadow-lg">
-                    Toyota
-                </span>
-            </div>
-
-            <div class="group relative h-[400px] rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_15px_35px_rgba(0,0,0,0.4)]">
-                <img src="img/audi.jpg" alt="Audi" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                <span class="absolute bottom-5 left-5 z-10 text-white font-bold text-xl drop-shadow-lg">
-                    Audi
-                </span>
-            </div>
-
-            </div>
+        <button
+          class="bg-black text-white px-[30px] py-[12px] rounded-lg font-bold hover:bg-[#333] active:scale-95 transition-all"
+        >
+          BUSCAR
+        </button>
+      </div>
     </section>
 
-
-    <footer class="bg-[#1a1a1a] text-white pt-16 pb-6 px-[5%] border-t-4 border-[#ff6600]">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-            
-            <div class="flex flex-col items-center md:items-start">
-                <img src="img/logo-zonaautos.avif" alt="Logo Zona Autos" class="w-48 mb-6">
-                <p class="text-gray-400 leading-relaxed text-center md:text-left">
-                    Líderes en confianza y calidad automotriz desde 2010. 🏎️
-                </p>
-            </div>
-
-            <div class="text-center md:text-left">
-                <h3 class="text-lg font-bold mb-6 uppercase tracking-wider">Explorar</h3>
-                <ul class="space-y-4">
-                    <li><a href="#" class="text-gray-400 hover:text-[#ff6600] transition-colors duration-300">Usados Seleccionados</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-[#ff6600] transition-colors duration-300">Financiación</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-[#ff6600] transition-colors duration-300">Vende tu Auto</a></li>
-                </ul>
-            </div>
-
-            <div class="text-center md:text-left">
-                <h3 class="text-lg font-bold mb-6 uppercase tracking-wider">Contacto</h3>
-                <div class="space-y-4 text-gray-400">
-                    <p class="flex items-center justify-center md:justify-start gap-3">
-                        <span class="text-[#ff6600]">📍</span> Av. Libertador 1234, CABA
-                    </p>
-                    <p class="flex items-center justify-center md:justify-start gap-3">
-                        <span class="text-[#ff6600]">📞</span> +54 11 4567-8900
-                    </p>
-                    <p class="flex items-center justify-center md:justify-start gap-3">
-                        <span class="text-[#ff6600]">📧</span> info@zonaautos.com
-                    </p>
-                </div>
-            </div>
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-5 bg-[#282828] py-16 px-[5%]"
+    >
+      <h2 class="col-span-full text-center text-2xl font-bold text-white">
+        Nuestros Autos Destacados
+      </h2>
+      <article
+        class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+      >
+        <div class="relative h-48 overflow-hidden">
+          <img
+            src="img/audi.jpg"
+            alt="Audi A4"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <span
+            class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase"
+          >
+            Nuevo
+            <!-- Tag de "Nuevo" -->
+          </span>
         </div>
 
-        <div class="mt-16 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
-            <p>&copy; 2026 Ignacio Campos - Todos los derechos reservados.</p>
+        <div class="p-5">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Audi A4 Premium</h3>
+
+          <div
+            class="flex justify-between border-y border-gray-100 py-3 my-3 text-sm text-gray-500"
+          >
+            <div class="flex items-center gap-1">📅 2023</div>
+            <div class="flex items-center gap-1">🚀 5.000 km</div>
+            <div class="flex items-center gap-1">⛽ Nafta</div>
+          </div>
+
+          <div class="flex justify-between items-center mt-4">
+            <span class="text-2xl font-black text-gray-900 animate-pulse"
+              >USD 45.000</span
+            >
+            <button
+              class="bg-gray-100 hover:bg-red-600 hover:text-white text-gray-800 px-4 py-2 rounded-lg font-bold transition-colors duration-300"
+            >
+              Ver más
+            </button>
+          </div>
         </div>
+      </article>
+
+      <article
+        class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+      >
+        <div class="relative h-48 overflow-hidden">
+          <img
+            src="img/mercedes-benz.jpg"
+            alt="Mercedes-Benz GLE"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <span
+            class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase"
+          >
+            Nuevo
+            <!-- Tag de "Nuevo" -->
+          </span>
+        </div>
+
+        <div class="p-5">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">
+            Mercedes-Benz GLE
+          </h3>
+
+          <div
+            class="flex justify-between border-y border-gray-100 py-3 my-3 text-sm text-gray-500"
+          >
+            <div class="flex items-center gap-1">📅 2023</div>
+            <div class="flex items-center gap-1">🚀 5.000 km</div>
+            <div class="flex items-center gap-1">⛽ Nafta</div>
+          </div>
+
+          <div class="flex justify-between items-center mt-4">
+            <span class="text-2xl font-black text-gray-900 animate-pulse"
+              >USD 45.000</span
+            >
+            <button
+              class="bg-gray-100 hover:bg-red-600 hover:text-white text-gray-800 px-4 py-2 rounded-lg font-bold transition-colors duration-300"
+            >
+              Ver más
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <article
+        class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+      >
+        <div class="relative h-48 overflow-hidden">
+          <img
+            src="img/toyota.jpg"
+            alt="Toyota Hilux"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <span
+            class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase"
+          >
+            Nuevo
+            <!-- Tag de "Nuevo" -->
+          </span>
+        </div>
+
+        <div class="p-5">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Toyota Hilux</h3>
+
+          <div
+            class="flex justify-between border-y border-gray-100 py-3 my-3 text-sm text-gray-500"
+          >
+            <div class="flex items-center gap-1">📅 2023</div>
+            <div class="flex items-center gap-1">🚀 5.000 km</div>
+            <div class="flex items-center gap-1">⛽ Nafta</div>
+          </div>
+
+          <div class="flex justify-between items-center mt-4">
+            <span class="text-2xl font-black text-gray-900 animate-pulse"
+              >USD 45.000</span
+            >
+            <button
+              class="bg-gray-100 hover:bg-red-600 hover:text-white text-gray-800 px-4 py-2 rounded-lg font-bold transition-colors duration-300"
+            >
+              Ver más
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <article
+        class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+      >
+        <div class="relative h-48 overflow-hidden">
+          <img
+            src="img/honda.jpg"
+            alt="Honda CR-V"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <span
+            class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase"
+          >
+            Nuevo
+            <!-- Tag de "Nuevo" -->
+          </span>
+        </div>
+
+        <div class="p-5">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Honda CR-V</h3>
+
+          <div
+            class="flex justify-between border-y border-gray-100 py-3 my-3 text-sm text-gray-500"
+          >
+            <div class="flex items-center gap-1">📅 2023</div>
+            <div class="flex items-center gap-1">🚀 5.000 km</div>
+            <div class="flex items-center gap-1">⛽ Nafta</div>
+          </div>
+
+          <div class="flex justify-between items-center mt-4">
+            <span class="text-2xl font-black text-gray-900 animate-pulse"
+              >USD 45.000</span
+            >
+            <button
+              class="bg-gray-100 hover:bg-red-600 hover:text-white text-gray-800 px-4 py-2 rounded-lg font-bold transition-colors duration-300"
+            >
+              Ver más
+            </button>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <section class="bg-[#282828] py-16 px-[5%]">
+      <h2 class="text-3xl font-sans font-bold text-[#eee] mb-8">
+        Explorá por marca
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div
+          class="group relative h-[400px] rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_15px_35px_rgba(0,0,0,0.4)]"
+        >
+          <img
+            src="img/mercedes.jpg"
+            alt="Mercedes Benz"
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"
+          ></div>
+
+          <span
+            class="absolute bottom-5 left-5 z-10 text-white font-bold text-xl drop-shadow-lg"
+          >
+            Mercedes-Benz
+          </span>
+        </div>
+
+        <div
+          class="group relative h-[400px] rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_15px_35px_rgba(0,0,0,0.4)]"
+        >
+          <img
+            src="img/hyundai.jpg"
+            alt="Hyundai"
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"
+          ></div>
+          <span
+            class="absolute bottom-5 left-5 z-10 text-white font-bold text-xl drop-shadow-lg"
+          >
+            Hyundai
+          </span>
+        </div>
+
+        <div
+          class="group relative h-[400px] rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_15px_35px_rgba(0,0,0,0.4)]"
+        >
+          <img
+            src="img/toyota.jpg"
+            alt="Toyota"
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"
+          ></div>
+
+          <span
+            class="absolute bottom-5 left-5 z-10 text-white font-bold text-xl drop-shadow-lg"
+          >
+            Toyota
+          </span>
+        </div>
+
+        <div
+          class="group relative h-[400px] rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_15px_35px_rgba(0,0,0,0.4)]"
+        >
+          <img
+            src="img/audi.jpg"
+            alt="Audi"
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"
+          ></div>
+          <span
+            class="absolute bottom-5 left-5 z-10 text-white font-bold text-xl drop-shadow-lg"
+          >
+            Audi
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="bg-[#1a1a1a] text-white pt-16 pb-6 px-[5%] border-t-4 border-[#ff6600]"
+    >
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div class="flex flex-col items-center md:items-start">
+          <img
+            src="img/logo-zonaautos.avif"
+            alt="Logo Zona Autos"
+            class="w-48 mb-6"
+          />
+          <p class="text-gray-400 leading-relaxed text-center md:text-left">
+            Líderes en confianza y calidad automotriz desde 2010. 🏎️
+          </p>
+        </div>
+
+        <div class="text-center md:text-left">
+          <h3 class="text-lg font-bold mb-6 uppercase tracking-wider">
+            Explorar
+          </h3>
+          <ul class="space-y-4">
+            <li>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-[#ff6600] transition-colors duration-300"
+                >Usados Seleccionados</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-[#ff6600] transition-colors duration-300"
+                >Financiación</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-[#ff6600] transition-colors duration-300"
+                >Vende tu Auto</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="text-center md:text-left">
+          <h3 class="text-lg font-bold mb-6 uppercase tracking-wider">
+            Contacto
+          </h3>
+          <div class="space-y-4 text-gray-400">
+            <p class="flex items-center justify-center md:justify-start gap-3">
+              <span class="text-[#ff6600]">📍</span> Av. Libertador 1234, CABA
+            </p>
+            <p class="flex items-center justify-center md:justify-start gap-3">
+              <span class="text-[#ff6600]">📞</span> +54 11 4567-8900
+            </p>
+            <p class="flex items-center justify-center md:justify-start gap-3">
+              <span class="text-[#ff6600]">📧</span> info@zonaautos.com
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="mt-16 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm"
+      >
+        <p>&copy; 2026 Ignacio Campos - Todos los derechos reservados.</p>
+      </div>
     </footer>
     <script src="index.js"></script>
-</body>
+  </body>
 </html>

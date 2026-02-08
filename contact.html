@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="relative w-full">
+      <div
+        class="fixed top-5 left-1/2 -translate-x-1/2 flex justify-between items-center bg-[#282828] px-5 py-3 rounded-full w-[92%] max-w-[1200px] shadow-2xl z-[110] border border-white/5"
+      >
+        <div class="logo">
+          <a href="index.html">
+            <img
+              src="img/logo-zonaautos.avif"
+              alt="Logo"
+              class="h-8 md:h-10 w-auto"
+            />
+          </a>
+        </div>
+
+        <nav class="hidden md:block">
+          <ul class="flex items-center gap-8 text-white">
+            <li>
+              <a href="index.html" class="text-white/80 hover:text-red-600 transition-colors"
+                >Inicio</a
+              >
+            </li>
+            <li>
+              <a
+                href="catalogo.html"
+                class="text-white/80 hover:text-red-600 transition-colors"
+                >Autos Usados</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-white/80 hover:text-red-600 transition-colors"
+                >0 km</a
+              >
+            </li>
+            <li>
+              <a
+                href="contact.html"
+                class="bg-red-700 px-4 py-2 rounded-full font-bold"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <button
+          id="menu-btn"
+          class="flex flex-col gap-1.5 md:hidden p-2 z-[120]"
+          aria-label="Abrir menú"
+        >
+          <span class="w-6 h-0.5 bg-white rounded-full"></span>
+          <span class="w-6 h-0.5 bg-white rounded-full"></span>
+          <span class="w-6 h-0.5 bg-white rounded-full"></span>
+        </button>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="hidden fixed top-24 left-1/2 -translate-x-1/2 w-[90%] bg-[#282828] rounded-3xl p-6 z-[105] md:hidden shadow-2xl flex-col gap-5 text-center transition-all duration-300"
+      >
+        <a
+          href="#"
+          class="text-white text-lg font-bold py-2 border-b border-white/5"
+          >Inicio</a
+        >
+        <a
+          href="catalogo.html"
+          class="text-white/80 text-lg py-2 border-b border-white/5"
+          >Autos Usados</a
+        >
+        <a href="#" class="text-white/80 text-lg py-2 border-b border-white/5"
+          >0 km</a
+        >
+        <a href="#" class="text-white/80 text-lg py-2">Contacto</a>
+      </div>
+</header>
+
+<div class="isolate min-h-screen bg-[#282828] relative overflow-hidden px-6 py-24 sm:py-32 lg:px-8">
+  
+  <div aria-hidden="true" class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
+    <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" 
+         class="relative left-1/2 -z-10 aspect-1155/678 w-144.5 max-w-none -translate-x-1/2 rotate-30 bg-gradient-to-tr from-[#ff6600] to-[#282828] opacity-20 sm:left-[calc(50%-40rem)] sm:w-288.75">
+    </div>
+  </div>
+
+  <div class="mx-auto max-w-2xl text-center">
+    <h2 class="text-4xl font-bold tracking-tight text-white sm:text-5xl">Contacto</h2>
+    <p class="mt-2 text-lg text-gray-400">¿Tenés alguna duda sobre un vehículo? Estamos para asesorarte.</p>
+  </div>
+
+  <form action="#" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-20 bg-white/5 p-8 rounded-3xl backdrop-blur-sm border border-white/10 shadow-2xl">
+    <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+      <div>
+        <label for="first-name" class="block text-sm font-semibold text-white">Nombre</label>
+        <div class="mt-2.5">
+          <input id="first-name" type="text" name="first-name" class="block w-full rounded-xl bg-white/5 px-3.5 py-2 text-white outline-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:outline-[#ff6600] transition-all" />
+        </div>
+      </div>
+      <div>
+        <label for="last-name" class="block text-sm font-semibold text-white">Apellido</label>
+        <div class="mt-2.5">
+          <input id="last-name" type="text" name="last-name" class="block w-full rounded-xl bg-white/5 px-3.5 py-2 text-white outline-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:outline-[#ff6600] transition-all" />
+        </div>
+      </div>
+      <div class="sm:col-span-2">
+        <label for="phone-number" class="block text-sm font-semibold text-white">Número de teléfono</label>
+        <div class="mt-2.5">
+          <input id="phone-number" type="text" name="phone-number" placeholder="Ej: +54 11 ..." class="block w-full rounded-xl bg-white/5 px-3.5 py-2 text-white outline-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:outline-[#ff6600] transition-all" />
+        </div>
+      </div>
+      <div class="sm:col-span-2">
+        <label for="message" class="block text-sm font-semibold text-white">Mensaje</label>
+        <div class="mt-2.5">
+          <textarea id="message" name="message" rows="4" class="block w-full rounded-xl bg-white/5 px-3.5 py-2 text-white outline-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:outline-[#ff6600] transition-all"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10">
+      <button type="submit" class="block w-full rounded-xl bg-[#ff6600] px-3.5 py-2.5 text-center text-sm font-bold text-white shadow-lg shadow-orange-600/20 hover:bg-[#e65c00] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff6600] transition-all active:scale-95">
+        ENVIAR CONSULTA
+      </button>
+    </div>
+  </form>
+
+  <div aria-hidden="true" class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
+    <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" 
+         class="relative left-[calc(50%+3rem)] aspect-1155/678 w-144.5 -translate-x-1/2 bg-gradient-to-tr from-[#ff6600] to-[#282828] opacity-10 sm:left-[calc(50%+36rem)] sm:w-288.75">
+    </div>
+  </div>
+</div>
+
+<footer class="bg-[#1a1a1a] text-white pt-16 pb-6 px-[5%] border-t-4 border-[#ff6600]">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+            
+            <div class="flex flex-col items-center md:items-start">
+                <img src="img/logo-zonaautos.avif" alt="Logo Zona Autos" class="w-48 mb-6">
+                <p class="text-gray-400 leading-relaxed text-center md:text-left">
+                    Líderes en confianza y calidad automotriz desde 2010. 🏎️
+                </p>
+            </div>
+
+            <div class="text-center md:text-left">
+                <h3 class="text-lg font-bold mb-6 uppercase tracking-wider">Explorar</h3>
+                <ul class="space-y-4">
+                    <li><a href="#" class="text-gray-400 hover:text-[#ff6600] transition-colors duration-300">Usados Seleccionados</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-[#ff6600] transition-colors duration-300">Financiación</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-[#ff6600] transition-colors duration-300">Vende tu Auto</a></li>
+                </ul>
+            </div>
+
+            <div class="text-center md:text-left">
+                <h3 class="text-lg font-bold mb-6 uppercase tracking-wider">Contacto</h3>
+                <div class="space-y-4 text-gray-400">
+                    <p class="flex items-center justify-center md:justify-start gap-3">
+                        <span class="text-[#ff6600]">📍</span> Av. Libertador 1234, CABA
+                    </p>
+                    <p class="flex items-center justify-center md:justify-start gap-3">
+                        <span class="text-[#ff6600]">📞</span> +54 11 4567-8900
+                    </p>
+                    <p class="flex items-center justify-center md:justify-start gap-3">
+                        <span class="text-[#ff6600]">📧</span> info@zonaautos.com
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-16 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+            <p>&copy; 2026 Ignacio Campos - Todos los derechos reservados.</p>
+        </div>
+</footer>
+
+<script src="index.js"></script>
+
+    
+</body>
+</html>
