@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto 1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="relative w-full">
+      <div
+        class="fixed top-5 left-1/2 -translate-x-1/2 flex justify-between items-center bg-[#282828] px-5 py-3 rounded-full w-[92%] max-w-[1200px] shadow-2xl z-[110] border border-white/5"
+      >
+        <div class="logo">
+          <a href="../index.html">
+            <img
+              src="../img/logo-zonaautos.avif"
+              alt="Logo"
+              class="h-8 md:h-10 w-auto"
+            />
+          </a>
+        </div>
+
+        <nav class="hidden md:block">
+          <ul class="flex items-center gap-8 text-white">
+            <li>
+              <a href="../index.html" class="text-white/80 hover:text-red-600 transition-colors"
+                >Inicio</a
+              >
+            </li>
+            <li>
+              <a
+                href="../catalogo.html"
+                class="text-white/80 hover:text-red-600 transition-colors"
+                >Autos Usados</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-white/80 hover:text-red-600 transition-colors"
+                >0 km</a
+              >
+            </li>
+            <li>
+              <a
+                href="../contact.html"
+                class="bg-red-700 px-4 py-2 rounded-full font-bold"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <button
+          id="menu-btn"
+          class="flex flex-col gap-1.5 md:hidden p-2 z-[120]"
+          aria-label="Abrir menú"
+        >
+          <span class="w-6 h-0.5 bg-white rounded-full"></span>
+          <span class="w-6 h-0.5 bg-white rounded-full"></span>
+          <span class="w-6 h-0.5 bg-white rounded-full"></span>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="hidden fixed top-24 left-1/2 -translate-x-1/2 w-[90%] bg-[#282828] rounded-3xl p-6 z-[105] md:hidden shadow-2xl flex-col gap-5 text-center transition-all duration-300">
+            <a href="../index.html" class="text-white/80 text-lg py-2 border-b border-white/5">Inicio</a>
+            <a href="../catalogo.html" class="text-white text-lg font-bold py-2 border-b border-white/5">Autos Usados</a>
+            <a href="#" class="text-white/80 text-lg py-2 border-b border-white/5">0 km</a>
+            <a href="../contact.html" class="text-white/80 text-lg py-2 border-b border-white/5">Contacto</a>
+    </div>
+</header>
+
+<main class="min-h-screen bg-[#1a1a1a] pt-32 pb-12 px-6">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+        
+        <div class="space-y-6">
+            <div class="aspect-[4/3] rounded-3xl overflow-hidden bg-[#282828] border border-white/5 shadow-2xl">
+                <img id="main-img" src="../img/audi.jpg" alt="Vista Principal" class="w-full h-full object-cover transition-opacity duration-300">
+            </div>
+            
+            <div class="flex gap-4 justify-center">
+                <img src="../img/auto-verde.jpg" onclick="changeImage(this.src)" class="w-20 h-20 rounded-xl object-cover cursor-pointer border-2 border-orange-600 opacity-100 hover:opacity-100 transition-all thumb">
+                <img src="../img/Fiat.jpg" onclick="changeImage(this.src)" class="w-20 h-20 rounded-xl object-cover cursor-pointer border-2 border-transparent opacity-50 hover:opacity-100 transition-all thumb">
+                <img src="../img/honda.jpg" onclick="changeImage(this.src)" class="w-20 h-20 rounded-xl object-cover cursor-pointer border-2 border-transparent opacity-50 hover:opacity-100 transition-all thumb">
+            </div>
+        </div>
+
+        <div class="flex flex-col justify-center">
+            <h1 class="text-5xl font-black text-white italic tracking-tighter uppercase">Audi A4</h1>
+            <p class="text-orange-500 font-bold text-xl mt-2">2.0 TFSI Quattro</p>
+            
+            <div class="mt-8 space-y-4 text-gray-400 border-l-2 border-white/10 pl-6">
+                <p><span class="text-white font-semibold">Año:</span> 2023</p>
+                <p><span class="text-white font-semibold">Kilometraje:</span> 12.000 km</p>
+                <p><span class="text-white font-semibold">Transmisión:</span> Automática S-Tronic</p>
+            </div>
+
+            <div class="mt-12">
+                <div class="text-4xl font-light text-white mb-6">USD <span class="font-bold text-6xl">45.900</span></div>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://wa.me/tu-numero" class="flex-1 bg-[#25D366] text-white text-center py-4 rounded-2xl font-bold hover:bg-[#128C7E] transition-all flex items-center justify-center gap-2">
+                        WhatsApp
+                    </a>
+                    <button class="flex-1 bg-white text-black py-4 rounded-2xl font-bold hover:bg-gray-200 transition-all uppercase text-sm tracking-widest">
+                        Me interesa
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer
+      class="bg-[#1a1a1a] text-white pt-16 pb-6 px-[5%] border-t-4 border-[#ff6600]"
+    >
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div class="flex flex-col items-center md:items-start">
+          <img
+            src="../img/logo-zonaautos.avif"
+            alt="Logo Zona Autos"
+            class="w-48 mb-6"
+          />
+          <p class="text-gray-400 leading-relaxed text-center md:text-left">
+            Líderes en confianza y calidad automotriz desde 2010. 🏎️
+          </p>
+        </div>
+
+        <div class="text-center md:text-left">
+          <h3 class="text-lg font-bold mb-6 uppercase tracking-wider">
+            Explorar
+          </h3>
+          <ul class="space-y-4">
+            <li>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-[#ff6600] transition-colors duration-300"
+                >Usados Seleccionados</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-[#ff6600] transition-colors duration-300"
+                >Financiación</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-[#ff6600] transition-colors duration-300"
+                >Vende tu Auto</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="text-center md:text-left">
+          <h3 class="text-lg font-bold mb-6 uppercase tracking-wider">
+            Contacto
+          </h3>
+          <div class="space-y-4 text-gray-400">
+            <p class="flex items-center justify-center md:justify-start gap-3">
+              <span class="text-[#ff6600]">📍</span> Av. Libertador 1234, CABA
+            </p>
+            <p class="flex items-center justify-center md:justify-start gap-3">
+              <span class="text-[#ff6600]">📞</span> +54 11 4567-8900
+            </p>
+            <p class="flex items-center justify-center md:justify-start gap-3">
+              <span class="text-[#ff6600]">📧</span> info@zonaautos.com
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="mt-16 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm"
+      >
+        <p>&copy; 2026 Ignacio Campos - Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+<script src="../index.js"></script>
+</body>
+</html>

@@ -25,3 +25,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+function changeImage(src) {
+    const mainImg = document.getElementById('main-img');
+    const thumbs = document.querySelectorAll('.thumb');
+
+    // 1. Efecto de parpadeo suave
+    mainImg.style.opacity = '0';
+    
+    setTimeout(() => {
+        // 2. Cambiamos la fuente de la imagen
+        mainImg.src = src;
+        mainImg.style.opacity = '1';
+    }, 200);
+
+    // 3. Actualizamos los bordes de las miniaturas
+    thumbs.forEach(thumb => {
+        thumb.classList.remove('border-orange-600', 'opacity-100');
+        thumb.classList.add('border-transparent', 'opacity-50');
+        
+        if(thumb.src === src) {
+            thumb.classList.add('border-orange-600', 'opacity-100');
+            thumb.classList.remove('border-transparent', 'opacity-50');
+        }
+    });
+}
