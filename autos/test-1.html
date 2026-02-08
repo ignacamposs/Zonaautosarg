@@ -73,7 +73,7 @@
 </header>
 
 <main class="min-h-screen bg-[#1a1a1a] pt-32 pb-12 px-6">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         
         <div class="space-y-6">
             <div class="aspect-[4/3] rounded-3xl overflow-hidden bg-[#282828] border border-white/5 shadow-2xl">
@@ -81,33 +81,43 @@
             </div>
             
             <div class="flex gap-4 justify-center">
-                <img src="../img/auto-verde.jpg" onclick="changeImage(this.src)" class="w-20 h-20 rounded-xl object-cover cursor-pointer border-2 border-orange-600 opacity-100 hover:opacity-100 transition-all thumb">
+                <img src="../img/auto-verde.jpg" onclick="changeImage(this.src)" class="w-20 h-20 rounded-xl object-cover cursor-pointer border-2 border-orange-600 opacity-100 transition-all thumb">
                 <img src="../img/Fiat.jpg" onclick="changeImage(this.src)" class="w-20 h-20 rounded-xl object-cover cursor-pointer border-2 border-transparent opacity-50 hover:opacity-100 transition-all thumb">
                 <img src="../img/honda.jpg" onclick="changeImage(this.src)" class="w-20 h-20 rounded-xl object-cover cursor-pointer border-2 border-transparent opacity-50 hover:opacity-100 transition-all thumb">
             </div>
         </div>
 
-        <div class="flex flex-col justify-center">
-            <h1 class="text-5xl font-black text-white italic tracking-tighter uppercase">Audi A4</h1>
-            <p class="text-orange-500 font-bold text-xl mt-2">2.0 TFSI Quattro</p>
+        <div class="flex flex-col">
+            <h1 id="car-name" class="text-6xl font-black text-white italic tracking-tighter uppercase">Audi A4</h1>
+            <p class="text-orange-500 font-bold text-2xl mt-2 italic">2.0 TFSI Quattro</p>
             
-            <div class="mt-8 space-y-4 text-gray-400 border-l-2 border-white/10 pl-6">
-                <p><span class="text-white font-semibold">Año:</span> 2023</p>
-                <p><span class="text-white font-semibold">Kilometraje:</span> 12.000 km</p>
-                <p><span class="text-white font-semibold">Transmisión:</span> Automática S-Tronic</p>
+            <div class="mt-10 grid grid-cols-3 gap-4 py-6 border-y border-white/10">
+                <div class="text-center">
+                    <span class="block text-gray-500 text-[10px] uppercase font-bold tracking-widest">Año</span>
+                    <span class="text-white font-bold text-lg">2023</span>
+                </div>
+                <div class="text-center border-x border-white/10">
+                    <span class="block text-gray-500 text-[10px] uppercase font-bold tracking-widest">KM</span>
+                    <span class="text-white font-bold text-lg">12.500</span>
+                </div>
+                <div class="text-center">
+                    <span class="block text-gray-500 text-[10px] uppercase font-bold tracking-widest">Caja</span>
+                    <span class="text-white font-bold text-lg">Auto</span>
+                </div>
             </div>
 
-            <div class="mt-12">
-                <div class="text-4xl font-light text-white mb-6">USD <span class="font-bold text-6xl">45.900</span></div>
-                
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="https://wa.me/tu-numero" class="flex-1 bg-[#25D366] text-white text-center py-4 rounded-2xl font-bold hover:bg-[#128C7E] transition-all flex items-center justify-center gap-2">
-                        WhatsApp
-                    </a>
-                    <button class="flex-1 bg-white text-black py-4 rounded-2xl font-bold hover:bg-gray-200 transition-all uppercase text-sm tracking-widest">
-                        Me interesa
-                    </button>
+            <div class="mt-10">
+                <div class="text-gray-400 text-sm uppercase font-bold mb-2">Precio Final</div>
+                <div class="text-white mb-8">
+                    <span class="text-4xl font-light">USD</span>
+                    <span class="text-7xl font-black ml-2">45.900</span>
                 </div>
+                
+                <button onclick="sendWhatsApp()" class="w-full bg-[#25D366] hover:bg-[#128C7E] text-white py-5 rounded-2xl font-black text-lg transition-all flex items-center justify-center gap-3 shadow-xl shadow-green-900/20 active:scale-[0.98]">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="50" viewBox="0 0 48 48">
+                <path fill="#fff" d="M4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5c5.1,0,9.8,2,13.4,5.6C41,14.2,43,18.9,43,24	c0,10.5-8.5,19-19,19c0,0,0,0,0,0h0c-3.2,0-6.3-0.8-9.1-2.3L4.9,43.3z"></path><path fill="#fff" d="M4.9,43.8c-0.1,0-0.3-0.1-0.4-0.1c-0.1-0.1-0.2-0.3-0.1-0.5L7,33.5c-1.6-2.9-2.5-6.2-2.5-9.6	C4.5,13.2,13.3,4.5,24,4.5c5.2,0,10.1,2,13.8,5.7c3.7,3.7,5.7,8.6,5.7,13.8c0,10.7-8.7,19.5-19.5,19.5c-3.2,0-6.3-0.8-9.1-2.3	L5,43.8C5,43.8,4.9,43.8,4.9,43.8z"></path><path fill="#cfd8dc" d="M24,5c5.1,0,9.8,2,13.4,5.6C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19h0c-3.2,0-6.3-0.8-9.1-2.3L4.9,43.3	l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5 M24,43L24,43L24,43 M24,43L24,43L24,43 M24,4L24,4C13,4,4,13,4,24	c0,3.4,0.8,6.7,2.5,9.6L3.9,43c-0.1,0.3,0,0.7,0.3,1c0.2,0.2,0.4,0.3,0.7,0.3c0.1,0,0.2,0,0.3,0l9.7-2.5c2.8,1.5,6,2.2,9.2,2.2	c11,0,20-9,20-20c0-5.3-2.1-10.4-5.8-14.1C34.4,6.1,29.4,4,24,4L24,4z"></path><path fill="#40c351" d="M35.2,12.8c-3-3-6.9-4.6-11.2-4.6C15.3,8.2,8.2,15.3,8.2,24c0,3,0.8,5.9,2.4,8.4L11,33l-1.6,5.8l6-1.6l0.6,0.3	c2.4,1.4,5.2,2.2,8,2.2h0c8.7,0,15.8-7.1,15.8-15.8C39.8,19.8,38.2,15.8,35.2,12.8z"></path><path fill="#fff" fill-rule="evenodd" d="M19.3,16c-0.4-0.8-0.7-0.8-1.1-0.8c-0.3,0-0.6,0-0.9,0s-0.8,0.1-1.3,0.6c-0.4,0.5-1.7,1.6-1.7,4	s1.7,4.6,1.9,4.9s3.3,5.3,8.1,7.2c4,1.6,4.8,1.3,5.7,1.2c0.9-0.1,2.8-1.1,3.2-2.3c0.4-1.1,0.4-2.1,0.3-2.3c-0.1-0.2-0.4-0.3-0.9-0.6	s-2.8-1.4-3.2-1.5c-0.4-0.2-0.8-0.2-1.1,0.2c-0.3,0.5-1.2,1.5-1.5,1.9c-0.3,0.3-0.6,0.4-1,0.1c-0.5-0.2-2-0.7-3.8-2.4	c-1.4-1.3-2.4-2.8-2.6-3.3c-0.3-0.5,0-0.7,0.2-1c0.2-0.2,0.5-0.6,0.7-0.8c0.2-0.3,0.3-0.5,0.5-0.8c0.2-0.3,0.1-0.6,0-0.8	C20.6,19.3,19.7,17,19.3,16z" clip-rule="evenodd"></path>
+                </svg>                   Consultar por WhatsApp
+                </button>
             </div>
         </div>
     </div>
