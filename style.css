@@ -32,3 +32,19 @@ body{
      color: #333333;
      background-color: #474747;
 }
+
+/* Ocultar barra de scroll pero mantener funcionalidad */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Opcional: que las miniaturas no se deformen */
+.thumb {
+    flex-shrink: 0; /* Obliga a que mantengan su ancho original */
+    width: 100px;   /* Podés ajustar el tamaño a tu gusto */
+    height: 100px;
+}

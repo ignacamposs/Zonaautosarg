@@ -33,7 +33,7 @@
             </li>
             <li>
               <a
-                href="#"
+                href="0km.html"
                 class="text-white/80 hover:text-red-600 transition-colors"
                 >0 km</a
               >
@@ -64,36 +64,33 @@
     </header>
     
 
-    <main class="max-w-[1600px] mx-auto mt-20 md:mt-32 p-5 md:p-10 grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-10 " >
-        <aside class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 h-fit sticky top-28">
+<main class="max-w-[1600px] mx-auto mt-20 md:mt-32 p-5 md:p-10 grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-10">
+    <aside class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 h-fit sticky top-28">
         <h3 class="text-xl font-bold mb-6 text-gray-800">Filtros</h3>
 
         <div class="mb-6">
             <label class="block text-xs font-bold text-gray-400 uppercase mb-2">Marca</label>
-            <select class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-orange-500 transition-colors">
-                <option>Todas las marcas</option>
-                <option>Audi</option>
-                <option>Mercedes-Benz</option>
-                <option>Toyota</option>
+            <select id="filtro-marca" class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-orange-500 transition-colors">
+                <option value="">Todas las marcas</option>
+                <option value="Audi">Audi</option>
+                <option value="Mercedes-Benz">Mercedes-Benz</option>
+                <option value="Toyota">Toyota</option>
             </select>
         </div>
 
         <div class="mb-6">
-            <label class="block text-xs font-bold text-gray-400 uppercase mb-2">Precio (USD)</label>
-            <div class="flex gap-2">
-                <input type="number" placeholder="Min" class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl outline-none text-sm">
-                <input type="number" placeholder="Max" class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl outline-none text-sm">
-            </div>
+            <label class="block text-xs font-bold text-gray-400 uppercase mb-2">Precio Máximo (USD)</label>
+            <input type="number" id="filtro-precio" placeholder="Ej: 50000" class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl outline-none text-sm">
         </div>
 
         <button class="w-full bg-orange-600 text-white py-3 rounded-xl font-bold hover:bg-orange-700 transition-all shadow-lg shadow-orange-600/20 active:scale-95">
             Aplicar Filtros
         </button>
-        </aside>
+    </aside>
 
-        <section class="results-grid">
+    <section>
         <div class="flex flex-col sm:flex-row justify-between items-center mb-8 pb-4 border-b border-gray-700">
-            <h2 class="text-white text-xl font-medium mb-4 sm:mb-0">Mostrando <span class="font-bold text-orange-500">12</span> autos usados</h2>
+            <h2 class="text-white text-xl font-medium mb-4 sm:mb-0">Inventario de <span class="font-bold text-orange-500 text-2xl uppercase italic">Zona Autos</span></h2>
             
             <div class="flex items-center gap-3">
                 <span class="text-gray-400 text-sm italic">Ordenar por:</span>
@@ -105,409 +102,10 @@
             </div>
         </div>
 
-    <div
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-5 bg-[#282828] py-16 px-[5%]"
-    >
-      <h2 class="col-span-full text-center text-2xl font-bold text-white">
-        Nuestros Autos Destacados
-      </h2>
-      <article
-        class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
-      >
-        <div class="relative h-48 overflow-hidden">
-          <img
-            src="img/audi.jpg"
-            alt="Audi A4"
-            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-          />
-          <span
-            class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase"
-          >
-            Nuevo
-            <!-- Tag de "Nuevo" -->
-          </span>
-        </div>
-
-        <div class="p-5">
-          <h3 class="text-xl font-bold text-gray-800 mb-3">Audi A4 Premium</h3>
-
-          <div
-            class="flex justify-between border-y border-gray-100 py-3 my-3 text-sm text-gray-500"
-          >
-            <div class="flex items-center gap-1">📅 2023</div>
-            <div class="flex items-center gap-1">🚀 5.000 km</div>
-            <div class="flex items-center gap-1">⛽ Nafta</div>
-          </div>
-
-          <div class="flex justify-center items-center mt-4">
-            
-            <button
-              class="bg-gray-100 hover:bg-red-600 hover:text-white text-gray-800 px-12 py-2 rounded-lg font-bold transition-colors duration-300"
-              onclick="window.location.href='autos/test-1.html'"
-            >
-              Ver más
-            </button>
-          </div>
-        </div>
-      </article>
-    
-      <article
-        class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
-      >
-        <div class="relative h-48 overflow-hidden">
-          <img
-            src="img/audi.jpg"
-            alt="Audi A4"
-            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-          />
-          <span
-            class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase"
-          >
-            Nuevo
-            <!-- Tag de "Nuevo" -->
-          </span>
-        </div>
-
-        <div class="p-5">
-          <h3 class="text-xl font-bold text-gray-800 mb-3">Audi A4 Premium</h3>
-
-          <div
-            class="flex justify-between border-y border-gray-100 py-3 my-3 text-sm text-gray-500"
-          >
-            <div class="flex items-center gap-1">📅 2023</div>
-            <div class="flex items-center gap-1">🚀 5.000 km</div>
-            <div class="flex items-center gap-1">⛽ Nafta</div>
-          </div>
-
-          <div class="flex justify-center items-center mt-4">
-            
-            <button
-              class="bg-gray-100 hover:bg-red-600 hover:text-white text-gray-800 px-12 py-2 rounded-lg font-bold transition-colors duration-300 "
-            >
-              Ver más
-            </button>
-          </div>
-        </div>
-      </article>
-
-      <article
-        class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
-      >
-        <div class="relative h-48 overflow-hidden">
-          <img
-            src="img/audi.jpg"
-            alt="Audi A4"
-            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-          />
-          <span
-            class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase"
-          >
-            Nuevo
-            <!-- Tag de "Nuevo" -->
-          </span>
-        </div>
-
-        <div class="p-5">
-          <h3 class="text-xl font-bold text-gray-800 mb-3">Audi A4 Premium</h3>
-
-          <div
-            class="flex justify-between border-y border-gray-100 py-3 my-3 text-sm text-gray-500"
-          >
-            <div class="flex items-center gap-1">📅 2023</div>
-            <div class="flex items-center gap-1">🚀 5.000 km</div>
-            <div class="flex items-center gap-1">⛽ Nafta</div>
-          </div>
-
-          <div class="flex justify-center items-center mt-4">
-            
-            <button
-              class="bg-gray-100 hover:bg-red-600 hover:text-white text-gray-800 px-12 py-2 rounded-lg font-bold transition-colors duration-300 "
-            >
-              Ver más
-            </button>
-          </div>
-        </div>
-      </article>
-      
-      <article
-        class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
-      >
-        <div class="relative h-48 overflow-hidden">
-          <img
-            src="img/audi.jpg"
-            alt="Audi A4"
-            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-          />
-          <span
-            class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase"
-          >
-            Nuevo
-            <!-- Tag de "Nuevo" -->
-          </span>
-        </div>
-
-        <div class="p-5">
-          <h3 class="text-xl font-bold text-gray-800 mb-3">Audi A4 Premium</h3>
-
-          <div
-            class="flex justify-between border-y border-gray-100 py-3 my-3 text-sm text-gray-500"
-          >
-            <div class="flex items-center gap-1">📅 2023</div>
-            <div class="flex items-center gap-1">🚀 5.000 km</div>
-            <div class="flex items-center gap-1">⛽ Nafta</div>
-          </div>
-
-          <div class="flex justify-center items-center mt-4">
-            
-            <button
-              class="bg-gray-100 hover:bg-red-600 hover:text-white text-gray-800 px-12 py-2 rounded-lg font-bold transition-colors duration-300 "
-            >
-              Ver más
-            </button>
-          </div>
-        </div>
-      </article>
-
-      <article
-        class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
-      >
-        <div class="relative h-48 overflow-hidden">
-          <img
-            src="img/mercedes-benz.jpg"
-            alt="Mercedes-Benz GLE"
-            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-          />
-          <span
-            class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase"
-          >
-            Nuevo
-            <!-- Tag de "Nuevo" -->
-          </span>
-        </div>
-
-        <div class="p-5">
-          <h3 class="text-xl font-bold text-gray-800 mb-3">
-            Mercedes-Benz GLE
-          </h3>
-
-          <div
-            class="flex justify-between border-y border-gray-100 py-3 my-3 text-sm text-gray-500"
-          >
-            <div class="flex items-center gap-1">📅 2023</div>
-            <div class="flex items-center gap-1">🚀 5.000 km</div>
-            <div class="flex items-center gap-1">⛽ Nafta</div>
-          </div>
-
-          <div class="flex justify-center items-center mt-4">
-            <button
-              class="bg-gray-100 hover:bg-red-600 hover:text-white text-gray-800 px-12 py-2 rounded-lg font-bold transition-colors duration-300"
-            >
-              Ver más
-            </button>
-          </div>
-        </div>
-      </article>
-
-      <article
-        class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
-      >
-        <div class="relative h-48 overflow-hidden">
-          <img
-            src="img/mercedes-benz.jpg"
-            alt="Mercedes-Benz GLE"
-            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-          />
-          <span
-            class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase"
-          >
-            Nuevo
-            <!-- Tag de "Nuevo" -->
-          </span>
-        </div>
-
-        <div class="p-5">
-          <h3 class="text-xl font-bold text-gray-800 mb-3">
-            Mercedes-Benz GLE
-          </h3>
-
-          <div
-            class="flex justify-between border-y border-gray-100 py-3 my-3 text-sm text-gray-500"
-          >
-            <div class="flex items-center gap-1">📅 2023</div>
-            <div class="flex items-center gap-1">🚀 5.000 km</div>
-            <div class="flex items-center gap-1">⛽ Nafta</div>
-          </div>
-
-          <div class="flex justify-center items-center mt-4">
-            <button
-              class="bg-gray-100 hover:bg-red-600 hover:text-white text-gray-800 px-12 py-2 rounded-lg font-bold transition-colors duration-300"
-            >
-              Ver más
-            </button>
-          </div>
-        </div>
-      </article>
-
-      <article
-        class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
-      >
-        <div class="relative h-48 overflow-hidden">
-          <img
-            src="img/mercedes-benz.jpg"
-            alt="Mercedes-Benz GLE"
-            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-          />
-          <span
-            class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase"
-          >
-            Nuevo
-            <!-- Tag de "Nuevo" -->
-          </span>
-        </div>
-
-        <div class="p-5">
-          <h3 class="text-xl font-bold text-gray-800 mb-3">
-            Mercedes-Benz GLE
-          </h3>
-
-          <div
-            class="flex justify-between border-y border-gray-100 py-3 my-3 text-sm text-gray-500"
-          >
-            <div class="flex items-center gap-1">📅 2023</div>
-            <div class="flex items-center gap-1">🚀 5.000 km</div>
-            <div class="flex items-center gap-1">⛽ Nafta</div>
-          </div>
-
-          <div class="flex justify-center items-center mt-4">
-            <button
-              class="bg-gray-100 hover:bg-red-600 hover:text-white text-gray-800 px-12 py-2 rounded-lg font-bold transition-colors duration-300"
-            >
-              Ver más
-            </button>
-          </div>
-        </div>
-      </article>
-
-      <article
-        class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
-      >
-        <div class="relative h-48 overflow-hidden">
-          <img
-            src="img/mercedes-benz.jpg"
-            alt="Mercedes-Benz GLE"
-            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-          />
-          <span
-            class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase"
-          >
-            Nuevo
-            <!-- Tag de "Nuevo" -->
-          </span>
-        </div>
-
-        <div class="p-5">
-          <h3 class="text-xl font-bold text-gray-800 mb-3">
-            Mercedes-Benz GLE
-          </h3>
-
-          <div
-            class="flex justify-between border-y border-gray-100 py-3 my-3 text-sm text-gray-500"
-          >
-            <div class="flex items-center gap-1">📅 2023</div>
-            <div class="flex items-center gap-1">🚀 5.000 km</div>
-            <div class="flex items-center gap-1">⛽ Nafta</div>
-          </div>
-
-          <div class="flex justify-center items-center mt-4">
-            <button
-              class="bg-gray-100 hover:bg-red-600 hover:text-white text-gray-800 px-12 py-2 rounded-lg font-bold transition-colors duration-300"
-            >
-              Ver más
-            </button>
-          </div>
-        </div>
-      </article>
-
-      <article
-        class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
-      >
-        <div class="relative h-48 overflow-hidden">
-          <img
-            src="img/toyota.jpg"
-            alt="Toyota Hilux"
-            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-          />
-          <span
-            class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase"
-          >
-            Nuevo
-            <!-- Tag de "Nuevo" -->
-          </span>
-        </div>
-
-        <div class="p-5">
-          <h3 class="text-xl font-bold text-gray-800 mb-3">Toyota Hilux</h3>
-
-          <div
-            class="flex justify-between border-y border-gray-100 py-3 my-3 text-sm text-gray-500"
-          >
-            <div class="flex items-center gap-1">📅 2023</div>
-            <div class="flex items-center gap-1">🚀 5.000 km</div>
-            <div class="flex items-center gap-1">⛽ Nafta</div>
-          </div>
-
-          <div class="flex justify-center items-center mt-4">
-            <button
-              class="bg-gray-100 hover:bg-red-600 hover:text-white text-gray-800 px-12 py-2 rounded-lg font-bold transition-colors duration-300"
-            >
-              Ver más
-            </button>
-          </div>
-        </div>
-      </article>
-
-      <article
-        class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
-      >
-        <div class="relative h-48 overflow-hidden">
-          <img
-            src="img/honda.jpg"
-            alt="Honda CR-V"
-            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-          />
-          <span
-            class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase"
-          >
-            Nuevo
-            <!-- Tag de "Nuevo" -->
-          </span>
-        </div>
-
-        <div class="p-5">
-          <h3 class="text-xl font-bold text-gray-800 mb-3">Honda CR-V</h3>
-
-          <div
-            class="flex justify-between border-y border-gray-100 py-3 my-3 text-sm text-gray-500"
-          >
-            <div class="flex items-center gap-1">📅 2023</div>
-            <div class="flex items-center gap-1">🚀 5.000 km</div>
-            <div class="flex items-center gap-1">⛽ Nafta</div>
-          </div>
-
-          <div class="flex justify-center items-center mt-4">
-            <button
-              class="bg-gray-100 hover:bg-red-600 hover:text-white text-gray-800 px-12 py-2 rounded-lg font-bold transition-colors duration-300"
-            >
-              Ver más
-            </button>
-          </div>
-        </div>
-        </div>
-      </article>
+        <div id="contenedor-catalogo" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     </div>
-
-        </section> 
-    </main>
+    </section> 
+</main>
     
 
 <footer class="bg-[#1a1a1a] text-white pt-16 pb-6 px-[5%] border-t-4 border-[#ff6600]">
