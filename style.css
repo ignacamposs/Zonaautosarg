@@ -48,3 +48,20 @@ body{
     width: 100px;   /* Podés ajustar el tamaño a tu gusto */
     height: 100px;
 }
+
+/* Primero definimos el fondo para PC (lo que ya tenías) */
+.hero-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), 
+                      url("img/auto-verde.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* EL TRUCO: Media Query para celulares (pantallas menores a 768px) */
+@media (max-width: 768px) {
+    .hero-bg {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), 
+                          url("img/bg-cel.jpeg"); /* <--- Foto vertical aquí */
+        background-position: center bottom; /* Ajusta la posición para que se vea el auto */
+    }
+}

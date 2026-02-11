@@ -58,7 +58,7 @@
         <div id="mobile-menu" class="hidden fixed top-24 left-1/2 -translate-x-1/2 w-[90%] bg-[#282828] rounded-3xl p-6 z-[105] md:hidden shadow-2xl flex-col gap-5 text-center transition-all duration-300">
             <a href="index.html" class="text-white/80 text-lg py-2 border-b border-white/5">Inicio</a>
             <a href="catalogo.html" class="text-white text-lg font-bold py-2 border-b border-white/5">Autos Usados</a>
-            <a href="#" class="text-white/80 text-lg py-2 border-b border-white/5">0 km</a>
+            <a href="0km.html" class="text-white/80 text-lg py-2 border-b border-white/5">0 km</a>
             <a href="contact.html" class="text-white/80 text-lg py-2">Contacto</a>
         </div>
     </header>
@@ -66,27 +66,29 @@
 
 <main class="max-w-[1600px] mx-auto mt-20 md:mt-32 p-5 md:p-10 grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-10">
     <aside class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 h-fit sticky top-28">
-        <h3 class="text-xl font-bold mb-6 text-gray-800">Filtros</h3>
+    <h3 class="text-xl font-bold mb-6 text-gray-800">Filtros</h3>
 
-        <div class="mb-6">
-            <label class="block text-xs font-bold text-gray-400 uppercase mb-2">Marca</label>
-            <select id="filtro-marca" class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-orange-500 transition-colors">
-                <option value="">Todas las marcas</option>
-                <option value="Audi">Audi</option>
-                <option value="Mercedes-Benz">Mercedes-Benz</option>
-                <option value="Toyota">Toyota</option>
-            </select>
+    <div class="mb-6">
+        <label class="block text-xs font-bold text-gray-400 uppercase mb-2">Marca</label>
+        <select id="filtro-marca" class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-orange-500 transition-colors">
+            <option value="">Todas las marcas</option>
+            <option value="Audi">Audi</option>
+            <option value="Ford">Ford</option>
+            <option value="Toyota">Toyota</option>
+        </select>
+    </div>
+
+    <div class="mb-6">
+        <label class="block text-xs font-bold text-gray-400 uppercase mb-2">Precio Máximo (USD)</label>
+        <div class="flex gap-2">
+            <input type="number" id="filtro-precio" placeholder="Ej: 30000" class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl outline-none text-sm">
         </div>
+    </div>
 
-        <div class="mb-6">
-            <label class="block text-xs font-bold text-gray-400 uppercase mb-2">Precio Máximo (USD)</label>
-            <input type="number" id="filtro-precio" placeholder="Ej: 50000" class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl outline-none text-sm">
-        </div>
-
-        <button class="w-full bg-orange-600 text-white py-3 rounded-xl font-bold hover:bg-orange-700 transition-all shadow-lg shadow-orange-600/20 active:scale-95">
-            Aplicar Filtros
-        </button>
-    </aside>
+    <button class="w-full bg-orange-600 text-white py-3 rounded-xl font-bold hover:bg-orange-700 transition-all shadow-lg shadow-orange-600/20 active:scale-95">
+        Aplicar Filtros
+    </button>
+</aside>
 
     <section>
         <div class="flex flex-col sm:flex-row justify-between items-center mb-8 pb-4 border-b border-gray-700">

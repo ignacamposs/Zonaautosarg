@@ -1,33 +1,33 @@
 [
-  {
-    "id": 1,
-    "marca": "Audi",
-    "modelo": "A4 2.0 FUNCIONAAAAAAA",
-    "anio": 2023,
-    "km": 12500,
-    "precio": 45900,
-    "transmision": "Automática",
-    "imagenes": [
-        "img/auto-1-1.webp",
-        "img/auto-1-2.webp",
-        "img/auto-1-3.webp",
-        "img/auto-1-4.webp",
-        "img/auto-1-5.webp",
-        "img/auto-1-6.webp",
-        "img/auto-1-7.webp",
-        "img/auto-1-8.webp",
-        "img/auto-1-9.webp",
-        "img/auto-1-10.webp"
-    ]
-  },
+{
+  "id": 1,
+  "marca": "Ford",
+  "modelo": "Focus S",
+  "anio": 2018,
+  "km": 115000,
+  "precio": 0,
+  "transmision": "Manual",
+  "imagenes": ["img/auto-1-1.webp",
+    "img/auto-1-2.webp",
+    "img/auto-1-3.webp",
+    "img/auto-1-4.webp",
+    "img/auto-1-5.webp",
+    "img/auto-1-6.webp",
+    "img/auto-1-7.webp",
+    "img/auto-1-8.webp",
+    "img/auto-1-9.webp",
+    "img/auto-1-10.webp"
+  ],
+  "descripcion": "1.6 - 125CV \n Servicios al dia"
+},
   {
     "id": 2,
     "marca": "Ford",
-    "modelo": "Ecosport",
+    "modelo": "Ecosport Titaniun",
     "anio": 2014,
-    "km": 0,
-    "precio": "xxx",
-    "transmision": "Automática",
+    "km": 58000,
+    "precio": 0,
+    "transmision": "Manual",
     "imagenes": [
         "img/auto-2-1.webp",
         "img/auto-2-2.webp",
@@ -39,16 +39,270 @@
         "img/auto-2-8.webp",
         "img/auto-2-9.webp",
         "img/auto-2-10.webp"
-    ]
+    ],
+    "descripcion": "1.6 -110CV \n Traccion 4X2 \n Climatizador \n Servicios Oficiales \n Unico dueño "
   },
   {
   "id": 3,
-  "marca": "Toyota",
-  "modelo": "Corolla Cross SE-G",
-  "anio": 2026,
-  "km": 0,
-  "precio": 32000,
-  "transmision": "Automática",
-  "imagenes": ["img/corolla-0km.jpg"]
+  "marca": "Ford",
+  "modelo": "Ranger XLT",
+  "anio": 2024,
+  "km": 17000,
+  "precio": 0,
+  "transmision": "Automática AT10",
+  "imagenes": [
+    "img/auto-3-1.webp",
+    "img/auto-3-2.webp",
+    "img/auto-3-3.webp",
+    "img/auto-3-4.webp",
+    "img/auto-3-5.webp",
+    "img/auto-3-6.webp",
+    "img/auto-3-7.webp",
+    "img/auto-3-8.webp",
+    "img/auto-3-9.webp",
+    "img/auto-3-10.webp",
+    "img/auto-3-11.webp",
+    "img/auto-3-12.webp",
+    "img/auto-3-13.webp",
+    "img/auto-3-14.webp"
+    ],
+    "descripcion": "2.0 - 210CV \n Servicio oficial \n Garantia de fabrica \n Traccion 4x4"
 }        
+,{
+  "id": 4,
+  "marca": "Ford",
+  "modelo": "Ka S+",
+  "anio": 2019,
+  "km": 130000,
+  "precio": 0,
+  "transmision": "Manual",
+  "imagenes": [
+    "img/auto-4-1.webp",
+    "img/auto-4-2.webp",
+    "img/auto-4-3.webp",
+    "img/auto-4-4.webp",
+    "img/auto-4-5.webp",
+    "img/auto-4-6.webp",
+    "img/auto-4-7.webp",
+    "img/auto-4-8.webp",
+    "img/auto-4-9.webp",
+    "img/auto-4-10.webp",
+    "img/auto-4-11.webp",
+    "img/auto-4-12.webp"
+    ],
+    "descripcion": "1.5 - 123CV\nServicios al dia"
+  
+} 
+,{
+  "id": 5,
+  "marca": "Mercedes Benz",
+  "modelo": "Sprinter Combi 515 4325",
+  "anio": 2014,
+  "km": 179000,
+  "precio": 0,
+  "transmision": "Manual",
+  "imagenes": [
+    "img/auto-5-1.webp",
+    "img/auto-5-2.webp",
+    "img/auto-5-3.webp",
+    "img/auto-5-4.webp",
+    "img/auto-5-5.webp",
+    "img/auto-5-6.webp",
+    "img/auto-5-7.webp",
+    "img/auto-5-8.webp",
+    "img/auto-5-9.webp",
+    "img/auto-5-10.webp"
+    ],
+    "descripcion": "2.1 - 150CV\n 19 + 1 asientos\n Servicios al dia \n Segundo dueño \n Neumaticos nuevos"
+  
+} 
+,{
+  "id": 6,
+  "marca": "Volkswagen",
+  "modelo": "Gol Trend",
+  "anio": 2013,
+  "km": 115000,
+  "precio": 0,
+  "transmision": "Manual",
+  "imagenes": [
+    "img/auto-6-1.webp",
+    "img/auto-6-2.webp",
+    "img/auto-6-3.webp",
+    "img/auto-6-4.webp",
+    "img/auto-6-5.webp",
+    "img/auto-6-6.webp",
+    "img/auto-6-7.webp",
+    "img/auto-6-8.webp",
+    "img/auto-6-9.webp",
+    "img/auto-6-10.webp",
+    "img/auto-6-11.webp"
+    ],
+    "descripcion": "1.6 - 101CV\n Unico Dueño\n Servicios al dia \n Version Pack 1"
+  
+} 
+,{
+  "id": 7,
+  "marca": "Toyota",
+  "modelo": "Sw4",
+  "anio": 2025,
+  "km": 15000,
+  "precio": 0,
+  "transmision": "Automatica",
+  "imagenes": [
+    "img/auto-7-1.webp",
+    "img/auto-7-2.webp",
+    "img/auto-7-3.webp",
+    "img/auto-7-4.webp",
+    "img/auto-7-5.webp",
+    "img/auto-7-6.webp",
+    "img/auto-7-7.webp",
+    "img/auto-7-8.webp",
+    "img/auto-7-9.webp",
+    "img/auto-7-10.webp",
+    "img/auto-7-11.webp",
+    "img/auto-7-12.webp",
+    "img/auto-7-13.webp",
+    "img/auto-7-14.webp"
+    ],
+    "descripcion": "Version Diamond\n Traccion 4x4 \n 7 Asientos \n Alfombras Ziel \n Servicios Oficiales \n Garantia de fabrica"
+  
+} ,{
+  "id": 8,
+  "marca": "Ford",
+  "modelo": "Kuga",
+  "anio": 2017,
+  "km": 170000,
+  "precio": 0,
+  "transmision": "Automatica",
+  "imagenes": [
+    "img/auto-8-1.webp",
+    "img/auto-8-2.webp",
+    "img/auto-8-3.webp",
+    "img/auto-8-4.webp",
+    "img/auto-8-5.webp",
+    "img/auto-8-6.webp",
+    "img/auto-8-7.webp",
+    "img/auto-8-8.webp",
+    "img/auto-8-9.webp",
+    "img/auto-8-10.webp",
+    "img/auto-8-11.webp",
+    "img/auto-8-12.webp"
+    ],
+    "descripcion": "Version Titanium\n 2.0 - 240CV \n Traccion 4x4 \n Alfombras Ziel \n Park Assist \n Sensores 360° \n Servicios al dia"
+  
+}  ,{
+  "id": 9,
+  "marca": "Fiat",
+  "modelo": "Palio",
+  "anio": 2016,
+  "km": 97000,
+  "precio": 0,
+  "transmision": "Manual",
+  "imagenes": [
+    "img/auto-9-1.webp",
+    "img/auto-9-2.webp",
+    "img/auto-9-3.webp",
+    "img/auto-9-4.webp",
+    "img/auto-9-5.webp",
+    "img/auto-9-6.webp",
+    "img/auto-9-7.webp",
+    "img/auto-9-8.webp",
+    "img/auto-9-9.webp",
+    "img/auto-9-10.webp"
+    ],
+    "descripcion": "Version Attractive\n 1.4 - 85CV \n Aire - Direccion \n Lev Cristales \n Cierre - Alarma \n Servicios al dia"
+  
+} ,{
+  "id": 10,
+  "marca": "Peugeot",
+  "modelo": "207",
+  "anio": 2010,
+  "km": 136000,
+  "precio": 0,
+  "transmision": "Manual",
+  "imagenes": [
+    "img/auto-10-1.webp",
+    "img/auto-10-2.webp",
+    "img/auto-10-3.webp",
+    "img/auto-10-4.webp",
+    "img/auto-10-5.webp",
+    "img/auto-10-6.webp",
+    "img/auto-10-7.webp",
+    "img/auto-10-8.webp",
+    "img/auto-10-9.webp",
+    "img/auto-10-10.webp",
+    "img/auto-10-11.webp"
+    ],
+    "descripcion": "Version XT\n 1.6 - 110CV \n Climatizador \n Lev Cristales \n Cierre - Alarma \n Servicios al dia"
+  
+} ,{
+  "id": 11,
+  "marca": "Volkswagen",
+  "modelo": "T-Cross",
+  "anio": 2022,
+  "km": 36000,
+  "precio": 0,
+  "transmision": "Manual",
+  "imagenes": [
+    "img/auto-11-1.webp",
+    "img/auto-11-2.webp",
+    "img/auto-11-3.webp",
+    "img/auto-11-4.webp",
+    "img/auto-11-5.webp",
+    "img/auto-11-6.webp",
+    "img/auto-11-7.webp",
+    "img/auto-11-8.webp",
+    "img/auto-11-9.webp",
+    "img/auto-11-10.webp",
+    "img/auto-11-11.webp",
+    "img/auto-11-12.webp",
+    "img/auto-11-13.webp",
+    "img/auto-11-14.webp"
+    ],
+    "descripcion": "Version Trendline\n 1.6 - 110CV \n Traccion 4x2 \n Unico Dueño \n Sensores de estacionamiento \n Servicios Oficiales"  
+} ,{
+  "id": 12,
+  "marca": "Volkswagen",
+  "modelo": "Amarok",
+  "anio": 2012,
+  "km": 228000,
+  "precio": 0,
+  "transmision": "Manual",
+  "imagenes": [
+    "img/auto-12-1.webp",
+    "img/auto-12-2.webp",
+    "img/auto-12-3.webp",
+    "img/auto-12-4.webp",
+    "img/auto-12-5.webp",
+    "img/auto-12-6.webp",
+    "img/auto-12-7.webp",
+    "img/auto-12-8.webp",
+    "img/auto-12-9.webp",
+    "img/auto-12-10.webp",
+    "img/auto-12-11.webp"
+    ],
+    "descripcion": "Version Starline\n 2.0 - 180CV \n Traccion 4x4 \n BF Goodrich \n Cierre - Alarma \n Servicios Oficiales"  
+} ,{
+  "id": 13,
+  "marca": "Fiat",
+  "modelo": "Fiorino",
+  "anio": 2016,
+  "km": 88000,
+  "precio": 0,
+  "transmision": "Manual",
+  "imagenes": [
+    "img/auto-13-1.webp",
+    "img/auto-13-2.webp",
+    "img/auto-13-3.webp",
+    "img/auto-13-4.webp",
+    "img/auto-13-5.webp",
+    "img/auto-13-6.webp",
+    "img/auto-13-7.webp",
+    "img/auto-13-8.webp",
+    "img/auto-13-9.webp",
+    "img/auto-13-10.webp",
+    "img/auto-13-11.webp"
+    ],
+    "descripcion": "Version Evo Top\n 1.4 - 87CV \n Aire - Direccion \n Lev Cristales \n Cierre \nSensores de estacionamiento \n Servicios al dia"  
+} 
 ]
