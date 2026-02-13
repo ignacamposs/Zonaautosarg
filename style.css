@@ -54,6 +54,27 @@ body{
     background-position: center;
 }
 
+/* Efecto de pulso para el botón de WhatsApp */
+.btn-whatsapp-pulse {
+    animation: pulse-green 2s infinite;
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+}
+
+@keyframes pulse-green {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
 /* EL TRUCO: Media Query para celulares (pantallas menores a 768px) */
 @media (max-width: 768px) {
     .hero-bg {

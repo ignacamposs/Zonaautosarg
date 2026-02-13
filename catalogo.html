@@ -6,7 +6,11 @@
     <title>Catalogo</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="prueba1.ico">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+
+
 <body class="bg-gradient-to-br from-[#282828] to-[#1f1f1f]">
  <header class="relative w-full">
         <div class="fixed top-5 left-1/2 -translate-x-1/2 flex justify-between items-center bg-[#282828] px-5 py-3 rounded-full w-[92%] max-w-[1200px] shadow-2xl z-[110] border border-white/5">
@@ -65,11 +69,11 @@
     
 
 <main class="max-w-[1600px] mx-auto mt-20 md:mt-32 p-5 md:p-10 grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-10">
-    <aside class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 h-fit sticky top-28">
-    <h3 class="text-xl font-bold mb-6 text-gray-800">Filtros</h3>
+    <aside class="bg-[#1E1E1E] p-6 rounded-2xl shadow-sm border border-red-600 h-fit sticky top-28">
+    <h3 class="text-xl font-bold mb-6 text-white">Filtros</h3>
 
     <div class="mb-6">
-        <label class="block text-xs font-bold text-gray-400 uppercase mb-2">Marca</label>
+        <label class="block text-xs font-bold text-white uppercase mb-2">Marca</label>
         <select id="filtro-marca" class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-orange-500 transition-colors">
             <option value="">Todas las marcas</option>
             <option value="Ford">Ford</option>
@@ -81,12 +85,13 @@
         </select>
     </div>
 
+<!--
     <div class="mb-6">
         <label class="block text-xs font-bold text-gray-400 uppercase mb-2">Precio Máximo (USD)</label>
         <div class="flex gap-2">
             <input type="number" id="filtro-precio" placeholder="Ej: 30000" class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl outline-none text-sm">
         </div>
-    </div>
+    </div>-->
 
     <button class="w-full bg-orange-600 text-white py-3 rounded-xl font-bold hover:bg-orange-700 transition-all shadow-lg shadow-orange-600/20 active:scale-95">
         Aplicar Filtros
@@ -119,7 +124,7 @@
             <div class="flex flex-col items-center md:items-start">
                 <img src="img/logo-zonaautos.avif" alt="Logo Zona Autos" class="w-48 mb-6">
                 <p class="text-gray-400 leading-relaxed text-center md:text-left">
-                    Líderes en confianza y calidad automotriz desde 2010. 🏎️
+                    Líderes en confianza y calidad automotriz desde 2015. 🏎️
                 </p>
             </div>
 
@@ -134,17 +139,17 @@
 
             <div class="text-center md:text-left">
                 <h3 class="text-lg font-bold mb-6 uppercase tracking-wider">Contacto</h3>
-                <div class="space-y-4 text-gray-400">
+                    <div class="space-y-4 text-gray-400">
                     <p class="flex items-center justify-center md:justify-start gap-3">
-                        <span class="text-[#ff6600]">📍</span> Av. Libertador 1234, CABA
+                        <span class="text-[#ff6600]">📍</span> Vice Almte. O'Connor 820, Bariloche
                     </p>
                     <p class="flex items-center justify-center md:justify-start gap-3">
-                        <span class="text-[#ff6600]">📞</span> +54 11 4567-8900
+                        <span class="text-[#ff6600]">📞</span> +54 2944 38-8443
                     </p>
                     <p class="flex items-center justify-center md:justify-start gap-3">
-                        <span class="text-[#ff6600]">📧</span> info@zonaautos.com
+                        <span class="text-[#ff6600]">📧</span> Zonaautosbrc@gmail.com
                     </p>
-                </div>
+                    </div>
             </div>
         </div>
 
@@ -152,6 +157,14 @@
             <p>&copy; 2026 Ignacio Campos - Todos los derechos reservados.</p>
         </div>
 </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init({
+        duration: 800, // Duración de la animación en milisegundos
+        once: true,    // Para que la animación pase solo una vez al bajar
+    });
+    </script>
     <script src="index.js"></script>
 </body>
 </html>

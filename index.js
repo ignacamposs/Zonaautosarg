@@ -106,45 +106,44 @@ function renderizarTarjetas(lista, idContenedor) {
         ? `<p class="col-span-full text-center text-gray-400 py-10 uppercase tracking-widest">No hay unidades disponibles</p>` 
         : '';
 
-    lista.forEach(auto => {
-    const es0km = auto.km === 0;
-    const img2 = auto.imagenes[1] ? auto.imagenes[1] : auto.imagenes[0];
+    lista.forEach((auto, index) => {
+        const es0km = auto.km === 0;
+        const img2 = auto.imagenes[1] ? auto.imagenes[1] : auto.imagenes[0];
 
-    contenedor.innerHTML += `
-        <article onclick="window.location.href='autos-detalles.html?id=${auto.id}'" 
-                 class="group bg-[#1E1E1E] border-2 border-[#333333] rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full hover:border-red-600 cursor-pointer">
-            
-            <div class="relative h-72 overflow-hidden">
-                <img src="${auto.imagenes[0]}" 
-                     class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0">
-                
-                <img src="${img2}" 
-                     class="absolute inset-0 w-full h-full object-cover opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110">
-
-                <div class="absolute top-4 right-4 z-10 ${es0km ? 'bg-black' : 'bg-red-600'} text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-lg">
-                    ${es0km ? '0 KM' : 'Usado'}
-                </div>
-            </div>
-            
-            <div class="p-5 flex flex-col justify-between flex-grow">
-                <div>
-                    <span class="text-[#FFFFFF] text-[10px] font-black uppercase tracking-tighter opacity-70">${auto.marca}</span>
-                    <h3 class="text-xl font-bold text-[#FFFFFF] leading-tight uppercase italic mb-2">${auto.modelo}</h3>
-                    <div class="flex gap-4 text-[11px] text-[#B0B0B0] font-semibold mb-4">
-                        <span>📅 ${auto.anio}</span>
-                        <span>${es0km ? '✨ Nuevo' : '🚀 ' + auto.km.toLocaleString() + ' KM'}</span>
+        // Agregamos data-aos="fade-up" para la animación
+        // Y un data-aos-delay para que aparezcan uno después del otro
+        contenedor.innerHTML += `
+            <article 
+                data-aos="fade-up" 
+                data-aos-delay="${index * 100}" 
+                onclick="window.location.href='autos-detalles.html?id=${auto.id}'" 
+                class="group bg-[#1E1E1E] border-2 border-[#333333] rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full hover:border-red-600 cursor-pointer"
+            >
+                <div class="relative h-72 overflow-hidden">
+                    <img src="${auto.imagenes[0]}" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0">
+                    <img src="${img2}" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110">
+                    <div class="absolute top-4 right-4 z-10 ${es0km ? 'bg-black' : 'bg-red-600'} text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">
+                        ${es0km ? '0 KM' : 'Usado'}
                     </div>
                 </div>
-                <div class="flex flex-col gap-3">
-                    <span class="text-2xl font-black text-white tracking-tighter">USD ${auto.precio.toLocaleString()}</span>
-                    
-                    <div class="w-full text-center ${es0km ? 'bg-white text-black' : 'bg-[#333333] text-white'} group-hover:bg-red-600 group-hover:text-white py-3 rounded-2xl font-bold transition-all duration-300 uppercase text-[10px] tracking-widest border border-transparent">
-                        Ver Ficha Técnica
+                <div class="p-5 flex flex-col justify-between flex-grow">
+                    <div>
+                        <span class="text-white/50 text-[10px] font-black uppercase tracking-tighter">${auto.marca}</span>
+                        <h3 class="text-xl font-bold text-white leading-tight uppercase italic mb-2">${auto.modelo}</h3>
+                        <div class="flex gap-4 text-[11px] text-[#B0B0B0] font-semibold mb-4">
+                            <span>📅 ${auto.anio}</span>
+                            <span>${es0km ? '✨ Nuevo' : '🚀 ' + auto.km.toLocaleString() + ' KM'}</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <span class="text-2xl font-black text-white tracking-tighter">USD ${auto.precio.toLocaleString()}</span>
+                        <div class="w-full text-center ${es0km ? 'bg-white text-black' : 'bg-[#333333] text-white'} group-hover:bg-red-600 group-hover:text-white py-3 rounded-2xl font-bold transition-all duration-300 uppercase text-[10px] tracking-widest">
+                            Ver Ficha Técnica
+                        </div>
                     </div>
                 </div>
-            </div>
-        </article>`;
-});
+            </article>`;
+    });
 }
 
 // Filtros de la barra lateral (Catálogo)
