@@ -28,9 +28,6 @@ body{
     /* 🛡️ Bloquea el scroll horizontal "fantasma" */
      width: 100%;
      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-     background-color: #f5f5f5;
-     color: #333333;
-     background-color: #474747;
 }
 
 /* Ocultar barra de scroll pero mantener funcionalidad */
