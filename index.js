@@ -231,5 +231,15 @@ function sendWhatsApp() {
     const carNameElement = document.getElementById('car-name');
     if (!carNameElement) return;
     const carName = carNameElement.innerText;
+
+    // --- EVENTO DE ANALYTICS ---
+    // Esto le avisa a Google que alguien hizo clic en contactar por un auto específico
+    if (typeof gtag === 'function') {
+        gtag('event', 'contact_whatsapp', {
+            'item_name': carName,
+            'event_category': 'Engagement'
+        });
+    }
+
     window.open(`https://wa.me/542944388443?text=${encodeURIComponent('Hola Zona Autos! Me interesa el ' + carName + ' que vi en la web.')}`, '_blank');
 }
