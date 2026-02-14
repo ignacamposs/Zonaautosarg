@@ -119,12 +119,17 @@ function renderizarTarjetas(lista, idContenedor) {
                 onclick="window.location.href='autos-detalles.html?id=${auto.id}'" 
                 class="group bg-[#1E1E1E] border-2 border-[#333333] rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full hover:border-red-600 cursor-pointer"
             >
-                <div class="relative h-72 overflow-hidden">
-                    <img src="${auto.imagenes[0]}" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0">
-                    <img src="${img2}" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110">
-                    <div class="absolute top-4 right-4 z-10 ${es0km ? 'bg-black' : 'bg-red-600'} text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">
+                <div class="relative w-full aspect-[4/3] overflow-hidden rounded-t-3xl">
+                    <img src="${auto.imagenes[0]}" 
+                        class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0 shadow-none border-none">
+                    
+                    <img src="${img2}" 
+                        class="absolute inset-0 w-full h-full object-cover opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110 shadow-none border-none">
+
+                    <div class="absolute top-4 right-4 z-10 ${es0km ? 'bg-black' : 'bg-red-600'} text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-lg">
                         ${es0km ? '0 KM' : 'Usado'}
                     </div>
+                </div>
                 </div>
                 <div class="p-5 flex flex-col justify-between flex-grow">
                     <div>
