@@ -24,18 +24,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- LÓGICA DEL BUSCADOR DEL HERO (Buscador Blanco) ---
-    // Buscamos el botón "BUSCAR" y el input de marca dentro de la sección Hero
+    // --- LÓGICA DEL BUSCADOR DEL HERO ---
     const searchBtn = document.querySelector('section button'); 
     const searchInput = document.querySelector('section input'); 
     
     if (searchBtn && searchInput) {
         searchBtn.addEventListener('click', () => {
             const valor = searchInput.value.trim();
-            // Si el usuario escribe algo, lo mandamos al catálogo con el filtro
             window.location.href = valor !== "" ? `catalogo.html?marca=${encodeURIComponent(valor)}` : `catalogo.html`;
         });
-        // También funciona al apretar Enter
         searchInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') searchBtn.click(); });
     }
 
@@ -61,14 +58,13 @@ async function cargarDatosYRenderizar() {
         if (!respuesta.ok) throw new Error("No se pudo cargar el JSON");
         todosLosAutos = await respuesta.json();
 
-        // 1. HOME: Llenar el contenedor de destacados automáticamente
+        // 1. HOME: Destacados
         const contenedorHome = document.getElementById('contenedor-destacados');
         if (contenedorHome) {
-            // Mostramos los primeros 4 del JSON para la Home
             renderizarTarjetas(todosLosAutos.slice(0, 4), 'contenedor-destacados');
         }
 
-        // 2. CATÁLOGO: Filtrar usados y revisar si viene marca del Hero
+        // 2. CATÁLOGO
         const contenedorCat = document.getElementById('contenedor-catalogo');
         if (contenedorCat) {
             const params = new URLSearchParams(window.location.search);
@@ -83,12 +79,11 @@ async function cargarDatosYRenderizar() {
             }
             renderizarTarjetas(filtrados, 'contenedor-catalogo');
             
-            // Conectar botón lateral de filtros
             const btnFiltroLateral = document.querySelector('aside button');
             if (btnFiltroLateral) btnFiltroLateral.onclick = aplicarFiltrosLaterales;
         }
 
-        // 3. 0KM: Solo km = 0
+        // 3. 0KM
         if (document.getElementById('contenedor-0km')) {
             const nuevos = todosLosAutos.filter(a => a.km === 0);
             renderizarTarjetas(nuevos, 'contenedor-0km');
@@ -97,7 +92,7 @@ async function cargarDatosYRenderizar() {
     } catch (error) { console.error("Error cargando autos:", error); }
 }
 
-// Función que crea las tarjetas con la imagen grande (H-72)
+// Función corregida para Safari/iPhone
 function renderizarTarjetas(lista, idContenedor) {
     const contenedor = document.getElementById(idContenedor);
     if (!contenedor) return;
@@ -106,31 +101,29 @@ function renderizarTarjetas(lista, idContenedor) {
         ? `<p class="col-span-full text-center text-gray-400 py-10 uppercase tracking-widest">No hay unidades disponibles</p>` 
         : '';
 
-    lista.forEach((auto, index) => {
+    lista.forEach((auto) => {
         const es0km = auto.km === 0;
         const img2 = auto.imagenes[1] ? auto.imagenes[1] : auto.imagenes[0];
 
-        // Agregamos data-aos="fade-up" para la animación
-        // Y un data-aos-delay para que aparezcan uno después del otro
         contenedor.innerHTML += `
             <article 
-                data-aos="fade-up" 
-                data-aos-delay="${index * 100}" 
                 onclick="window.location.href='autos-detalles.html?id=${auto.id}'" 
-                class="group bg-[#1E1E1E] border-2 border-[#333333] rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full hover:border-red-600 cursor-pointer"
+                class="group bg-[#1E1E1E] border-2 border-[#333333] rounded-3xl overflow-hidden shadow-md flex flex-col h-full hover:border-red-600 cursor-pointer mb-6"
             >
-                <div class="relative w-full aspect-[4/3] overflow-hidden rounded-t-3xl">
+                <div class="relative w-full overflow-hidden" style="height: 240px; min-height: 240px;">
                     <img src="${auto.imagenes[0]}" 
-                        class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0 shadow-none border-none">
+                        class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0"
+                        style="display: block; width: 100%; height: 100%; object-fit: cover;">
                     
                     <img src="${img2}" 
-                        class="absolute inset-0 w-full h-full object-cover opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110 shadow-none border-none">
+                        class="absolute inset-0 w-full h-full object-cover opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110"
+                        style="display: block; width: 100%; height: 100%; object-fit: cover;">
 
                     <div class="absolute top-4 right-4 z-10 ${es0km ? 'bg-black' : 'bg-red-600'} text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-lg">
                         ${es0km ? '0 KM' : 'Usado'}
                     </div>
                 </div>
-                </div>
+
                 <div class="p-5 flex flex-col justify-between flex-grow">
                     <div>
                         <span class="text-white/50 text-[10px] font-black uppercase tracking-tighter">${auto.marca}</span>
@@ -151,7 +144,6 @@ function renderizarTarjetas(lista, idContenedor) {
     });
 }
 
-// Filtros de la barra lateral (Catálogo)
 function aplicarFiltrosLaterales() {
     const marca = document.getElementById('filtro-marca').value;
     const precioMax = document.getElementById('filtro-precio').value;
@@ -164,7 +156,7 @@ function aplicarFiltrosLaterales() {
 }
 
 // ==========================================
-// 3. FICHA TÉCNICA (Galería y WhatsApp)
+// 3. FICHA TÉCNICA
 // ==========================================
 
 let carImages = [];
@@ -207,6 +199,8 @@ async function cargarDetalleProducto() {
 function changeImage(src) {
     const mainImg = document.getElementById('main-img');
     const thumbs = document.querySelectorAll('.thumb');
+    if(!mainImg) return;
+    
     mainImg.style.opacity = '0';
     setTimeout(() => { 
         mainImg.src = src; 
@@ -234,6 +228,8 @@ function nextPrev(delta) {
 }
 
 function sendWhatsApp() {
-    const carName = document.getElementById('car-name').innerText;
+    const carNameElement = document.getElementById('car-name');
+    if (!carNameElement) return;
+    const carName = carNameElement.innerText;
     window.open(`https://wa.me/542944388443?text=${encodeURIComponent('Hola Zona Autos! Me interesa el ' + carName + ' que vi en la web.')}`, '_blank');
 }
