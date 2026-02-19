@@ -117,30 +117,6 @@
   
 } 
 ,{
-  "id": 6,
-  "marca": "Volkswagen",
-  "modelo": "Gol Trend",
-  "anio": 2013,
-  "km": 115000,
-  "precio": 0,
-  "transmision": "Manual",
-  "imagenes": [
-    "img/auto-6-1.webp",
-    "img/auto-6-2.webp",
-    "img/auto-6-3.webp",
-    "img/auto-6-4.webp",
-    "img/auto-6-5.webp",
-    "img/auto-6-6.webp",
-    "img/auto-6-7.webp",
-    "img/auto-6-8.webp",
-    "img/auto-6-9.webp",
-    "img/auto-6-10.webp",
-    "img/auto-6-11.webp"
-    ],
-    "descripcion": "1.6 - 101CV\n Unico Dueño\n Servicios al dia \n Version Pack 1"
-  
-} 
-,{
   "id": 7,
   "marca": "Toyota",
   "modelo": "Sw4",
@@ -190,121 +166,8 @@
     ],
     "descripcion": "Version Titanium\n 2.0 - 240CV \n Traccion 4x4 \n Alfombras Ziel \n Park Assist \n Sensores 360° \n Servicios al dia"
   
-}  ,{
-  "id": 9,
-  "marca": "Fiat",
-  "modelo": "Palio",
-  "anio": 2016,
-  "km": 97000,
-  "precio": 0,
-  "transmision": "Manual",
-  "imagenes": [
-    "img/auto-9-1.webp",
-    "img/auto-9-2.webp",
-    "img/auto-9-3.webp",
-    "img/auto-9-4.webp",
-    "img/auto-9-5.webp",
-    "img/auto-9-6.webp",
-    "img/auto-9-7.webp",
-    "img/auto-9-8.webp",
-    "img/auto-9-9.webp",
-    "img/auto-9-10.webp"
-    ],
-    "descripcion": "Version Attractive\n 1.4 - 85CV \n Aire - Direccion \n Lev Cristales \n Cierre - Alarma \n Servicios al dia"
-  
-} ,{
-  "id": 10,
-  "marca": "Peugeot",
-  "modelo": "207",
-  "anio": 2010,
-  "km": 136000,
-  "precio": 0,
-  "transmision": "Manual",
-  "imagenes": [
-    "img/auto-10-1.webp",
-    "img/auto-10-2.webp",
-    "img/auto-10-3.webp",
-    "img/auto-10-4.webp",
-    "img/auto-10-5.webp",
-    "img/auto-10-6.webp",
-    "img/auto-10-7.webp",
-    "img/auto-10-8.webp",
-    "img/auto-10-9.webp",
-    "img/auto-10-10.webp",
-    "img/auto-10-11.webp"
-    ],
-    "descripcion": "Version XT\n 1.6 - 110CV \n Climatizador \n Lev Cristales \n Cierre - Alarma \n Servicios al dia"
-  
-} ,{
-  "id": 11,
-  "marca": "Volkswagen",
-  "modelo": "T-Cross",
-  "anio": 2022,
-  "km": 36000,
-  "precio": 0,
-  "transmision": "Manual",
-  "imagenes": [
-    "img/auto-11-1.webp",
-    "img/auto-11-2.webp",
-    "img/auto-11-3.webp",
-    "img/auto-11-4.webp",
-    "img/auto-11-5.webp",
-    "img/auto-11-6.webp",
-    "img/auto-11-7.webp",
-    "img/auto-11-8.webp",
-    "img/auto-11-9.webp",
-    "img/auto-11-10.webp",
-    "img/auto-11-11.webp",
-    "img/auto-11-12.webp",
-    "img/auto-11-13.webp",
-    "img/auto-11-14.webp"
-    ],
-    "descripcion": "Version Trendline\n 1.6 - 110CV \n Traccion 4x2 \n Unico Dueño \n Sensores de estacionamiento \n Servicios Oficiales"  
-} ,{
-  "id": 12,
-  "marca": "Volkswagen",
-  "modelo": "Amarok",
-  "anio": 2012,
-  "km": 228000,
-  "precio": 0,
-  "transmision": "Manual",
-  "imagenes": [
-    "img/auto-12-1.webp",
-    "img/auto-12-2.webp",
-    "img/auto-12-3.webp",
-    "img/auto-12-4.webp",
-    "img/auto-12-5.webp",
-    "img/auto-12-6.webp",
-    "img/auto-12-7.webp",
-    "img/auto-12-8.webp",
-    "img/auto-12-9.webp",
-    "img/auto-12-10.webp",
-    "img/auto-12-11.webp"
-    ],
-    "descripcion": "Version Starline\n 2.0 - 180CV \n Traccion 4x4 \n BF Goodrich \n Cierre - Alarma \n Servicios Oficiales"  
-} ,{
-  "id": 13,
-  "marca": "Fiat",
-  "modelo": "Fiorino",
-  "anio": 2016,
-  "km": 88000,
-  "precio": 0,
-  "transmision": "Manual",
-  "imagenes": [
-    "img/auto-13-1.webp",
-    "img/auto-13-2.webp",
-    "img/auto-13-3.webp",
-    "img/auto-13-4.webp",
-    "img/auto-13-5.webp",
-    "img/auto-13-6.webp",
-    "img/auto-13-7.webp",
-    "img/auto-13-8.webp",
-    "img/auto-13-9.webp",
-    "img/auto-13-10.webp",
-    "img/auto-13-11.webp"
-    ],
-    "descripcion": "Version Evo Top\n 1.4 - 87CV \n Aire - Direccion \n Lev Cristales \n Cierre \nSensores de estacionamiento \n Servicios al dia"  
-} ,{
+}
+,{
   "id": 14,
   "marca": "Renault",
   "modelo": "Clio",
