@@ -304,5 +304,69 @@
     "img/auto-13-11.webp"
     ],
     "descripcion": "Version Evo Top\n 1.4 - 87CV \n Aire - Direccion \n Lev Cristales \n Cierre \nSensores de estacionamiento \n Servicios al dia"  
+} ,{
+  "id": 14,
+  "marca": "Renault",
+  "modelo": "Clio",
+  "anio": 2016,
+  "km": 260000,
+  "precio": 0,
+  "transmision": "Manual",
+  "imagenes": [
+    "img/auto-14-1.webp",
+    "img/auto-14-2.webp",
+    "img/auto-14-3.webp",
+    "img/auto-14-4.webp",
+    "img/auto-14-5.webp",
+    "img/auto-14-6.webp",
+    "img/auto-14-7.webp",
+    "img/auto-14-8.webp",
+    "img/auto-14-9.webp",
+    "img/auto-14-10.webp"]
+    ,
+    "descripcion": "Version Mio Work \n 1.2 - 16CV \n Unica Mano \n Neumaticos Nuevos \n Servicios al dia"  
+} ,{
+  "id": 15,
+  "marca": "Chevrolet",
+  "modelo": "Onix Joy",
+  "anio": 2019,
+  "km": 130000,
+  "precio": 0,
+  "transmision": "Manual",
+  "imagenes": [
+    "img/auto-15-1.webp",
+    "img/auto-15-2.webp",
+    "img/auto-15-3.webp",
+    "img/auto-15-4.webp",
+    "img/auto-15-5.webp",
+    "img/auto-15-6.webp",
+    "img/auto-15-7.webp",
+    "img/auto-15-8.webp",
+    "img/auto-15-9.webp",
+    "img/auto-15-10.webp",
+    "img/auto-15-11.webp"
+    ],
+    "descripcion": "Aire - Direccion \n 1.4 - 98CV \n Servicios al dia"  
+} ,{
+  "id": 16,
+  "marca": "Renault",
+  "modelo": "Kangoo Authentique",
+  "anio": 2015,
+  "km": 260000,
+  "precio": 0,
+  "transmision": "Manual",
+  "imagenes": [
+    "img/auto-16-1.webp",
+    "img/auto-16-2.webp",
+    "img/auto-16-3.webp",
+    "img/auto-16-4.webp",
+    "img/auto-16-5.webp",
+    "img/auto-16-6.webp",
+    "img/auto-16-7.webp",
+    "img/auto-16-8.webp",
+    "img/auto-16-9.webp",
+    "img/auto-16-10.webp"
+    ],
+    "descripcion": "autentique 1PLC \n 1.6 - 16CV \n Neumaticos Nuevos \n Servicios al dia"  
 } 
 ]
