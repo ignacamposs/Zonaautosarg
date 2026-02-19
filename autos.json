@@ -115,6 +115,29 @@
     ],
     "descripcion": "2.1 - 150CV\n 19 + 1 asientos\n Servicios al dia \n Segundo dueño \n Neumaticos nuevos"
   
+} ,{
+  "id": 6,
+  "marca": "Toyota",
+  "modelo": "Corolla Cross XLI",
+  "anio": 2025,
+  "km": 2500,
+  "precio": 0,
+  "transmision": "Automatica",
+  "imagenes": [
+    "img/auto-6-1.webp",
+    "img/auto-6-2.webp",
+    "img/auto-6-3.webp",
+    "img/auto-6-4.webp",
+    "img/auto-6-5.webp",
+    "img/auto-6-6.webp",
+    "img/auto-6-7.webp",
+    "img/auto-6-8.webp",
+    "img/auto-6-9.webp",
+    "img/auto-6-10.webp",
+    "img/auto-6-11.webp",
+    "img/auto-6-12.webp"
+    ],
+    "descripcion": "2.0 - 170CV\n Asistencia de Carril\n Velocidad Crucero \n Garantiad de Fabrica"  
 } 
 ,{
   "id": 7,
