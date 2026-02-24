@@ -79,8 +79,10 @@ async function cargarDatosYRenderizar() {
             }
             renderizarTarjetas(filtrados, 'contenedor-catalogo');
             
-            const btnFiltroLateral = document.querySelector('aside button');
-            if (btnFiltroLateral) btnFiltroLateral.onclick = aplicarFiltrosLaterales;
+            const btnFiltro = document.getElementById('btn-aplicar-filtros');
+            if (btnFiltro) {
+                btnFiltro.onclick = aplicarFiltrosLaterales;
+        }
         }
 
         // 3. 0KM
@@ -151,16 +153,36 @@ function renderizarTarjetas(lista, idContenedor) {
 });
 }
 
-function aplicarFiltrosLaterales() {
-    const marca = document.getElementById('filtro-marca').value;
-    const precioMax = document.getElementById('filtro-precio').value;
+window.aplicarFiltrosLaterales = function() {
+    console.log("Iniciando filtrado...");
+
+    // Obtenemos el elemento de marca
+    const elMarca = document.getElementById('filtro-marca');
+    
+    // Verificación de seguridad: si no existe el elemento, salimos para evitar el error
+    if (!elMarca) {
+        console.error("No se encontró el elemento 'filtro-marca' en el HTML");
+        return;
+    }
+
+    const marcaSeleccionada = elMarca.value;
+    
+    // Filtramos siempre sobre la lista completa de usados (km > 0)
+    // Asegurate que 'todosLosAutos' tenga los datos cargados del JSON
     let filtrados = todosLosAutos.filter(a => a.km > 0);
 
-    if (marca) filtrados = filtrados.filter(a => a.marca === marca);
-    if (precioMax) filtrados = filtrados.filter(a => a.precio <= parseInt(precioMax));
+    if (marcaSeleccionada !== "") {
+        filtrados = filtrados.filter(a => a.marca === marcaSeleccionada);
+    }
 
+    console.log("Autos encontrados:", filtrados.length);
+
+    // Renderizamos los resultados
     renderizarTarjetas(filtrados, 'contenedor-catalogo');
-}
+    
+    // Scroll suave hacia arriba para ver los resultados
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+};
 
 // ==========================================
 // 3. FICHA TÉCNICA
