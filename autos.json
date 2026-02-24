@@ -1,6 +1,27 @@
 [
 {
   "id": 1,
+  "marca": "Toyota",
+  "modelo": "Corolla Seg",
+  "anio": 2011,
+  "km": 120000,
+  "precio": 0,
+  "transmision": "Automatica",
+  "imagenes": ["img/auto-10-1.webp",
+    "img/auto-10-2.webp",
+    "img/auto-10-3.webp",
+    "img/auto-10-4.webp",
+    "img/auto-10-5.webp",
+    "img/auto-10-6.webp",
+    "img/auto-10-7.webp",
+    "img/auto-10-8.webp",
+    "img/auto-10-9.webp",
+    "img/auto-10-10.webp",
+    "img/auto-10-11.webp"
+  ],
+  "descripcion": "1.8 - 136CV \n Cuero \n Servicios al dia"
+},  {
+  "id": 2,
   "marca": "Ford",
   "modelo": "Focus S",
   "anio": 2018,
@@ -21,7 +42,7 @@
   "descripcion": "1.6 - 125CV \n Servicios al dia"
 },
   {
-    "id": 2,
+    "id": 3,
     "marca": "Ford",
     "modelo": "Ecosport Titaniun",
     "anio": 2014,
@@ -43,7 +64,7 @@
     "descripcion": "1.6 -110CV \n Traccion 4X2 \n Climatizador \n Servicios Oficiales \n Unico dueño "
   },
   {
-  "id": 3,
+  "id": 4,
   "marca": "Ford",
   "modelo": "Ranger XLT",
   "anio": 2024,
@@ -69,7 +90,7 @@
     "descripcion": "2.0 - 210CV \n Servicio oficial \n Garantia de fabrica \n Traccion 4x4"
 }        
 ,{
-  "id": 4,
+  "id": 5,
   "marca": "Ford",
   "modelo": "Ka S+",
   "anio": 2019,
@@ -91,29 +112,6 @@
     "img/auto-4-12.webp"
     ],
     "descripcion": "1.5 - 123CV\nServicios al dia"
-  
-} 
-,{
-  "id": 5,
-  "marca": "Mercedes Benz",
-  "modelo": "Sprinter Combi 515 4325",
-  "anio": 2014,
-  "km": 179000,
-  "precio": 0,
-  "transmision": "Manual",
-  "imagenes": [
-    "img/auto-5-1.webp",
-    "img/auto-5-2.webp",
-    "img/auto-5-3.webp",
-    "img/auto-5-4.webp",
-    "img/auto-5-5.webp",
-    "img/auto-5-6.webp",
-    "img/auto-5-7.webp",
-    "img/auto-5-8.webp",
-    "img/auto-5-9.webp",
-    "img/auto-5-10.webp"
-    ],
-    "descripcion": "2.1 - 150CV\n 19 + 1 asientos\n Servicios al dia \n Segundo dueño \n Neumaticos nuevos"
   
 } ,{
   "id": 6,
@@ -165,32 +163,33 @@
     ],
     "descripcion": "Version Diamond\n Traccion 4x4 \n 7 Asientos \n Alfombras Ziel \n Servicios Oficiales \n Garantia de fabrica"
   
-} ,{
-  "id": 8,
-  "marca": "Ford",
-  "modelo": "Kuga",
-  "anio": 2017,
-  "km": 170000,
+}, {
+  "id": 9,
+  "marca": "Peugeot",
+  "modelo": "308 Allure",
+  "anio": 2016,
+  "km": 93000,
   "precio": 0,
-  "transmision": "Automatica",
+  "transmision": "Manual",
   "imagenes": [
-    "img/auto-8-1.webp",
-    "img/auto-8-2.webp",
-    "img/auto-8-3.webp",
-    "img/auto-8-4.webp",
-    "img/auto-8-5.webp",
-    "img/auto-8-6.webp",
-    "img/auto-8-7.webp",
-    "img/auto-8-8.webp",
-    "img/auto-8-9.webp",
-    "img/auto-8-10.webp",
-    "img/auto-8-11.webp",
-    "img/auto-8-12.webp"
+    "img/auto-9-1.webp",
+    "img/auto-9-2.webp",
+    "img/auto-9-3.webp",
+    "img/auto-9-4.webp",
+    "img/auto-9-5.webp",
+    "img/auto-9-6.webp",
+    "img/auto-9-7.webp",
+    "img/auto-9-8.webp",
+    "img/auto-9-9.webp",
+    "img/auto-9-10.webp",
+    "img/auto-9-11.webp",
+    "img/auto-9-12.webp"
     ],
-    "descripcion": "Version Titanium\n 2.0 - 240CV \n Traccion 4x4 \n Alfombras Ziel \n Park Assist \n Sensores 360° \n Servicios al dia"
-  
+    "descripcion": "1.6 - 115CV\n Servicios al dia"
+   
 }
-,{
+
+ ,{
   "id": 14,
   "marca": "Renault",
   "modelo": "Clio",
