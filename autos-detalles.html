@@ -3,232 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto 1</title>
+    <title id="dynamic-title">Zona Autos ARG | Detalle de Unidad</title>
+    
     <link rel="stylesheet" href="../style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" type="image/x-icon" href="prueba1.ico">
+    <link rel="icon" type="image/x-icon" href="../prueba1.ico">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Google tag (gtag.js) -->
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QJ21ZKW8CT"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-QJ21ZKW8CT');
     </script>
+
+    <meta id="og-title" property="og:title" content="Zona Autos ARG | Detalle de Unidad">
+    <meta id="og-description" property="og:description" content="Consultá el equipamiento y precio de esta unidad seleccionada en nuestro catálogo.">
+    <meta id="og-image" property="og:image" content="https://zonaautosarg.com/img/logo-zonaautos.avif"> 
+    <meta property="og:url" content="https://zonaautosarg.com">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta id="twitter-title" name="twitter:title" content="Zona Autos ARG">
+    <meta id="twitter-image" name="twitter:image" content="https://zonaautosarg.com/img/logo-zonaautos.avif">
 </head>
-<body>
+
+<body class="bg-[#1a1a1a] antialiased">
     <header class="relative w-full">
-      <div
-        class="fixed top-5 left-1/2 -translate-x-1/2 flex justify-between items-center bg-[#282828] px-5 py-3 rounded-full w-[92%] max-w-[1200px] shadow-2xl z-[110] border border-white/5"
-      >
-        <div class="logo">
-          <a href="../index.html">
-            <img
-              src="../img/logo-zonaautos.avif"
-              alt="Logo"
-              class="h-8 md:h-10 w-auto"
-            />
-          </a>
+        <div class="fixed top-5 left-1/2 -translate-x-1/2 flex justify-between items-center bg-[#282828] px-5 py-3 rounded-full w-[92%] max-w-[1200px] shadow-2xl z-[110] border border-white/5">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../img/logo-zonaautos.avif" alt="Logo" class="h-8 md:h-10 w-auto" />
+                </a>
+            </div>
+
+            <nav class="hidden md:block">
+                <ul class="flex items-center gap-8 text-white">
+                    <li><a href="../index.html" class="text-white/80 hover:text-red-600 transition-colors">Inicio</a></li>
+                    <li><a href="../catalogo.html" class="bg-red-700 px-4 py-2 rounded-full font-bold">Autos Usados</a></li>
+                    <li><a href="../0km.html" class="text-white/80 hover:text-red-600 transition-colors">0 km</a></li>
+                    <li><a href="../contact.html" class="text-white/80 hover:text-red-600 transition-colors">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <button id="menu-btn" class="flex flex-col gap-1.5 md:hidden p-2 z-[120]" aria-label="Abrir menú">
+                <span class="w-6 h-0.5 bg-white rounded-full"></span>
+                <span class="w-6 h-0.5 bg-white rounded-full"></span>
+                <span class="w-6 h-0.5 bg-white rounded-full"></span>
+            </button>
         </div>
 
-        <nav class="hidden md:block">
-          <ul class="flex items-center gap-8 text-white">
-            <li>
-              <a href="../index.html" class="text-white/80 hover:text-red-600 transition-colors"
-                >Inicio</a
-              >
-            </li>
-            <li>
-              <a
-                href="../catalogo.html"
-                class="bg-red-700 px-4 py-2 rounded-full font-bold"
-                >Autos Usados</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="text-white/80 hover:text-red-600 transition-colors"
-                >0 km</a
-              >
-            </li>
-            <li>
-              <a
-                href="../contact.html"
-                class="text-white/80 hover:text-red-600 transition-colors"
-                >Contacto</a
-              >
-            </li>
-          </ul>
-        </nav>
-
-        <button
-          id="menu-btn"
-          class="flex flex-col gap-1.5 md:hidden p-2 z-[120]"
-          aria-label="Abrir menú"
-        >
-          <span class="w-6 h-0.5 bg-white rounded-full"></span>
-          <span class="w-6 h-0.5 bg-white rounded-full"></span>
-          <span class="w-6 h-0.5 bg-white rounded-full"></span>
-        </button>
-      </div>
-
-      <div id="mobile-menu" class="hidden fixed top-24 left-1/2 -translate-x-1/2 w-[90%] bg-[#282828] rounded-3xl p-6 z-[105] md:hidden shadow-2xl flex-col gap-5 text-center transition-all duration-300">
+        <div id="mobile-menu" class="hidden fixed top-24 left-1/2 -translate-x-1/2 w-[90%] bg-[#282828] rounded-3xl p-6 z-[105] md:hidden shadow-2xl flex-col gap-5 text-center transition-all duration-300">
             <a href="../index.html" class="text-white/80 text-lg py-2 border-b border-white/5">Inicio</a>
             <a href="../catalogo.html" class="text-white text-lg font-bold py-2 border-b border-white/5">Autos Usados</a>
-            <a href="#" class="text-white/80 text-lg py-2 border-b border-white/5">0 km</a>
+            <a href="../0km.html" class="text-white/80 text-lg py-2 border-b border-white/5">0 km</a>
             <a href="../contact.html" class="text-white/80 text-lg py-2 border-b border-white/5">Contacto</a>
-    </div>
-</header>
-
-<main class="min-h-screen bg-[#1a1a1a] pt-32 pb-12 px-6">
-  <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        
-        <div class="space-y-6">
-    <div class="relative group aspect-square rounded-3xl overflow-hidden bg-[#282828] border border-white/5 shadow-2xl">
-        
-        <img id="main-img" src="../img/audi.jpg" alt="Vista Principal" class="w-full h-full object-cover transition-opacity duration-300">
-
-        <button onclick="nextPrev(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-orange-600 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-            </svg>
-        </button>
-
-        <button onclick="nextPrev(1)" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-orange-600 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-            </svg>
-        </button>
-    </div>
-    
-    <div id="contenedor-thumbs" class="flex gap-4 justify-start overflow-x-auto pb-4 px-2 no-scrollbar scroll-smooth">
-    </div>
-</div>
-        <button onclick="nextPrev(1)" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-orange-600 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-          </svg>
-        </button>
-
-        <div class="flex flex-col">
-          <h1 id="car-name" class="text-6xl font-black text-white italic tracking-tighter uppercase">Cargando...</h1>
-          <p id="car-transmision-text" class="text-orange-500 font-bold text-2xl mt-2 italic">Detalle de unidad</p>
-          
-          <div class="mt-10 grid grid-cols-3 gap-4 py-6 border-y border-white/10">
-              <div class="text-center">
-                  <span class="block text-gray-500 text-[10px] uppercase font-bold tracking-widest">Año</span>
-                  <span id="car-year" class="text-white font-bold text-lg">-</span>
-              </div>
-              <div class="text-center border-x border-white/10">
-                  <span class="block text-gray-500 text-[10px] uppercase font-bold tracking-widest">KM</span>
-                  <span id="car-km" class="text-white font-bold text-lg">-</span>
-              </div>
-              <div class="text-center">
-                  <span class="block text-gray-500 text-[10px] uppercase font-bold tracking-widest">Caja</span>
-                  <span id="car-transmision" class="text-white font-bold text-lg">-</span>
-              </div>
-          </div>
-          <div class="mt-8 border-t border-gray-100 pt-6">
-              <h3 class="text-sm font-bold text-white uppercase tracking-widest mb-3">
-                  Descripción
-              </h3>
-              <p id="car-description" class="text-white text-sm leading-relaxed">
-                  Cargando descripción...
-              </p>
-          </div>
-
-           <div class="mt-10">
-              <div class="text-gray-400 text-sm uppercase font-bold mb-2">Precio Final</div>
-              <div class="text-white mb-8">
-                  <span class="text-4xl font-light">USD</span>
-                  <span id="car-price" class="text-5xl font-black ml-2">0</span>
-              </div>
-              
-              <button onclick="sendWhatsApp()" class="w-full bg-[#25D366] hover:bg-[#128C7E] text-white py-5 rounded-2xl font-black text-lg transition-all flex items-center justify-center gap-3 shadow-xl shadow-green-900/20 active:scale-[0.98]">
-                  Consultar por WhatsApp
-              </button>
-          </div>
         </div>
-  </div>
-</main>
+    </header>
 
-<footer
-      class="bg-[#1a1a1a] text-white pt-16 pb-6 px-[5%] border-t-4 border-[#ff6600]"
-    >
-      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-        <div class="flex flex-col items-center md:items-start">
-          <img
-            src="../img/logo-zonaautos.avif"
-            alt="Logo Zona Autos"
-            class="w-48 mb-6"
-          />
-          <p class="text-gray-400 leading-relaxed text-center md:text-left">
-            Líderes en confianza y calidad automotriz desde 2015. 🏎️
-          </p>
-        </div>
+    <main class="min-h-screen pt-32 pb-12 px-6">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            
+            <div class="space-y-6">
+                <div class="relative group aspect-square rounded-3xl overflow-hidden bg-[#282828] border border-white/5 shadow-2xl">
+                    <img id="main-img" src="../img/placeholder-car.jpg" alt="Vista Principal" class="w-full h-full object-cover transition-opacity duration-300">
 
-        <div class="text-center md:text-left">
-          <h3 class="text-lg font-bold mb-6 uppercase tracking-wider">
-            Explorar
-          </h3>
-          <ul class="space-y-4">
-            <li>
-              <a
-                href="#"
-                class="text-gray-400 hover:text-[#ff6600] transition-colors duration-300"
-                >Usados Seleccionados</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="text-gray-400 hover:text-[#ff6600] transition-colors duration-300"
-                >Financiación</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="text-gray-400 hover:text-[#ff6600] transition-colors duration-300"
-                >Vende tu Auto</a
-              >
-            </li>
-          </ul>
-        </div>
+                    <button onclick="nextPrev(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-orange-600 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
+                    </button>
 
-        <div class="text-center md:text-left">
-          <h3 class="text-lg font-bold mb-6 uppercase tracking-wider">Contacto</h3>
-            <div class="space-y-4 text-gray-400">
-              <p class="flex items-center justify-center md:justify-start gap-3">
-                <span class="text-[#ff6600]">📍</span> Vice Almte. O'Connor 820, Bariloche
-              </p>
-              <p class="flex items-center justify-center md:justify-start gap-3">
-                <span class="text-[#ff6600]">📞</span> +54 2944 38-8443
-              </p>
-              <p class="flex items-center justify-center md:justify-start gap-3">
-                <span class="text-[#ff6600]">📧</span> Zonaautosbrc@gmail.com
-              </p>
+                    <button onclick="nextPrev(1)" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-orange-600 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
+                    </button>
+                </div>
+                
+                <div id="contenedor-thumbs" class="flex gap-4 justify-start overflow-x-auto pb-4 px-2 no-scrollbar scroll-smooth">
+                    </div>
+            </div>
+
+            <div class="flex flex-col">
+                <h1 id="car-name" class="text-6xl font-black text-white italic tracking-tighter uppercase">Cargando...</h1>
+                <p id="car-transmision-text" class="text-orange-500 font-bold text-2xl mt-2 italic uppercase">Detalle de unidad</p>
+                
+                <div class="mt-10 grid grid-cols-3 gap-4 py-6 border-y border-white/10">
+                    <div class="text-center">
+                        <span class="block text-gray-500 text-[10px] uppercase font-bold tracking-widest">Año</span>
+                        <span id="car-year" class="text-white font-bold text-lg">-</span>
+                    </div>
+                    <div class="text-center border-x border-white/10">
+                        <span class="block text-gray-500 text-[10px] uppercase font-bold tracking-widest">KM</span>
+                        <span id="car-km" class="text-white font-bold text-lg">-</span>
+                    </div>
+                    <div class="text-center">
+                        <span class="block text-gray-500 text-[10px] uppercase font-bold tracking-widest">Caja</span>
+                        <span id="car-transmision" class="text-white font-bold text-lg">-</span>
+                    </div>
+                </div>
+
+                <div class="mt-8 pt-6">
+                    <h3 class="text-sm font-bold text-white uppercase tracking-widest mb-3 italic">Descripción</h3>
+                    <p id="car-description" class="text-gray-300 text-sm leading-relaxed whitespace-pre-line">
+                        Cargando descripción...
+                    </p>
+                </div>
+
+                <div class="mt-10 bg-[#222222] p-8 rounded-3xl border border-white/5">
+                    <div class="text-gray-400 text-xs uppercase font-bold mb-2 tracking-widest">Precio Final</div>
+                    <div class="text-white mb-8 flex items-baseline">
+                        <span id="currency-label" class="text-3xl font-light opacity-50">USD</span>
+                        <span id="car-price" class="text-6xl font-black ml-3 tracking-tighter">0</span>
+                    </div>
+                    
+                    <button onclick="sendWhatsApp()" class="w-full bg-[#25D366] hover:bg-[#128C7E] text-white py-5 rounded-2xl font-black text-lg transition-all flex items-center justify-center gap-3 shadow-xl shadow-green-900/20 active:scale-[0.98]">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Consultar por WhatsApp
+                    </button>
+                </div>
             </div>
         </div>
-      </div>
+    </main>
 
-      <div
-        class="mt-16 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm"
-      >
-        <p>&copy; 2026 Ignacio Campos - Todos los derechos reservados.</p>
-      </div>
+    <footer class="bg-[#1a1a1a] text-white pt-16 pb-6 px-[5%] border-t-4 border-[#ff6600]">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="flex flex-col items-center md:items-start">
+                <img src="../img/logo-zonaautos.avif" alt="Logo Zona Autos" class="w-48 mb-6" />
+                <p class="text-gray-400 leading-relaxed text-center md:text-left">
+                    Líderes en confianza y calidad automotriz desde 2015. 🏎️
+                </p>
+            </div>
+
+            <div class="text-center md:text-left">
+                <h3 class="text-lg font-bold mb-6 uppercase tracking-wider italic">Explorar</h3>
+                <ul class="space-y-4 text-gray-400">
+                    <li><a href="../catalogo.html" class="hover:text-[#ff6600] transition-colors">Usados Seleccionados</a></li>
+                    <li><a href="#" class="hover:text-[#ff6600] transition-colors">Financiación</a></li>
+                    <li><a href="../contact.html" class="hover:text-[#ff6600] transition-colors">Vende tu Auto</a></li>
+                </ul>
+            </div>
+
+            <div class="text-center md:text-left">
+                <h3 class="text-lg font-bold mb-6 uppercase tracking-wider italic">Contacto</h3>
+                <div class="space-y-4 text-gray-400">
+                    <p class="flex items-center justify-center md:justify-start gap-3">📍 Vice Almte. O'Connor 820, Bariloche</p>
+                    <p class="flex items-center justify-center md:justify-start gap-3">📞 +54 2944 38-8443</p>
+                    <p class="flex items-center justify-center md:justify-start gap-3">📧 Zonaautosbrc@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="mt-16 pt-8 border-t border-gray-800 text-center text-gray-500 text-[10px] uppercase tracking-widest">
+            <p>&copy; 2026 Ignacio Campos - Todos los derechos reservados.</p>
+        </div>
     </footer>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      AOS.init({
-        duration: 800, // Duración de la animación en milisegundos
-        once: true,    // Para que la animación pase solo una vez al bajar
-      });
+      AOS.init({ duration: 800, once: true });
     </script>
-
-<script src="../index.js"></script>
+    <script src="../index.js"></script>
 </body>
 </html>
