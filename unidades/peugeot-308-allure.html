@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Zona Autos | Peugeot 308 Allure</title>
+    <meta property="og:title" content="Peugeot 308 Allure 2016 - Zona Autos">
+    <meta property="og:image" content="https://zonaautosarg.com/img/auto-9-1.webp">
+    <link rel="icon" type="image/x-icon" href="../prueba1.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../unidad.js" defer></script> 
+</head>
+<body class="bg-[#1a1a1a] text-white selection:bg-red-600">
+
+    <header class="fixed top-0 left-0 w-full z-50 p-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center bg-[#282828]/90 backdrop-blur-md p-4 rounded-full border border-white/5 shadow-2xl">
+            <a href="../index.html">
+                <img src="../img/logo-zonaautos.avif" alt="Logo" class="h-8 md:h-10">
+            </a>
+            <a href="../catalogo.html" class="text-[10px] font-bold uppercase tracking-widest bg-red-600 px-4 py-2 rounded-full">Volver al Catálogo</a>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-20 px-6 max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            
+            <div class="space-y-4">
+                <div class="relative group overflow-hidden rounded-[40px] border border-white/5 shadow-2xl bg-[#282828]">
+                    <button onclick="nextPrev(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/50 p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
+                    </button>
+
+                    <img id="main-img" src="../img/auto-9-1.webp" class="w-full aspect-square object-cover transition-all duration-500" alt="Auto">
+
+                    <button onclick="nextPrev(1)" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/50 p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
+                    </button>
+                </div>
+                
+                <div id="contenedor-thumbs" class="flex gap-3 overflow-x-auto pb-2 thumbnails-container"></div>
+            </div>
+
+            <div class="flex flex-col">
+                <h1 id="car-name" class="text-6xl font-black text-white italic tracking-tighter uppercase">Peugeot 308 Allure</h1>
+                <p id="car-transmision-text" class="text-orange-500 font-bold text-2xl mt-2 italic uppercase">Detalle de unidad</p>
+                
+                <div class="mt-10 grid grid-cols-3 gap-4 py-6 border-y border-white/10">
+                    <div class="text-center">
+                        <span class="block text-gray-500 text-[10px] uppercase font-bold tracking-widest">Año</span>
+                        <span id="car-year" class="text-white font-bold text-lg">2016</span>
+                    </div>
+                    <div class="text-center border-x border-white/10">
+                        <span class="block text-gray-500 text-[10px] uppercase font-bold tracking-widest">KM</span>
+                        <span id="car-km" class="text-white font-bold text-lg">93.000</span>
+                    </div>
+                    <div class="text-center">
+                        <span class="block text-gray-500 text-[10px] uppercase font-bold tracking-widest">Caja</span>
+                        <span id="car-transmision" class="text-white font-bold text-lg">Manual</span>
+                    </div>
+                </div>
+
+                <div class="mt-8 pt-6">
+                    <h3 class="text-sm font-bold text-white uppercase tracking-widest mb-3 italic">Descripción</h3>
+                    <p id="car-description" class="text-gray-300 text-sm leading-relaxed whitespace-pre-line">1.6 - 115CV <br> Servicios al dia </p>
+                </div>
+
+                <div class="mt-10 bg-[#222222] p-8 rounded-3xl border border-white/5">
+                    <div class="text-gray-400 text-xs uppercase font-bold mb-2 tracking-widest">Precio Final</div>
+                    <div class="text-white mb-8 flex items-baseline">
+                        <span id="currency-label" class="text-3xl font-light opacity-50" style="display: none;">USD</span>
+                        <span id="car-price" class="text-6xl font-black ml-3 tracking-tighter">Consultar</span>
+                    </div>
+                    
+                    <button onclick="sendWhatsApp()" class="w-full bg-[#25D366] hover:bg-[#128C7E] text-white py-5 rounded-2xl font-black text-lg transition-all flex items-center justify-center gap-3 shadow-xl shadow-green-900/20 active:scale-[0.98]">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+                        Consultar por WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-[#1a1a1a] text-white pt-16 pb-6 px-[5%] border-t-4 border-[#ff6600]">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="flex flex-col items-center md:items-start">
+                <img src="../img/logo-zonaautos.avif" alt="Logo Zona Autos" class="w-48 mb-6" />
+                <p class="text-gray-400 leading-relaxed text-center md:text-left">
+                    Líderes en confianza y calidad automotriz desde 2015. 🏎️
+                </p>
+            </div>
+
+            <div class="text-center md:text-left">
+                <h3 class="text-lg font-bold mb-6 uppercase tracking-wider italic">Explorar</h3>
+                <ul class="space-y-4 text-gray-400">
+                    <li><a href="../catalogo.html" class="hover:text-[#ff6600] transition-colors">Usados Seleccionados</a></li>
+                    <li><a href="#" class="hover:text-[#ff6600] transition-colors">Financiación</a></li>
+                    <li><a href="../contact.html" class="hover:text-[#ff6600] transition-colors">Vende tu Auto</a></li>
+                </ul>
+            </div>
+
+            <div class="text-center md:text-left">
+                <h3 class="text-lg font-bold mb-6 uppercase tracking-wider italic">Contacto</h3>
+                <div class="space-y-4 text-gray-400">
+                    <p class="flex items-center justify-center md:justify-start gap-3">📍 Vice Almte. O'Connor 820, Bariloche</p>
+                    <p class="flex items-center justify-center md:justify-start gap-3">📞 +54 2944 38-8443</p>
+                    <p class="flex items-center justify-center md:justify-start gap-3">📧 Zonaautosbrc@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="mt-16 pt-8 border-t border-gray-800 text-center text-gray-500 text-[10px] uppercase tracking-widest">
+            <p>&copy; 2026 Ignacio Campos - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const fotosDeEsteAuto = ["img/auto-9-1.webp", 
+            "img/auto-9-2.webp", 
+            "img/auto-9-3.webp", 
+            "img/auto-9-4.webp", 
+            "img/auto-9-5.webp", 
+            "img/auto-9-6.webp", 
+            "img/auto-9-7.webp", 
+            "img/auto-9-8.webp", 
+            "img/auto-9-9.webp", 
+            "img/auto-9-10.webp", 
+            "img/auto-9-11.webp", 
+            "img/auto-9-12.webp"];
+            // Llamamos a la función del unidad.js
+            if (typeof initSlider === 'function') {
+                initSlider(fotosDeEsteAuto);
+            }
+        });
+    </script>
+</body>
+</html>
