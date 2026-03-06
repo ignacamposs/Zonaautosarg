@@ -187,7 +187,76 @@
     ],
     "descripcion": "1.6 - 115CV\n Servicios al dia"
    
+}, {
+  "id": 11,
+  "marca": "Volkswagen",
+  "modelo": "Touareg",
+  "anio": 2010,
+  "km": 118000,
+  "precio": 0,
+  "transmision": "Automatica",
+  "imagenes": [
+    "img/auto-11-1.webp",
+    "img/auto-11-2.webp",
+    "img/auto-11-3.webp",
+    "img/auto-11-4.webp",
+    "img/auto-11-5.webp",
+    "img/auto-11-6.webp",
+    "img/auto-11-7.webp",
+    "img/auto-11-8.webp",
+    "img/auto-11-9.webp",
+    "img/auto-11-10.webp",
+    "img/auto-11-11.webp",
+    "img/auto-11-12.webp",
+    "img/auto-11-13.webp"
+    ],
+    "descripcion": "Version Style\n V6 - 3.6 - 280CV\n Traccion 4x4 \n 4 modos de manejo \n Cuero - Nogal \n Neumaticos Nuevos \n Servicios al dia"
+   
+}, {
+  "id": 12,
+  "marca": "Chevrolet",
+  "modelo": "Tracker LTZ",
+  "anio": 2024,
+  "km": 39000,
+  "precio": 0,
+  "transmision": "Automatica",
+  "imagenes": [
+    "img/auto-12-1.webp",
+    "img/auto-12-2.webp",
+    "img/auto-12-3.webp",
+    "img/auto-12-4.webp",
+    "img/auto-12-5.webp",
+    "img/auto-12-6.webp",
+    "img/auto-12-7.webp",
+    "img/auto-12-8.webp",
+    "img/auto-12-9.webp",
+    "img/auto-12-10.webp"
+  ],
+    "descripcion": "1.2 - 132CV\n Servicios al dia"
+   
+},{
+  "id": 13,
+  "marca": "Mitsubishi",
+  "modelo": "Outlander GLS",
+  "anio": 2009,
+  "km": 220000,
+  "precio": 0,
+  "transmision": "Automatica",
+  "imagenes": [
+    "img/auto-12-1.webp",
+    "img/auto-12-2.webp",
+    "img/auto-12-3.webp",
+    "img/auto-12-4.webp",
+    "img/auto-12-5.webp",
+    "img/auto-12-6.webp",
+    "img/auto-12-7.webp",
+    "img/auto-12-8.webp",
+    "img/auto-12-9.webp",
+    "img/auto-12-10.webp"
+  ],
+    "descripcion": "2.4 - 170CV\n Traccion 4x4\n Cuero/Techo \n Servicios al dia"
 }
+
 
  ,{
   "id": 14,
