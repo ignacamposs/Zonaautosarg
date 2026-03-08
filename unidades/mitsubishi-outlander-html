@@ -118,16 +118,19 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const fotosDeEsteAuto = [
-                "img/auto-12-1.webp",
-                "img/auto-12-2.webp",
-                "img/auto-12-3.webp",
-                "img/auto-12-4.webp",
-                "img/auto-12-5.webp",
-                "img/auto-12-6.webp",
-                "img/auto-12-7.webp",
-                "img/auto-12-8.webp",
-                "img/auto-12-9.webp",
-                "img/auto-12-10.webp",
+                "img/auto-13-1.webp",
+                "img/auto-13-2.webp",
+                "img/auto-13-3.webp",
+                "img/auto-13-4.webp",
+                "img/auto-13-5.webp",
+                "img/auto-13-6.webp",
+                "img/auto-13-7.webp",
+                "img/auto-13-8.webp",
+                "img/auto-13-9.webp",
+                "img/auto-13-10.webp",
+                "img/auto-13-11.webp",
+                "img/auto-13-12.webp",
+                "img/auto-13-13.webp"
             ];
             // Llamamos a la función del unidad.js
             if (typeof initSlider === 'function') {
