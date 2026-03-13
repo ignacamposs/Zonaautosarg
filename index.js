@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         searchInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') searchBtn.click(); });
     }
 
-    // --- CARGA DE DATOS ---
+    // --- CARGA DE DATOS (Solo si existen los contenedores) ---
     if (document.getElementById('contenedor-catalogo') || 
         document.getElementById('contenedor-0km') || 
         document.getElementById('contenedor-destacados')) {
@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 async function cargarDatosYRenderizar() {
     try {
         const respuesta = await fetch('autos.json');
+        if (!respuesta.ok) throw new Error("No se pudo cargar el JSON");
         todosLosAutos = await respuesta.json();
 
         // 1. HOME: Destacados (Primeros 4)
@@ -55,12 +56,23 @@ async function cargarDatosYRenderizar() {
         if (document.getElementById('contenedor-catalogo')) {
             const params = new URLSearchParams(window.location.search);
             const marcaFiltro = params.get('marca');
+            
+            // Filtramos usados (km > 0) para el catálogo general
             let filtrados = todosLosAutos.filter(a => a.km > 0); 
+
             if (marcaFiltro) {
                 filtrados = filtrados.filter(a => a.marca.toLowerCase() === marcaFiltro.toLowerCase());
-                // Pre-seleccionar la marca en el select si existe
+                // Sincronizar el select de marcas
                 const selectMarca = document.getElementById('filtro-marca');
-                if (selectMarca) selectMarca.value = marcaFiltro.charAt(0).toUpperCase() + marcaFiltro.slice(1);
+                if (selectMarca) {
+                    // Buscamos la opción que coincida ignorando mayúsculas
+                    for (let option of selectMarca.options) {
+                        if (option.value.toLowerCase() === marcaFiltro.toLowerCase()) {
+                            selectMarca.value = option.value;
+                            break;
+                        }
+                    }
+                }
             }
             renderizarTarjetas(filtrados, 'contenedor-catalogo');
         }
@@ -70,7 +82,9 @@ async function cargarDatosYRenderizar() {
             const nuevos = todosLosAutos.filter(a => a.km === 0);
             renderizarTarjetas(nuevos, 'contenedor-0km');
         }
-    } catch (error) { console.error("Error cargando autos:", error); }
+    } catch (error) { 
+        console.error("Error cargando autos:", error); 
+    }
 }
 
 // --- FUNCIÓN PARA FILTROS LATERALES (Catálogo) ---
@@ -93,22 +107,22 @@ function renderizarTarjetas(lista, idContenedor) {
     const contenedor = document.getElementById(idContenedor);
     if (!contenedor) return;
     
-    contenedor.innerHTML = lista.length === 0 
-        ? `<p class="col-span-full text-center text-gray-400 py-10 uppercase tracking-widest">No hay unidades disponibles</p>` 
-        : '';
+    if (lista.length === 0) {
+        contenedor.innerHTML = `<p class="col-span-full text-center text-gray-400 py-10 uppercase tracking-widest">No hay unidades disponibles</p>`;
+        return;
+    }
 
-    lista.forEach((auto) => {
+    contenedor.innerHTML = lista.map(auto => {
         const es0km = auto.km === 0;
         const img2 = auto.imagenes[1] ? auto.imagenes[1] : auto.imagenes[0];
         const precioMostrar = auto.precio === 0 ? "Consultar" : `USD ${auto.precio.toLocaleString()}`;
 
-        // Generar nombre de archivo: "Toyota Corolla Seg" -> "toyota-corolla-seg.html"
-        // Quitamos tildes y caracteres especiales para evitar errores de link
-        const marcaClean = auto.marca.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-');
-        const modeloClean = auto.modelo.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-');
-        const urlFicha = `unidades/${marcaClean}-${modeloClean}.html`;
+        // GENERACIÓN DE URL BLINDADA (Previene el error de doble guion "--")
+        const marcaUrl = auto.marca.trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-');
+        const modeloUrl = auto.modelo.trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-');
+        const urlFicha = `unidades/${marcaUrl}-${modeloUrl}.html`;
 
-        contenedor.innerHTML += `
+        return `
             <article 
                 onclick="window.location.href='${urlFicha}'" 
                 class="group bg-[#1E1E1E] border-2 border-transparent hover:border-red-600 rounded-3xl overflow-hidden shadow-md flex flex-col h-full cursor-pointer mb-6 transition-all duration-300"
@@ -138,5 +152,5 @@ function renderizarTarjetas(lista, idContenedor) {
                     </div>
                 </div>
             </article>`;
-    });
+    }).join('');
 }
