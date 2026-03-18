@@ -107,29 +107,7 @@
     "img/auto-17-11.webp"
   ],
   "descripcion": "1.4 - 90CV \n Unica mano \n Neumaticos Nuevos \n Servicios al dia"
-},
-{
-  "id": 12,
-  "marca": "Toyota",
-  "modelo": "Corolla Seg",
-  "anio": 2011,
-  "km": 120000,
-  "precio": 0,
-  "transmision": "Automatica",
-  "imagenes": ["img/auto-10-1.webp",
-    "img/auto-10-2.webp",
-    "img/auto-10-3.webp",
-    "img/auto-10-4.webp",
-    "img/auto-10-5.webp",
-    "img/auto-10-6.webp",
-    "img/auto-10-7.webp",
-    "img/auto-10-8.webp",
-    "img/auto-10-9.webp",
-    "img/auto-10-10.webp",
-    "img/auto-10-11.webp"
-  ],
-  "descripcion": "1.8 - 136CV \n Cuero \n Servicios al dia"
-},  {
+}, {
   "id": 13,
   "marca": "Ford",
   "modelo": "Focus S",
@@ -149,30 +127,7 @@
     "img/auto-1-10.webp"
   ],
   "descripcion": "1.6 - 125CV \n Servicios al dia"
-},
-  {
-    "id": 14,
-    "marca": "Ford",
-    "modelo": "Ecosport Titaniun",
-    "anio": 2014,
-    "km": 58000,
-    "precio": 0,
-    "transmision": "Manual",
-    "imagenes": [
-        "img/auto-2-1.webp",
-        "img/auto-2-2.webp",
-        "img/auto-2-3.webp",
-        "img/auto-2-4.webp",
-        "img/auto-2-5.webp",
-        "img/auto-2-6.webp",
-        "img/auto-2-7.webp",
-        "img/auto-2-8.webp",
-        "img/auto-2-9.webp",
-        "img/auto-2-10.webp"
-    ],
-    "descripcion": "1.6 -110CV \n Traccion 4X2 \n Climatizador \n Servicios Oficiales \n Unico dueño "
-  },
-  {
+}, {
   "id": 15,
   "marca": "Ford",
   "modelo": "Ranger XLT",
