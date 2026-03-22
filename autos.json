@@ -411,26 +411,4 @@
     "img/auto-16-10.webp"
     ],
     "descripcion": "autentique 1PLC \n 1.6 - 16CV \n Neumaticos Nuevos \n Servicios al dia"  
-}  ,{
-  "id": 26,
-  "marca": "Toyota",
-  "modelo": "Etios XLS",
-  "anio": 2023,
-  "km": 39000,
-  "precio": 0,
-  "transmision": "Automatico",
-  "imagenes": [
-    "img/auto-19-1.webp",
-    "img/auto-19-2.webp",
-    "img/auto-19-3.webp",
-    "img/auto-19-4.webp",
-    "img/auto-19-5.webp",
-    "img/auto-19-6.webp",
-    "img/auto-19-7.webp",
-    "img/auto-19-8.webp",
-    "img/auto-19-9.webp",
-    "img/auto-19-10.webp",
-    "img/auto-19-11.webp"
-    ],
-    "descripcion": "  1.5 - 105CV \n Unica Mano \n Servicios Oficiales"  
 } ]
