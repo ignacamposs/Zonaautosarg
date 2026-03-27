@@ -1,5 +1,29 @@
 [{
   "id": 1,
+  "marca": "Peugeot",
+  "modelo": "208 Active Pack",
+  "anio": 2023,
+  "km": 26000,
+  "precio": 0,
+  "transmision": "Automatico",
+  "imagenes": [
+    "img/auto-23-1.webp",
+    "img/auto-23-2.webp",
+    "img/auto-23-3.webp",
+    "img/auto-23-4.webp",
+    "img/auto-23-5.webp",
+    "img/auto-23-6.webp",
+    "img/auto-23-7.webp",
+    "img/auto-23-8.webp",
+    "img/auto-23-9.webp",
+    "img/auto-23-10.webp",
+    "img/auto-23-11.webp",
+    "img/auto-23-12.webp"
+    ],
+    "descripcion": "1.6 - 115CV \n Techo panoramico \n Unica Mano \n Servicios Oficiales"  
+},
+  {
+  "id": 2,
   "marca": "Toyota",
   "modelo": "Hilux SRV",
   "anio": 2013,
@@ -21,7 +45,7 @@
     ],
     "descripcion": " 3.0 - 171CV \n Traccion 4x4 \n Segunda Mano \n Neumaticos Nuevos Wrangler \n Servicios al dia"  
 },{
-  "id": 2,
+  "id": 3,
   "marca": "Toyota",
   "modelo": "Etios XLS",
   "anio": 2023,
@@ -43,7 +67,7 @@
     ],
     "descripcion": "  1.5 - 105CV \n Unica Mano \n Servicios Oficiales"  
 }  ,{
-  "id": 3,
+  "id": 4,
   "marca": "Renault",
   "modelo": "Sandero Life",
   "anio": 2022,
@@ -65,7 +89,7 @@
     ],
     "descripcion": "  1.6 - 115CV \n Unica Mano \n Servicios Oficiales"  
 } ,{
-  "id": 4,
+  "id": 5,
   "marca": "Ford",
   "modelo": "Ranger XLT",
   "anio": 2014,
