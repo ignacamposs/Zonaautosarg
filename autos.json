@@ -1,5 +1,54 @@
 [{
   "id": 1,
+  "marca": "Toyota",
+  "modelo": "Sw4 SRX",
+  "anio": 2025,
+  "km": 12000,
+  "precio": 0,
+  "transmision": "Automatica",
+  "imagenes": [
+    "img/auto-25-1.webp",
+    "img/auto-25-2.webp",
+    "img/auto-25-3.webp",
+    "img/auto-25-4.webp",
+    "img/auto-25-5.webp",
+    "img/auto-25-6.webp",
+    "img/auto-25-7.webp",
+    "img/auto-25-8.webp",
+    "img/auto-25-9.webp",
+    "img/auto-25-10.webp",
+    "img/auto-25-11.webp",
+    "img/auto-25-12.webp",
+    "img/auto-25-13.webp",
+    "img/auto-25-14.webp"
+    ],
+    "descripcion": "Version SRX\n Traccion 4x4 \n 7 Asientos \n Camara 360° \n Garantia de fabrica"
+  
+},{
+  "id": 2,
+  "marca": "Volkswagen",
+  "modelo": "Saveiro Cross Highline",
+  "anio": 2017,
+  "km": 55000,
+  "precio": 0,
+  "transmision": "Manual",
+  "imagenes": [
+    "img/auto-24-1.webp",
+    "img/auto-24-2.webp",
+    "img/auto-24-3.webp",
+    "img/auto-24-4.webp",
+    "img/auto-24-5.webp",
+    "img/auto-24-6.webp",
+    "img/auto-24-7.webp",
+    "img/auto-24-8.webp",
+    "img/auto-24-9.webp",
+    "img/auto-24-10.webp",
+    "img/auto-24-11.webp",
+    "img/auto-24-12.webp"
+    ],
+    "descripcion": "1.6 - 115CV \n Techo panoramico \n Unica Mano \n Servicios Oficiales"  
+},{
+  "id": 3,
   "marca": "Peugeot",
   "modelo": "208 Active Pack",
   "anio": 2023,
@@ -23,7 +72,7 @@
     "descripcion": "1.6 - 115CV \n Techo panoramico \n Unica Mano \n Servicios Oficiales"  
 },
   {
-  "id": 2,
+  "id": 4,
   "marca": "Toyota",
   "modelo": "Hilux SRV",
   "anio": 2013,
@@ -45,7 +94,7 @@
     ],
     "descripcion": " 3.0 - 171CV \n Traccion 4x4 \n Segunda Mano \n Neumaticos Nuevos Wrangler \n Servicios al dia"  
 } ,{
-  "id": 4,
+  "id": 5,
   "marca": "Renault",
   "modelo": "Sandero Life",
   "anio": 2022,
@@ -67,7 +116,7 @@
     ],
     "descripcion": "  1.6 - 115CV \n Unica Mano \n Servicios Oficiales"  
 } ,{
-  "id": 5,
+  "id": 6,
   "marca": "Ford",
   "modelo": "Ranger XLT 2014",
   "anio": 2014,
@@ -151,33 +200,7 @@
     "img/auto-1-10.webp"
   ],
   "descripcion": "1.6 - 125CV \n Servicios al dia"
-}, {
-  "id": 15,
-  "marca": "Ford",
-  "modelo": "Ranger XLT",
-  "anio": 2024,
-  "km": 17000,
-  "precio": 0,
-  "transmision": "Automática AT10",
-  "imagenes": [
-    "img/auto-3-1.webp",
-    "img/auto-3-2.webp",
-    "img/auto-3-3.webp",
-    "img/auto-3-4.webp",
-    "img/auto-3-5.webp",
-    "img/auto-3-6.webp",
-    "img/auto-3-7.webp",
-    "img/auto-3-8.webp",
-    "img/auto-3-9.webp",
-    "img/auto-3-10.webp",
-    "img/auto-3-11.webp",
-    "img/auto-3-12.webp",
-    "img/auto-3-13.webp",
-    "img/auto-3-14.webp"
-    ],
-    "descripcion": "2.0 - 210CV \n Servicio oficial \n Garantia de fabrica \n Traccion 4x4"
-}        
-,{
+},{
   "id": 16,
   "marca": "Ford",
   "modelo": "Ka S+",
@@ -224,33 +247,6 @@
     "img/auto-6-12.webp"
     ],
     "descripcion": "2.0 - 170CV\n Asistencia de Carril\n Velocidad Crucero \n Garantiad de Fabrica"  
-} 
-,{
-  "id": 18,
-  "marca": "Toyota",
-  "modelo": "Sw4",
-  "anio": 2025,
-  "km": 15000,
-  "precio": 0,
-  "transmision": "Automatica",
-  "imagenes": [
-    "img/auto-7-1.webp",
-    "img/auto-7-2.webp",
-    "img/auto-7-3.webp",
-    "img/auto-7-4.webp",
-    "img/auto-7-5.webp",
-    "img/auto-7-6.webp",
-    "img/auto-7-7.webp",
-    "img/auto-7-8.webp",
-    "img/auto-7-9.webp",
-    "img/auto-7-10.webp",
-    "img/auto-7-11.webp",
-    "img/auto-7-12.webp",
-    "img/auto-7-13.webp",
-    "img/auto-7-14.webp"
-    ],
-    "descripcion": "Version Diamond\n Traccion 4x4 \n 7 Asientos \n Alfombras Ziel \n Servicios Oficiales \n Garantia de fabrica"
-  
 }, {
   "id": 19,
   "marca": "Peugeot",
