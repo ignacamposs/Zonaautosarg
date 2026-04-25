@@ -1,5 +1,32 @@
 [{
   "id": 1,
+  "marca": "Ford",
+  "modelo": "Territory Titanium",
+  "anio": 2021,
+  "km": 49000,
+  "precio": 0,
+  "transmision": "Automatica",
+  "imagenes": [
+    "img/auto-26-1.webp",
+    "img/auto-26-2.webp",
+    "img/auto-26-3.webp",
+    "img/auto-26-4.webp",
+    "img/auto-26-5.webp",
+    "img/auto-26-6.webp",
+    "img/auto-26-7.webp",
+    "img/auto-26-8.webp",
+    "img/auto-26-9.webp",
+    "img/auto-26-10.webp",
+    "img/auto-26-11.webp",
+    "img/auto-26-12.webp",
+    "img/auto-26-13.webp",
+    "img/auto-26-14.webp"
+    ],
+    "descripcion": " 1.5 - 144CV \nTraccion 4x2 \n Camara 360° \n Park Assist \n Tablero Digital \n Servicios Oficiales \n Única Mano"
+  
+},
+  {
+  "id": 2,
   "marca": "Toyota",
   "modelo": "Sw4 SRX",
   "anio": 2025,
@@ -25,7 +52,7 @@
     "descripcion": "Version SRX\n Traccion 4x4 \n 7 Asientos \n Camara 360° \n Garantia de fabrica"
   
 },{
-  "id": 2,
+  "id": 3,
   "marca": "Volkswagen",
   "modelo": "Saveiro Cross Highline",
   "anio": 2017,
@@ -48,7 +75,7 @@
     ],
     "descripcion": "1.6 - 115CV \n Techo panoramico \n Unica Mano \n Servicios Oficiales"  
 },{
-  "id": 3,
+  "id": 4,
   "marca": "Peugeot",
   "modelo": "208 Active Pack",
   "anio": 2023,
@@ -72,7 +99,7 @@
     "descripcion": "1.6 - 115CV \n Techo panoramico \n Unica Mano \n Servicios Oficiales"  
 },
   {
-  "id": 4,
+  "id": 5,
   "marca": "Toyota",
   "modelo": "Hilux SRV",
   "anio": 2013,
@@ -94,7 +121,7 @@
     ],
     "descripcion": " 3.0 - 171CV \n Traccion 4x4 \n Segunda Mano \n Neumaticos Nuevos Wrangler \n Servicios al dia"  
 } ,{
-  "id": 5,
+  "id": 6,
   "marca": "Renault",
   "modelo": "Sandero Life",
   "anio": 2022,
@@ -116,7 +143,7 @@
     ],
     "descripcion": "  1.6 - 115CV \n Unica Mano \n Servicios Oficiales"  
 } ,{
-  "id": 6,
+  "id": 7,
   "marca": "Ford",
   "modelo": "Ranger XLT 2014",
   "anio": 2014,
