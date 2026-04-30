@@ -1,5 +1,57 @@
 [{
   "id": 1,
+  "marca": "Chevrolet",
+  "modelo": "Onix Plus LS",
+  "anio": 2020,
+  "km": 106000,
+  "precio": 0,
+  "transmision": "Manual",
+  "imagenes": [
+    "img/auto-3-1.webp",
+    "img/auto-3-2.webp",
+    "img/auto-3-3.webp",
+    "img/auto-3-4.webp",
+    "img/auto-3-5.webp",
+    "img/auto-3-6.webp",
+    "img/auto-3-7.webp",
+    "img/auto-3-8.webp",
+    "img/auto-3-9.webp",
+    "img/auto-3-10.webp",
+    "img/auto-3-11.webp",
+    "img/auto-3-12.webp",
+    "img/auto-3-13.webp",
+    "img/auto-3-14.webp"
+    ],
+    "descripcion": "1.4 - 98CV \n Servicios al dia \n Única Mano"
+  
+},{
+  "id": 2,
+  "marca": "Chevrolet",
+  "modelo": "Onix Joy Black",
+  "anio": 2021,
+  "km": 75000,
+  "precio": 0,
+  "transmision": "Manual",
+  "imagenes": [
+    "img/auto-2-1.webp",
+    "img/auto-2-2.webp",
+    "img/auto-2-3.webp",
+    "img/auto-2-4.webp",
+    "img/auto-2-5.webp",
+    "img/auto-2-6.webp",
+    "img/auto-2-7.webp",
+    "img/auto-2-8.webp",
+    "img/auto-2-9.webp",
+    "img/auto-2-10.webp",
+    "img/auto-2-11.webp",
+    "img/auto-2-12.webp",
+    "img/auto-2-13.webp"
+    ],
+    "descripcion": "1.4 - 98CV \n Servicios al dia \n Única Mano"
+  
+},
+ {
+  "id": 3,
   "marca": "Ford",
   "modelo": "Territory Titanium",
   "anio": 2021,
@@ -26,7 +78,7 @@
   
 },
   {
-  "id": 2,
+  "id": 4,
   "marca": "Toyota",
   "modelo": "Sw4 SRX",
   "anio": 2025,
@@ -52,30 +104,7 @@
     "descripcion": "Version SRX\n Traccion 4x4 \n 7 Asientos \n Camara 360° \n Garantia de fabrica"
   
 },{
-  "id": 3,
-  "marca": "Volkswagen",
-  "modelo": "Saveiro Cross Highline",
-  "anio": 2017,
-  "km": 55000,
-  "precio": 0,
-  "transmision": "Manual",
-  "imagenes": [
-    "img/auto-24-1.webp",
-    "img/auto-24-2.webp",
-    "img/auto-24-3.webp",
-    "img/auto-24-4.webp",
-    "img/auto-24-5.webp",
-    "img/auto-24-6.webp",
-    "img/auto-24-7.webp",
-    "img/auto-24-8.webp",
-    "img/auto-24-9.webp",
-    "img/auto-24-10.webp",
-    "img/auto-24-11.webp",
-    "img/auto-24-12.webp"
-    ],
-    "descripcion": "1.6 - 115CV \n Techo panoramico \n Unica Mano \n Servicios Oficiales"  
-},{
-  "id": 4,
+  "id": 5,
   "marca": "Peugeot",
   "modelo": "208 Active Pack",
   "anio": 2023,
@@ -97,30 +126,7 @@
     "img/auto-23-12.webp"
     ],
     "descripcion": "1.6 - 115CV \n Techo panoramico \n Unica Mano \n Servicios Oficiales"  
-},
-  {
-  "id": 5,
-  "marca": "Toyota",
-  "modelo": "Hilux SRV",
-  "anio": 2013,
-  "km": 218000,
-  "precio": 0,
-  "transmision": "Manual",
-  "imagenes": [
-    "img/auto-22-1.webp",
-    "img/auto-22-2.webp",
-    "img/auto-22-3.webp",
-    "img/auto-22-4.webp",
-    "img/auto-22-5.webp",
-    "img/auto-22-6.webp",
-    "img/auto-22-7.webp",
-    "img/auto-22-8.webp",
-    "img/auto-22-9.webp",
-    "img/auto-22-10.webp",
-    "img/auto-22-11.webp"
-    ],
-    "descripcion": " 3.0 - 171CV \n Traccion 4x4 \n Segunda Mano \n Neumaticos Nuevos Wrangler \n Servicios al dia"  
-} ,{
+},{
   "id": 6,
   "marca": "Renault",
   "modelo": "Sandero Life",
