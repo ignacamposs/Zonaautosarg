@@ -400,28 +400,6 @@
     ,
     "descripcion": "Version Mio Work \n 1.2 - 16CV \n Unica Mano \n Neumaticos Nuevos \n Servicios al dia"  
 } ,{
-  "id": 24,
-  "marca": "Chevrolet",
-  "modelo": "Onix Joy",
-  "anio": 2019,
-  "km": 130000,
-  "precio": 0,
-  "transmision": "Manual",
-  "imagenes": [
-    "img/auto-15-1.webp",
-    "img/auto-15-2.webp",
-    "img/auto-15-3.webp",
-    "img/auto-15-4.webp",
-    "img/auto-15-5.webp",
-    "img/auto-15-6.webp",
-    "img/auto-15-7.webp",
-    "img/auto-15-8.webp",
-    "img/auto-15-9.webp",
-    "img/auto-15-10.webp",
-    "img/auto-15-11.webp"
-    ],
-    "descripcion": "Aire - Direccion \n 1.4 - 98CV \n Servicios al dia"  
-} ,{
   "id": 25,
   "marca": "Renault",
   "modelo": "Kangoo Authentique",
