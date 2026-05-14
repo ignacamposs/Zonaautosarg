@@ -1,11 +1,12 @@
 [{
   "id": 2,
   "marca": "Toyota",
-  "modelo": "Hilux DX",
+  "modelo": "Hilux DX 4x4",
   "anio": 2025,
   "km": 15000,
   "precio": 0,
   "transmision": "Automática",
+  "combustible": "Diesel",
   "imagenes": [
     "img/auto-7-1.webp",
     "img/auto-7-2.webp",
@@ -23,7 +24,7 @@
     "img/auto-7-14.webp"
     ],
     "descripcion": "2.4 - 150CV \n Traccion 4x4 \n Garantia de Fabrica"
-  
+
 },
   {
   "id": 3,
@@ -33,6 +34,7 @@
   "km": 159000,
   "precio": 0,
   "transmision": "Automática",
+  "combustible": "Nafta",
   "imagenes": [
     "img/auto-5-1.webp",
     "img/auto-5-2.webp",
@@ -50,7 +52,7 @@
     "img/auto-5-14.webp"
     ],
     "descripcion": "1.6 - 115CV \n Servicios al dia \n Única Mano"
-  
+
 },{
   "id": 4,
   "marca": "Peugeot",
@@ -59,6 +61,7 @@
   "km": 26000,
   "precio": 0,
   "transmision": "Automática",
+  "combustible": "Nafta",
   "imagenes": [
     "img/auto-23-1.webp",
     "img/auto-23-2.webp",
@@ -73,7 +76,7 @@
     "img/auto-23-11.webp",
     "img/auto-23-12.webp"
     ],
-    "descripcion": "1.6 - 115CV \n Techo panoramico \n Unica Mano \n Servicios Oficiales"  
+    "descripcion": "1.6 - 115CV \n Techo panoramico \n Unica Mano \n Servicios Oficiales"
 },{
   "id": 5,
   "marca": "Chevrolet",
@@ -82,6 +85,7 @@
   "km": 75000,
   "precio": 0,
   "transmision": "Manual",
+  "combustible": "Nafta",
   "imagenes": [
     "img/auto-2-1.webp",
     "img/auto-2-2.webp",
@@ -98,7 +102,7 @@
     "img/auto-2-13.webp"
     ],
     "descripcion": "1.4 - 98CV \n Servicios al dia \n Única Mano"
-  
+
 },{
   "id": 6,
   "marca": "Toyota",
@@ -107,6 +111,7 @@
   "km": 12000,
   "precio": 0,
   "transmision": "Automática",
+  "combustible": "Diesel",
   "imagenes": [
     "img/auto-25-1.webp",
     "img/auto-25-2.webp",
@@ -124,7 +129,7 @@
     "img/auto-25-14.webp"
     ],
     "descripcion": "Version SRX\n Traccion 4x4 \n 7 Asientos \n Camara 360° \n Garantia de fabrica"
-  
+
 },{
   "id": 7,
   "marca": "Chevrolet",
@@ -133,6 +138,7 @@
   "km": 106000,
   "precio": 0,
   "transmision": "Manual",
+  "combustible": "Nafta",
   "imagenes": [
     "img/auto-3-1.webp",
     "img/auto-3-2.webp",
@@ -150,7 +156,7 @@
     "img/auto-3-14.webp"
     ],
     "descripcion": "1.4 - 98CV \n Servicios al dia \n Única Mano"
-  
+
 },{
   "id": 8,
   "marca": "Renault",
@@ -159,6 +165,7 @@
   "km": 40000,
   "precio": 0,
   "transmision": "Manual",
+  "combustible": "Nafta",
   "imagenes": [
     "img/auto-20-1.webp",
     "img/auto-20-2.webp",
@@ -172,7 +179,7 @@
     "img/auto-20-10.webp",
     "img/auto-20-11.webp"
     ],
-    "descripcion": "  1.6 - 115CV \n Unica Mano \n Servicios Oficiales"  
+    "descripcion": "  1.6 - 115CV \n Unica Mano \n Servicios Oficiales"
 } ,{
   "id": 9,
   "marca": "Ford",
@@ -181,6 +188,7 @@
   "km": 180000,
   "precio": 0,
   "transmision": "Manual",
+  "combustible": "Diesel",
   "imagenes": [
     "img/auto-21-1.webp",
     "img/auto-21-2.webp",
@@ -194,7 +202,7 @@
     "img/auto-21-10.webp",
     "img/auto-21-11.webp"
     ],
-    "descripcion": " 3.2 - 200CV \n Traccion 4x4\n Segunda Mano\n Neumaticos Nuevos \n Servicios al Dia"  
+    "descripcion": " 3.2 - 200CV \n Traccion 4x4\n Segunda Mano\n Neumaticos Nuevos \n Servicios al Dia"
 },{
   "id": 10,
   "marca": "Fiat",
@@ -203,6 +211,7 @@
   "km": 20000,
   "precio": 0,
   "transmision": "Manual",
+  "combustible": "Nafta",
   "imagenes": ["img/auto-18-1.webp",
     "img/auto-18-2.webp",
     "img/auto-18-3.webp",
@@ -225,6 +234,7 @@
   "km": 130000,
   "precio": 0,
   "transmision": "Manual",
+  "combustible": "Nafta",
   "imagenes": ["img/auto-17-1.webp",
     "img/auto-17-2.webp",
     "img/auto-17-3.webp",
@@ -246,6 +256,7 @@
   "km": 115000,
   "precio": 0,
   "transmision": "Manual",
+  "combustible": "Nafta",
   "imagenes": ["img/auto-1-1.webp",
     "img/auto-1-2.webp",
     "img/auto-1-3.webp",
@@ -266,6 +277,7 @@
   "km": 130000,
   "precio": 0,
   "transmision": "Manual",
+  "combustible": "Nafta",
   "imagenes": [
     "img/auto-4-1.webp",
     "img/auto-4-2.webp",
@@ -281,7 +293,7 @@
     "img/auto-4-12.webp"
     ],
     "descripcion": "1.5 - 123CV\nServicios al dia"
-  
+
 } ,{
   "id": 17,
   "marca": "Toyota",
@@ -290,6 +302,7 @@
   "km": 10000,
   "precio": 0,
   "transmision": "Automática",
+  "combustible": "Nafta",
   "imagenes": [
     "img/auto-6-1.webp",
     "img/auto-6-2.webp",
@@ -304,7 +317,7 @@
     "img/auto-6-11.webp",
     "img/auto-6-12.webp"
     ],
-    "descripcion": "2.0 - 170CV\n Asistencia de Carril\n Velocidad Crucero \n Garantiad de Fabrica"  
+    "descripcion": "2.0 - 170CV\n Asistencia de Carril\n Velocidad Crucero \n Garantiad de Fabrica"
 }, {
   "id": 19,
   "marca": "Peugeot",
@@ -313,6 +326,7 @@
   "km": 93000,
   "precio": 0,
   "transmision": "Manual",
+  "combustible": "Nafta",
   "imagenes": [
     "img/auto-9-1.webp",
     "img/auto-9-2.webp",
@@ -328,7 +342,7 @@
     "img/auto-9-12.webp"
     ],
     "descripcion": "1.6 - 115CV\n Servicios al dia"
-   
+
 }, {
   "id": 20,
   "marca": "Volkswagen",
@@ -337,6 +351,7 @@
   "km": 118000,
   "precio": 0,
   "transmision": "Automática",
+  "combustible": "Nafta",
   "imagenes": [
     "img/auto-11-1.webp",
     "img/auto-11-2.webp",
@@ -353,7 +368,7 @@
     "img/auto-11-13.webp"
     ],
     "descripcion": "Version Style\n V6 - 3.6 - 280CV\n Traccion 4x4 \n 4 modos de manejo \n Cuero - Nogal \n Neumaticos Nuevos \n Servicios al dia"
-   
+
 }, {
   "id": 21,
   "marca": "Chevrolet",
@@ -362,6 +377,7 @@
   "km": 39000,
   "precio": 0,
   "transmision": "Automática",
+  "combustible": "Nafta",
   "imagenes": [
     "img/auto-12-1.webp",
     "img/auto-12-2.webp",
@@ -375,7 +391,7 @@
     "img/auto-12-10.webp"
   ],
     "descripcion": "1.2 - 132CV\n Servicios al dia"
-   
+
 },{
   "id": 22,
   "marca": "Mitsubishi",
@@ -384,6 +400,7 @@
   "km": 220000,
   "precio": 0,
   "transmision": "Automática",
+  "combustible": "Nafta",
   "imagenes": [
     "img/auto-13-1.webp",
     "img/auto-13-2.webp",
@@ -411,6 +428,7 @@
   "km": 260000,
   "precio": 0,
   "transmision": "Manual",
+  "combustible": "Nafta",
   "imagenes": [
     "img/auto-14-1.webp",
     "img/auto-14-2.webp",
@@ -423,7 +441,7 @@
     "img/auto-14-9.webp",
     "img/auto-14-10.webp"]
     ,
-    "descripcion": "Version Mio Work \n 1.2 - 16CV \n Unica Mano \n Neumaticos Nuevos \n Servicios al dia"  
+    "descripcion": "Version Mio Work \n 1.2 - 16CV \n Unica Mano \n Neumaticos Nuevos \n Servicios al dia"
 } ,{
   "id": 25,
   "marca": "Renault",
@@ -432,6 +450,7 @@
   "km": 260000,
   "precio": 0,
   "transmision": "Manual",
+  "combustible": "Nafta",
   "imagenes": [
     "img/auto-16-1.webp",
     "img/auto-16-2.webp",
@@ -444,5 +463,5 @@
     "img/auto-16-9.webp",
     "img/auto-16-10.webp"
     ],
-    "descripcion": "autentique 1PLC \n 1.6 - 16CV \n Neumaticos Nuevos \n Servicios al dia"  
+    "descripcion": "autentique 1PLC \n 1.6 - 16CV \n Neumaticos Nuevos \n Servicios al dia"
 } ]
