@@ -139,9 +139,10 @@ function renderizarTarjetas(lista, idContenedor) {
                     <div>
                         <span class="text-white/50 text-[10px] font-black uppercase tracking-tighter">${auto.marca}</span>
                         <h3 class="text-xl font-bold text-white leading-tight uppercase italic mb-2">${auto.modelo}</h3>
-                        <div class="flex gap-4 text-[11px] text-[#B0B0B0] font-semibold mb-4">
+                        <div class="flex gap-4 text-sm text-[#B0B0B0] font-bold mb-4">
                             <span>📅 ${auto.anio}</span>
                             <span>${es0km ? '✨ Nuevo' : '🚀 ' + auto.km.toLocaleString() + ' KM'}</span>
+                            <span>${auto.combustible === 'Diesel' ? '🛢️ Diesel' : '⛽ Nafta'}</span>
                         </div>
                     </div>
                     <div class="flex flex-col gap-3">
