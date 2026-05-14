@@ -122,13 +122,17 @@
             
             <div class="flex items-center gap-3">
                 <span class="text-gray-400 text-sm italic">Ordenar por:</span>
-                <select class="bg-[#282828] text-white border border-gray-700 p-2 rounded-lg outline-none text-sm">
-                    <option>Menor precio</option>
-                    <option>Mayor precio</option>
-                    <option>Más nuevos</option>
+                <select id="filtro-orden" class="bg-[#282828] text-white border border-gray-700 p-2 rounded-lg outline-none text-sm cursor-pointer">
+                    <option value="">Destacados</option>
+                    <option value="precio-asc">Menor precio</option>
+                    <option value="precio-desc">Mayor precio</option>
+                    <option value="anio-desc">Más nuevos</option>
+                    <option value="km-asc">Menor kilometraje</option>
                 </select>
             </div>
         </div>
+
+        <div id="info-filtros" class="mb-4 flex items-center gap-3 flex-wrap min-h-[28px]"></div>
 
         <div id="contenedor-catalogo" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     </div>

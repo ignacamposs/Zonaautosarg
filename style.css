@@ -1,3 +1,13 @@
+@keyframes shimmer {
+    0%   { background-position: -600px 0; }
+    100% { background-position:  600px 0; }
+}
+.skeleton {
+    background: linear-gradient(90deg, #252525 25%, #2e2e2e 50%, #252525 75%);
+    background-size: 600px 100%;
+    animation: shimmer 1.4s infinite linear;
+}
+
 /* Agregamos la lógica que le falta a Tailwind */
 .animate-fade-in-up {
   animation: subir 0.6s ease-out forwards;
