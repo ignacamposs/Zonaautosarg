@@ -106,7 +106,7 @@
 },{
   "id": 6,
   "marca": "Toyota",
-  "modelo": "Sw4 SRX",
+  "modelo": "Sw4 SRX 4x4",
   "anio": 2025,
   "km": 12000,
   "precio": 0,
@@ -183,7 +183,7 @@
 } ,{
   "id": 9,
   "marca": "Ford",
-  "modelo": "Ranger XLT 2014",
+  "modelo": "Ranger XLT 2014 4x4",
   "anio": 2014,
   "km": 180000,
   "precio": 0,
@@ -346,7 +346,7 @@
 }, {
   "id": 20,
   "marca": "Volkswagen",
-  "modelo": "Touareg",
+  "modelo": "Touareg 4x4",
   "anio": 2010,
   "km": 118000,
   "precio": 0,
@@ -395,7 +395,7 @@
 },{
   "id": 22,
   "marca": "Mitsubishi",
-  "modelo": "Outlander GLS",
+  "modelo": "Outlander GLS 4x4",
   "anio": 2009,
   "km": 220000,
   "precio": 0,

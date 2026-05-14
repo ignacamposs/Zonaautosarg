@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem \"d:\\\\Desarrollo\\\\Estudio 2026\\\\Zona-autos\\\\unidades\\\\\" -Name | Select-String -Pattern \"hilux)",
+      "Bash(sw4)",
+      "Bash(ranger)",
+      "Bash(touareg)",
+      "Bash(outlander\")",
+      "PowerShell(Rename-Item \"d:\\\\Desarrollo\\\\Estudio 2026\\\\Zona-autos\\\\unidades\\\\toyota-sw4-srx.html\" \"toyota-sw4-srx-4x4.html\")",
+      "PowerShell(Rename-Item \"d:\\\\Desarrollo\\\\Estudio 2026\\\\Zona-autos\\\\unidades\\\\volkswagen-touareg.html\" \"volkswagen-touareg-4x4.html\")",
+      "PowerShell(Rename-Item \"d:\\\\Desarrollo\\\\Estudio 2026\\\\Zona-autos\\\\unidades\\\\mitsubishi-outlander-gls.html\" \"mitsubishi-outlander-gls-4x4.html\")"
+    ]
+  }
+}
