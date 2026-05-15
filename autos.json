@@ -1,4 +1,50 @@
 [{
+  "id": 26,
+  "marca": "Hyundai",
+  "modelo": "H1 Premium",
+  "anio": 2015,
+  "km": 146000,
+  "precio": 0,
+  "transmision": "Automática",
+  "combustible": "Nafta",
+  "imagenes": [
+    "img/auto-27-1.webp",
+    "img/auto-27-2.webp",
+    "img/auto-27-3.webp",
+    "img/auto-27-4.webp",
+    "img/auto-27-5.webp",
+    "img/auto-27-6.webp",
+    "img/auto-27-7.webp",
+    "img/auto-27-9.webp",
+    "img/auto-27-10.webp",
+    "img/auto-27-11.webp"
+  ],
+  "descripcion": "Version Premium \n 12 Asientos \n 2.4 - 175CV \n Servicios al dia \n Neumaticos Nuevos"
+},{
+  "id": 27,
+  "marca": "Toyota",
+  "modelo": "Rav4 Aut Full",
+  "anio": 2011,
+  "km": 164000,
+  "precio": 0,
+  "transmision": "Automática",
+  "combustible": "Nafta",
+  "imagenes": [
+    "img/auto-28-1.webp",
+    "img/auto-28-2.webp",
+    "img/auto-28-3.webp",
+    "img/auto-28-5.webp",
+    "img/auto-28-6.webp",
+    "img/auto-28-7.webp",
+    "img/auto-28-8.webp",
+    "img/auto-28-9.webp",
+    "img/auto-28-10.webp",
+    "img/auto-28-11.webp",
+    "img/auto-28-12.webp",
+    "img/auto-28-13.webp"
+  ],
+  "descripcion": "Version Aut Full \n Traccion integral 4x4 \n 2.4 - 170CV \n Servicios al dia \n Neumaticos Nuevos"
+},{
   "id": 2,
   "marca": "Toyota",
   "modelo": "Hilux DX 4x4",
