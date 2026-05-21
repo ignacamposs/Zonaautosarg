@@ -4,7 +4,8 @@
   "modelo": "QQ Light",
   "anio": 2018,
   "km": 75000,
-  "precio": 0,
+  "precio": 11000000,
+  "moneda": "ARS",
   "transmision": "Manual",
   "combustible": "Nafta",
   "imagenes": [
@@ -20,13 +21,14 @@
     "img/auto-29-10.webp"
   ],
   "descripcion": "Version Light \n 1.0 - 70CV \n Servicios Oficiales \n Única Mano"
-} ,{
+},{
   "id": 26,
   "marca": "Hyundai",
   "modelo": "H1 Premium",
   "anio": 2015,
   "km": 146000,
-  "precio": 0,
+  "precio": 32000000,
+  "moneda": "ARS",
   "transmision": "Automática",
   "combustible": "Nafta",
   "imagenes": [
@@ -48,7 +50,8 @@
   "modelo": "Rav4 Aut Full",
   "anio": 2011,
   "km": 164000,
-  "precio": 0,
+  "precio": 25500000,
+  "moneda": "ARS",
   "transmision": "Automática",
   "combustible": "Nafta",
   "imagenes": [
@@ -72,7 +75,8 @@
   "modelo": "Hilux DX 4x4",
   "anio": 2025,
   "km": 15000,
-  "precio": 0,
+  "precio": 54000000,
+  "moneda": "ARS",
   "transmision": "Automática",
   "combustible": "Diesel",
   "imagenes": [
@@ -90,17 +94,16 @@
     "img/auto-7-12.webp",
     "img/auto-7-13.webp",
     "img/auto-7-14.webp"
-    ],
-    "descripcion": "2.4 - 150CV \n Traccion 4x4 \n Garantia de Fabrica"
-
-},
-  {
+  ],
+  "descripcion": "2.4 - 150CV \n Traccion 4x4 \n Garantia de Fabrica"
+},{
   "id": 3,
   "marca": "Renault",
   "modelo": "Duster Intens CVT",
   "anio": 2022,
   "km": 159000,
-  "precio": 0,
+  "precio": 25000000,
+  "moneda": "ARS",
   "transmision": "Automática",
   "combustible": "Nafta",
   "imagenes": [
@@ -118,16 +121,16 @@
     "img/auto-5-12.webp",
     "img/auto-5-13.webp",
     "img/auto-5-14.webp"
-    ],
-    "descripcion": "1.6 - 115CV \n Servicios al dia \n Única Mano"
-
+  ],
+  "descripcion": "1.6 - 115CV \n Servicios al dia \n Única Mano"
 },{
   "id": 5,
   "marca": "Chevrolet",
   "modelo": "Onix Joy Black",
   "anio": 2021,
   "km": 75000,
-  "precio": 0,
+  "precio": 17500000,
+  "moneda": "ARS",
   "transmision": "Manual",
   "combustible": "Nafta",
   "imagenes": [
@@ -144,16 +147,16 @@
     "img/auto-2-11.webp",
     "img/auto-2-12.webp",
     "img/auto-2-13.webp"
-    ],
-    "descripcion": "1.4 - 98CV \n Servicios al dia \n Única Mano"
-
+  ],
+  "descripcion": "1.4 - 98CV \n Servicios al dia \n Única Mano"
 },{
   "id": 6,
   "marca": "Toyota",
   "modelo": "Sw4 SRX 4x4",
   "anio": 2025,
   "km": 12000,
-  "precio": 0,
+  "precio": 84000000,
+  "moneda": "ARS",
   "transmision": "Automática",
   "combustible": "Diesel",
   "imagenes": [
@@ -171,16 +174,16 @@
     "img/auto-25-12.webp",
     "img/auto-25-13.webp",
     "img/auto-25-14.webp"
-    ],
-    "descripcion": "Version SRX\n Traccion 4x4 \n 7 Asientos \n Camara 360° \n Garantia de fabrica"
-
+  ],
+  "descripcion": "Version SRX\n Traccion 4x4 \n 7 Asientos \n Camara 360° \n Garantia de fabrica"
 },{
   "id": 7,
   "marca": "Chevrolet",
   "modelo": "Onix Plus LS",
   "anio": 2020,
   "km": 106000,
-  "precio": 0,
+  "precio": 16800000,
+  "moneda": "ARS",
   "transmision": "Manual",
   "combustible": "Nafta",
   "imagenes": [
@@ -198,16 +201,16 @@
     "img/auto-3-12.webp",
     "img/auto-3-13.webp",
     "img/auto-3-14.webp"
-    ],
-    "descripcion": "1.4 - 98CV \n Servicios al dia \n Única Mano"
-
+  ],
+  "descripcion": "1.4 - 98CV \n Servicios al dia \n Única Mano"
 },{
   "id": 8,
   "marca": "Renault",
   "modelo": "Sandero Life",
   "anio": 2022,
   "km": 40000,
-  "precio": 0,
+  "precio": 19700000,
+  "moneda": "ARS",
   "transmision": "Manual",
   "combustible": "Nafta",
   "imagenes": [
@@ -222,15 +225,16 @@
     "img/auto-20-9.webp",
     "img/auto-20-10.webp",
     "img/auto-20-11.webp"
-    ],
-    "descripcion": "  1.6 - 115CV \n Unica Mano \n Servicios Oficiales"
-} ,{
+  ],
+  "descripcion": "1.6 - 115CV \n Unica Mano \n Servicios Oficiales"
+},{
   "id": 9,
   "marca": "Ford",
   "modelo": "Ranger XLT 2014 4x4",
   "anio": 2014,
   "km": 180000,
-  "precio": 0,
+  "precio": 26500000,
+  "moneda": "ARS",
   "transmision": "Manual",
   "combustible": "Diesel",
   "imagenes": [
@@ -245,18 +249,20 @@
     "img/auto-21-9.webp",
     "img/auto-21-10.webp",
     "img/auto-21-11.webp"
-    ],
-    "descripcion": " 3.2 - 200CV \n Traccion 4x4\n Segunda Mano\n Neumaticos Nuevos \n Servicios al Dia"
+  ],
+  "descripcion": "3.2 - 200CV \n Traccion 4x4\n Segunda Mano\n Neumaticos Nuevos \n Servicios al Dia"
 },{
   "id": 10,
   "marca": "Fiat",
   "modelo": "Pulse GSE Drive",
   "anio": 2025,
   "km": 20000,
-  "precio": 0,
+  "precio": 28000000,
+  "moneda": "ARS",
   "transmision": "Manual",
   "combustible": "Nafta",
-  "imagenes": ["img/auto-18-1.webp",
+  "imagenes": [
+    "img/auto-18-1.webp",
     "img/auto-18-2.webp",
     "img/auto-18-3.webp",
     "img/auto-18-4.webp",
@@ -269,17 +275,18 @@
     "img/auto-18-11.webp"
   ],
   "descripcion": "1.3 - 100CV \n Navegador \n Garantia de Fabrica \n Servicios Oficiales"
-},
-{
+},{
   "id": 11,
   "marca": "Fiat",
   "modelo": "Palio Pack Seg",
   "anio": 2015,
   "km": 130000,
-  "precio": 0,
+  "precio": 12200000,
+  "moneda": "ARS",
   "transmision": "Manual",
   "combustible": "Nafta",
-  "imagenes": ["img/auto-17-1.webp",
+  "imagenes": [
+    "img/auto-17-1.webp",
     "img/auto-17-2.webp",
     "img/auto-17-3.webp",
     "img/auto-17-4.webp",
@@ -292,16 +299,18 @@
     "img/auto-17-11.webp"
   ],
   "descripcion": "1.4 - 90CV \n Unica mano \n Neumaticos Nuevos \n Servicios al dia"
-}, {
+},{
   "id": 13,
   "marca": "Ford",
   "modelo": "Focus S",
   "anio": 2018,
   "km": 115000,
-  "precio": 0,
+  "precio": 19000000,
+  "moneda": "ARS",
   "transmision": "Manual",
   "combustible": "Nafta",
-  "imagenes": ["img/auto-1-1.webp",
+  "imagenes": [
+    "img/auto-1-1.webp",
     "img/auto-1-2.webp",
     "img/auto-1-3.webp",
     "img/auto-1-4.webp",
@@ -319,7 +328,8 @@
   "modelo": "Ka S+",
   "anio": 2019,
   "km": 130000,
-  "precio": 0,
+  "precio": 16000000,
+  "moneda": "ARS",
   "transmision": "Manual",
   "combustible": "Nafta",
   "imagenes": [
@@ -335,16 +345,16 @@
     "img/auto-4-10.webp",
     "img/auto-4-11.webp",
     "img/auto-4-12.webp"
-    ],
-    "descripcion": "1.5 - 123CV\nServicios al dia"
-
-} ,{
+  ],
+  "descripcion": "1.5 - 123CV\nServicios al dia"
+},{
   "id": 17,
   "marca": "Toyota",
   "modelo": "Corolla Cross XLI",
   "anio": 2025,
   "km": 10000,
   "precio": 0,
+  "moneda": "ARS",
   "transmision": "Automática",
   "combustible": "Nafta",
   "imagenes": [
@@ -360,15 +370,16 @@
     "img/auto-6-10.webp",
     "img/auto-6-11.webp",
     "img/auto-6-12.webp"
-    ],
-    "descripcion": "2.0 - 170CV\n Asistencia de Carril\n Velocidad Crucero \n Garantiad de Fabrica"
-}, {
+  ],
+  "descripcion": "2.0 - 170CV\n Asistencia de Carril\n Velocidad Crucero \n Garantia de Fabrica"
+},{
   "id": 19,
   "marca": "Peugeot",
   "modelo": "308 Allure",
   "anio": 2016,
   "km": 93000,
-  "precio": 0,
+  "precio": 15000000,
+  "moneda": "ARS",
   "transmision": "Manual",
   "combustible": "Nafta",
   "imagenes": [
@@ -384,16 +395,16 @@
     "img/auto-9-10.webp",
     "img/auto-9-11.webp",
     "img/auto-9-12.webp"
-    ],
-    "descripcion": "1.6 - 115CV\n Servicios al dia"
-
-}, {
+  ],
+  "descripcion": "1.6 - 115CV\n Servicios al dia"
+},{
   "id": 20,
   "marca": "Volkswagen",
   "modelo": "Touareg 4x4",
   "anio": 2010,
   "km": 118000,
-  "precio": 0,
+  "precio": 18500,
+  "moneda": "USD",
   "transmision": "Automática",
   "combustible": "Nafta",
   "imagenes": [
@@ -410,16 +421,16 @@
     "img/auto-11-11.webp",
     "img/auto-11-12.webp",
     "img/auto-11-13.webp"
-    ],
-    "descripcion": "Version Style\n V6 - 3.6 - 280CV\n Traccion 4x4 \n 4 modos de manejo \n Cuero - Nogal \n Neumaticos Nuevos \n Servicios al dia"
-
-}, {
+  ],
+  "descripcion": "Version Style\n V6 - 3.6 - 280CV\n Traccion 4x4 \n 4 modos de manejo \n Cuero - Nogal \n Neumaticos Nuevos \n Servicios al dia"
+},{
   "id": 21,
   "marca": "Chevrolet",
   "modelo": "Tracker LTZ",
   "anio": 2024,
   "km": 39000,
-  "precio": 0,
+  "precio": 32000000,
+  "moneda": "ARS",
   "transmision": "Automática",
   "combustible": "Nafta",
   "imagenes": [
@@ -434,17 +445,15 @@
     "img/auto-12-9.webp",
     "img/auto-12-10.webp"
   ],
-    "descripcion": "1.2 - 132CV\n Servicios al dia"
-
-}
-
- ,{
+  "descripcion": "1.2 - 132CV\n Servicios al dia"
+},{
   "id": 23,
   "marca": "Renault",
   "modelo": "Clio",
   "anio": 2016,
   "km": 260000,
-  "precio": 0,
+  "precio": 8500000,
+  "moneda": "ARS",
   "transmision": "Manual",
   "combustible": "Nafta",
   "imagenes": [
@@ -457,16 +466,17 @@
     "img/auto-14-7.webp",
     "img/auto-14-8.webp",
     "img/auto-14-9.webp",
-    "img/auto-14-10.webp"]
-    ,
-    "descripcion": "Version Mio Work \n 1.2 - 16CV \n Unica Mano \n Neumaticos Nuevos \n Servicios al dia"
-} ,{
+    "img/auto-14-10.webp"
+  ],
+  "descripcion": "Version Mio Work \n 1.2 - 16CV \n Unica Mano \n Neumaticos Nuevos \n Servicios al dia"
+},{
   "id": 25,
   "marca": "Renault",
   "modelo": "Kangoo Authentique",
   "anio": 2015,
   "km": 260000,
-  "precio": 0,
+  "precio": 13200000,
+  "moneda": "ARS",
   "transmision": "Manual",
   "combustible": "Nafta",
   "imagenes": [
@@ -480,6 +490,6 @@
     "img/auto-16-8.webp",
     "img/auto-16-9.webp",
     "img/auto-16-10.webp"
-    ],
-    "descripcion": "autentique 1PLC \n 1.6 - 16CV \n Neumaticos Nuevos \n Servicios al dia"
-} ]
+  ],
+  "descripcion": "Authentique 1PLC \n 1.6 - 16CV \n Neumaticos Nuevos \n Servicios al dia"
+}]

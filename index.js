@@ -195,7 +195,9 @@ function renderizarTarjetas(lista, idContenedor, marcaActiva = '') {
     contenedor.innerHTML = lista.map((auto, index) => {
         const es0km = auto.km === 0;
         const img2 = auto.imagenes[1] ? auto.imagenes[1] : auto.imagenes[0];
-        const precioMostrar = auto.precio === 0 ? "Consultar" : `USD ${auto.precio.toLocaleString()}`;
+        const precioMostrar = auto.precio === 0 ? "Consultar" :
+            auto.moneda === "USD" ? `u$s ${auto.precio.toLocaleString('es-AR')}` :
+            `$ ${auto.precio.toLocaleString('es-AR')}`;
 
         const marcaUrl = auto.marca.trim().toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/\s+/g, '-');
         const modeloUrl = auto.modelo.trim().toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/\s+/g, '-');
