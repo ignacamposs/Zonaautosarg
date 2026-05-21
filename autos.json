@@ -1,4 +1,26 @@
 [{
+  "id": 28,
+  "marca": "Chery",
+  "modelo": "QQ Light",
+  "anio": 2018,
+  "km": 75000,
+  "precio": 0,
+  "transmision": "Manual",
+  "combustible": "Nafta",
+  "imagenes": [
+    "img/auto-29-1.webp",
+    "img/auto-29-2.webp",
+    "img/auto-29-3.webp",
+    "img/auto-29-4.webp",
+    "img/auto-29-5.webp",
+    "img/auto-29-6.webp",
+    "img/auto-29-7.webp",
+    "img/auto-29-8.webp",
+    "img/auto-29-9.webp",
+    "img/auto-29-10.webp"
+  ],
+  "descripcion": "Version Light \n 1.0 - 70CV \n Servicios Oficiales \n Única Mano"
+} ,{
   "id": 26,
   "marca": "Hyundai",
   "modelo": "H1 Premium",
@@ -99,30 +121,6 @@
     ],
     "descripcion": "1.6 - 115CV \n Servicios al dia \n Única Mano"
 
-},{
-  "id": 4,
-  "marca": "Peugeot",
-  "modelo": "208 Active Pack",
-  "anio": 2023,
-  "km": 26000,
-  "precio": 0,
-  "transmision": "Automática",
-  "combustible": "Nafta",
-  "imagenes": [
-    "img/auto-23-1.webp",
-    "img/auto-23-2.webp",
-    "img/auto-23-3.webp",
-    "img/auto-23-4.webp",
-    "img/auto-23-5.webp",
-    "img/auto-23-6.webp",
-    "img/auto-23-7.webp",
-    "img/auto-23-8.webp",
-    "img/auto-23-9.webp",
-    "img/auto-23-10.webp",
-    "img/auto-23-11.webp",
-    "img/auto-23-12.webp"
-    ],
-    "descripcion": "1.6 - 115CV \n Techo panoramico \n Unica Mano \n Servicios Oficiales"
 },{
   "id": 5,
   "marca": "Chevrolet",
@@ -438,33 +436,7 @@
   ],
     "descripcion": "1.2 - 132CV\n Servicios al dia"
 
-},{
-  "id": 22,
-  "marca": "Mitsubishi",
-  "modelo": "Outlander GLS 4x4",
-  "anio": 2009,
-  "km": 220000,
-  "precio": 0,
-  "transmision": "Automática",
-  "combustible": "Nafta",
-  "imagenes": [
-    "img/auto-13-1.webp",
-    "img/auto-13-2.webp",
-    "img/auto-13-3.webp",
-    "img/auto-13-4.webp",
-    "img/auto-13-5.webp",
-    "img/auto-13-6.webp",
-    "img/auto-13-7.webp",
-    "img/auto-13-8.webp",
-    "img/auto-13-9.webp",
-    "img/auto-13-10.webp",
-    "img/auto-13-11.webp",
-    "img/auto-13-12.webp",
-    "img/auto-13-13.webp"
-  ],
-    "descripcion": "2.4 - 170CV\n Traccion 4x4\n Cuero/Techo \n Servicios al dia"
 }
-
 
  ,{
   "id": 23,
