@@ -1,4 +1,29 @@
 [{
+  "id": 29,
+  "marca": "Volkswagen",
+  "modelo": "Amarok Highline",
+  "anio": 2017,
+  "km": 180000,
+  "precio": 0,
+  "moneda": "ARS",
+  "transmision": "Manual",
+  "combustible": "Diesel",
+  "imagenes": [
+    "img/auto-30-1.webp",
+    "img/auto-30-2.webp",
+    "img/auto-30-3.webp",
+    "img/auto-30-4.webp",
+    "img/auto-30-5.webp",
+    "img/auto-30-6.webp",
+    "img/auto-30-7.webp",
+    "img/auto-30-8.webp",
+    "img/auto-30-9.webp",
+    "img/auto-30-10.webp",
+    "img/auto-30-11.webp",
+    "img/auto-30-12.webp"
+  ],
+  "descripcion": "Version Highline \n Traccion 4x4 \n 2.0 - 180CV \n Cuero \n Servicios al dia"
+},{
   "id": 28,
   "marca": "Chery",
   "modelo": "QQ Light",
