@@ -44,6 +44,7 @@ function actualizarThumbs() {
         t.classList.toggle('border-white/10', i !== currentImageIndex);
         t.classList.toggle('opacity-50', i !== currentImageIndex);
     });
+    thumbs[currentImageIndex]?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
 }
 
 function sendWhatsApp() {
