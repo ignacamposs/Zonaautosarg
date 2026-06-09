@@ -1,4 +1,28 @@
 ﻿[{
+  "id": 35,
+  "marca": "Volkswagen",
+  "modelo": "T-Cross 170TSI",
+  "anio": 2024,
+  "km": 56000,
+  "precio": 32500000,
+  "moneda": "ARS",
+  "transmision": "Manual",
+  "combustible": "Nafta",
+  "imagenes": [
+    "img/auto-35-1.webp",
+    "img/auto-35-2.webp",
+    "img/auto-35-3.webp",
+    "img/auto-35-4.webp",
+    "img/auto-35-5.webp",
+    "img/auto-35-6.webp",
+    "img/auto-35-7.webp",
+    "img/auto-35-8.webp",
+    "img/auto-35-9.webp",
+    "img/auto-35-10.webp",
+    "img/auto-35-11.webp"
+  ],
+  "descripcion": "1.0T - 101CV \n Version 170TSI  \n Unica Mano \n Servicios al dia"
+},{
   "id": 33,
   "marca": "Ford",
   "modelo": "Ka SEL",
