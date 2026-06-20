@@ -1,0 +1,237 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<!-- Breadcrumb -->
+<div class="flex items-center gap-2 mb-6 text-sm text-gray-400">
+    <a href="/" class="hover:text-white transition-colors">← Panel</a>
+    <span class="text-gray-600">/</span>
+    <span class="text-white font-medium truncate">{{ carpeta_nombre }}</span>
+</div>
+
+<!-- Info -->
+<div class="flex items-center gap-2 text-xs text-gray-500 mb-4">
+    <span class="text-green-500 font-bold">✓</span>
+    <span>{{ cant_fotos }} fotos descargadas · {{ nombre_auto }}</span>
+</div>
+
+<!-- ── Grilla de fotos ── -->
+<div class="mb-8">
+    <div class="flex items-center justify-between mb-3">
+        <p class="text-[10px] uppercase tracking-widest text-gray-400 font-bold">
+            Fotos — arrastrá para ordenar
+        </p>
+        <p class="text-[10px] text-gray-600">
+            Botón <span class="bg-red-900 text-red-300 px-1 rounded font-bold">D</span> = excluir del slider
+        </p>
+    </div>
+
+    <div id="photo-grid" class="grid grid-cols-3 sm:grid-cols-4 gap-2">
+        {% for foto in fotos %}
+        <div class="foto-item relative rounded-xl overflow-hidden border-2 border-transparent cursor-grab active:cursor-grabbing select-none"
+             data-foto="{{ foto }}">
+            <img src="/img/{{ foto }}" class="w-full aspect-square object-cover pointer-events-none">
+
+            <!-- Número de orden -->
+            <span class="order-num absolute top-1.5 left-1.5 bg-black/70 text-white text-[10px] font-black px-1.5 py-0.5 rounded-md min-w-[20px] text-center leading-none pt-1"></span>
+
+            <!-- Botón descripción -->
+            <button type="button"
+                class="btn-desc absolute top-1.5 right-1.5 bg-black/60 hover:bg-red-600 text-white text-[10px] font-black px-1.5 py-0.5 rounded-md transition-colors leading-none pt-1"
+                title="Marcar como descripción (excluir del slider)">D</button>
+
+            <!-- Badge descripción -->
+            <span class="desc-badge hidden absolute bottom-0 left-0 right-0 text-center bg-red-600/90 text-white text-[9px] font-bold py-1 uppercase tracking-widest">
+                descripción
+            </span>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Estado del análisis automático -->
+<div id="autofill-status" class="hidden text-sm px-4 py-3 rounded-xl border mb-6"></div>
+
+<!-- ── Formulario de datos ── -->
+<form id="main-form" method="POST" action="/publicar" class="space-y-4">
+
+    <input type="hidden" name="foto_order"  id="foto_order_form">
+    <input type="hidden" name="desc_fotos"  id="desc_fotos_form">
+
+    <div class="grid grid-cols-2 gap-3">
+        <div>
+            <label class="block text-[10px] uppercase tracking-widest text-gray-400 mb-1.5 font-bold">Marca</label>
+            <input type="text" name="marca" required placeholder="Toyota" autofocus
+                class="w-full bg-[#242424] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-red-600 transition-colors text-sm">
+        </div>
+        <div>
+            <label class="block text-[10px] uppercase tracking-widest text-gray-400 mb-1.5 font-bold">Modelo</label>
+            <input type="text" name="modelo" required placeholder="Suran Highline"
+                class="w-full bg-[#242424] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-red-600 transition-colors text-sm">
+        </div>
+    </div>
+
+    <div class="grid grid-cols-2 gap-3">
+        <div>
+            <label class="block text-[10px] uppercase tracking-widest text-gray-400 mb-1.5 font-bold">Año</label>
+            <input type="number" name="anio" required placeholder="2017" min="1990" max="2030"
+                class="w-full bg-[#242424] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-red-600 transition-colors text-sm">
+        </div>
+        <div>
+            <label class="block text-[10px] uppercase tracking-widest text-gray-400 mb-1.5 font-bold">KM</label>
+            <input type="number" name="km" required placeholder="80000" min="0"
+                class="w-full bg-[#242424] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-red-600 transition-colors text-sm">
+        </div>
+    </div>
+
+    <div class="grid grid-cols-2 gap-3">
+        <div>
+            <label class="block text-[10px] uppercase tracking-widest text-gray-400 mb-1.5 font-bold">Moneda</label>
+            <select name="moneda"
+                class="w-full bg-[#242424] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-red-600 transition-colors text-sm">
+                <option value="ARS">$ Pesos (ARS)</option>
+                <option value="USD">u$s Dólares (USD)</option>
+            </select>
+        </div>
+        <div>
+            <label class="block text-[10px] uppercase tracking-widest text-gray-400 mb-1.5 font-bold">
+                Precio <span class="text-gray-600 normal-case font-normal">(0 = Consultar)</span>
+            </label>
+            <input type="number" name="precio" required placeholder="0" value="0" min="0"
+                class="w-full bg-[#242424] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-red-600 transition-colors text-sm">
+        </div>
+    </div>
+
+    <div class="grid grid-cols-2 gap-3">
+        <div>
+            <label class="block text-[10px] uppercase tracking-widest text-gray-400 mb-1.5 font-bold">Transmisión</label>
+            <select name="transmision"
+                class="w-full bg-[#242424] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-red-600 transition-colors text-sm">
+                <option value="Manual">Manual</option>
+                <option value="Automática">Automática</option>
+            </select>
+        </div>
+        <div>
+            <label class="block text-[10px] uppercase tracking-widest text-gray-400 mb-1.5 font-bold">Combustible</label>
+            <select name="combustible"
+                class="w-full bg-[#242424] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-red-600 transition-colors text-sm">
+                <option value="Nafta">Nafta</option>
+                <option value="Diesel">Diesel</option>
+            </select>
+        </div>
+    </div>
+
+    <div>
+        <label class="block text-[10px] uppercase tracking-widest text-gray-400 mb-1.5 font-bold">Descripción</label>
+        <textarea name="descripcion" rows="5"
+            placeholder="Version Highline&#10;1.6 - 110CV&#10;Unica Mano&#10;Servicios al dia"
+            class="w-full bg-[#242424] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-red-600 transition-colors text-sm resize-none"></textarea>
+        <p class="text-[10px] text-gray-600 mt-1">Una característica por línea</p>
+    </div>
+
+    <button type="submit"
+        onclick="syncHiddenInputs(); document.getElementById('loading').classList.remove('hidden')"
+        class="w-full bg-red-600 hover:bg-red-500 active:scale-[0.99] text-white font-black py-4 rounded-2xl text-base transition-all mt-2">
+        Publicar Auto →
+    </button>
+
+</form>
+
+<!-- SortableJS -->
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.3/Sortable.min.js"></script>
+<script>
+    const descFotos = new Set();
+
+    // Inicializar SortableJS
+    Sortable.create(document.getElementById('photo-grid'), {
+        animation: 150,
+        ghostClass: 'opacity-30',
+        onEnd: updateBadges
+    });
+
+    // Botones D — toggle descripción + auto-fill
+    document.querySelectorAll('.btn-desc').forEach(btn => {
+        btn.addEventListener('click', function () {
+            const item = this.closest('.foto-item');
+            const foto = item.dataset.foto;
+            const isDesc = descFotos.has(foto);
+
+            if (isDesc) {
+                // Desmarcar
+                descFotos.delete(foto);
+                item.classList.remove('border-red-600', 'opacity-60');
+                item.querySelector('.desc-badge').classList.add('hidden');
+                item.querySelector('.order-num').classList.remove('hidden');
+            } else {
+                // Marcar como descripción → excluir del slider + analizar
+                descFotos.add(foto);
+                item.classList.add('border-red-600', 'opacity-60');
+                item.querySelector('.desc-badge').classList.remove('hidden');
+                item.querySelector('.order-num').classList.add('hidden');
+                autoFill(foto);
+            }
+            updateBadges();
+        });
+    });
+
+    function updateBadges() {
+        let num = 1;
+        document.querySelectorAll('#photo-grid .foto-item').forEach(item => {
+            const foto = item.dataset.foto;
+            const badge = item.querySelector('.order-num');
+            if (!descFotos.has(foto)) {
+                badge.textContent = num++;
+            }
+        });
+    }
+
+    function syncHiddenInputs() {
+        const items = document.querySelectorAll('#photo-grid .foto-item');
+        const sliderFotos = [];
+        items.forEach(item => {
+            const foto = item.dataset.foto;
+            if (!descFotos.has(foto)) sliderFotos.push(foto);
+        });
+        document.getElementById('foto_order_form').value = sliderFotos.join(',');
+        document.getElementById('desc_fotos_form').value = Array.from(descFotos).join(',');
+    }
+
+    function autoFill(foto) {
+        const status = document.getElementById('autofill-status');
+        status.className = 'text-sm px-4 py-3 rounded-xl border mb-6 border-yellow-800 bg-yellow-950/40 text-yellow-300';
+        status.textContent = '⏳ Analizando imagen con IA...';
+        status.classList.remove('hidden');
+
+        fetch(`/analizar/${foto}`)
+            .then(r => r.json())
+            .then(data => {
+                if (data.error) throw new Error(data.error);
+
+                const set = (name, val) => {
+                    if (val !== undefined && val !== null && val !== '') {
+                        document.querySelector(`[name=${name}]`).value = val;
+                    }
+                };
+                set('marca',       data.marca);
+                set('modelo',      data.modelo);
+                set('anio',        data.anio);
+                set('km',          data.km);
+                set('precio',      data.precio);
+                set('moneda',      data.moneda);
+                set('transmision', data.transmision);
+                set('combustible', data.combustible);
+                set('descripcion', data.descripcion);
+
+                status.className = 'text-sm px-4 py-3 rounded-xl border mb-6 border-green-800 bg-green-950/40 text-green-300';
+                status.textContent = '✓ Datos cargados automáticamente — revisá y corregí si algo está mal';
+            })
+            .catch(err => {
+                status.className = 'text-sm px-4 py-3 rounded-xl border mb-6 border-red-800 bg-red-950/40 text-red-300';
+                status.textContent = `⚠ No se pudo analizar la imagen: ${err.message}`;
+            });
+    }
+
+    // Inicializar badges al cargar
+    updateBadges();
+</script>
+
+{% endblock %}

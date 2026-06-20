@@ -1,3 +1,17 @@
+# Credenciales y secretos — nunca subir
+.env
 credentials.json
 token.json
+
+# Archivos de estado local
 .procesado_*
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db

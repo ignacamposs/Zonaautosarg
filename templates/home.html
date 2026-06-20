@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h1 class="text-2xl font-black mb-8">Carpetas en Drive</h1>
+
+{% if nuevas %}
+<div class="mb-10">
+    <p class="text-[10px] uppercase tracking-widest text-gray-400 font-bold mb-4">
+        Nuevas · listas para cargar
+    </p>
+    <div class="space-y-3">
+        {% for c in nuevas %}
+        <div class="bg-[#242424] border border-white/10 rounded-2xl p-4 flex items-center justify-between gap-4">
+            <div class="flex items-center gap-3 min-w-0">
+                <span class="w-2 h-2 rounded-full bg-green-400 shrink-0"></span>
+                <span class="font-medium text-sm truncate">{{ c.name }}</span>
+            </div>
+            <div class="flex items-center gap-2 shrink-0">
+                <a href="/saltear/{{ c.id }}"
+                   class="text-gray-500 hover:text-gray-300 text-xs px-3 py-2 rounded-full border border-white/10 hover:border-white/20 transition-colors">
+                    Saltear
+                </a>
+                <a href="/cargar/{{ c.id }}"
+                   class="btn-cargar bg-red-600 hover:bg-red-500 text-white text-sm font-bold px-5 py-2 rounded-full transition-colors">
+                    Cargar →
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% else %}
+<div class="bg-[#242424] border border-white/10 rounded-2xl p-10 text-center mb-10">
+    <p class="text-3xl mb-3">✓</p>
+    <p class="text-gray-400 text-sm">No hay carpetas nuevas en Drive.</p>
+</div>
+{% endif %}
+
+{% if procesadas %}
+<div>
+    <p class="text-[10px] uppercase tracking-widest text-gray-600 font-bold mb-3">Ya procesadas</p>
+    <div class="space-y-1">
+        {% for c in procesadas %}
+        <div class="flex items-center gap-3 px-3 py-2 text-gray-500 text-sm">
+            <span class="text-green-800 text-xs">✓</span>
+            <span>{{ c.name }}</span>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+<script>
+    document.querySelectorAll('.btn-cargar').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.getElementById('loading').classList.remove('hidden');
+        });
+    });
+</script>
+{% endblock %}

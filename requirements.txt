@@ -1,0 +1,8 @@
+flask
+pillow-heif
+Pillow
+google-api-python-client
+google-auth-oauthlib
+anthropic
+python-dotenv
+PyGithub

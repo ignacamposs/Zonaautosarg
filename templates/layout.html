@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zona Autos — Admin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#1a1a1a] text-white min-h-screen">
+
+    <!-- Overlay de carga -->
+    <div id="loading" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex flex-col items-center justify-center gap-5">
+        <div class="w-10 h-10 border-4 border-white/20 border-t-white rounded-full animate-spin"></div>
+        <p class="text-gray-300 text-sm text-center leading-relaxed">
+            Descargando y convirtiendo fotos...<br>
+            <span class="text-gray-500">Puede tardar un momento.</span>
+        </p>
+    </div>
+
+    <header class="bg-[#222] border-b border-white/10 px-6 py-4 sticky top-0 z-40">
+        <div class="max-w-xl mx-auto flex items-center gap-3">
+            <a href="/" class="text-red-500 font-black text-lg tracking-tight hover:text-red-400 transition-colors">
+                ZONA AUTOS
+            </a>
+            <span class="text-gray-600">/</span>
+            <span class="text-gray-400 text-sm">Admin</span>
+        </div>
+    </header>
+
+    <main class="max-w-xl mx-auto px-6 py-10">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+            <div class="bg-red-950/50 border border-red-800 text-red-300 px-4 py-3 rounded-xl mb-6 text-sm flex items-start gap-2">
+                <span class="shrink-0 mt-0.5">⚠</span>
+                <span>{{ msg }}</span>
+            </div>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+    </main>
+
+</body>
+</html>
