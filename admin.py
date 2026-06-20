@@ -50,8 +50,8 @@ if IS_RAILWAY:
     # Credenciales Google desde env vars → archivos temporales
     _creds_dir = Path(tempfile.gettempdir()) / "za-creds"
     _creds_dir.mkdir(exist_ok=True)
-    (_creds_dir / "credentials.json").write_text(os.getenv("GOOGLE_CREDENTIALS", "{}"))
-    (_creds_dir / "token.json").write_text(os.getenv("GOOGLE_TOKEN", "{}"))
+    (_creds_dir / "credentials.json").write_text(os.getenv("GOOGLE_CREDENTIALS") or "{}")
+    (_creds_dir / "token.json").write_text(os.getenv("GOOGLE_TOKEN") or "{}")
     _ca.TOKEN_FILE       = str(_creds_dir / "token.json")
     _ca.CREDENTIALS_FILE = str(_creds_dir / "credentials.json")
 
