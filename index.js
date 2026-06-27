@@ -212,22 +212,26 @@ function renderizarTarjetas(lista, idContenedor, marcaActiva = '') {
 
         const msgWA = encodeURIComponent(`Hola! Me interesa el ${auto.marca} ${auto.modelo} ${auto.anio}`);
 
-        const esVendido = auto.vendido === true;
+        const esVendido   = auto.vendido   === true;
+        const esReservado = auto.reservado === true;
+        const bloqueado   = esVendido || esReservado;
 
         return `
             <article
-                onclick="${esVendido ? '' : `window.location.href='${urlFicha}'`}"
+                onclick="${bloqueado ? '' : `window.location.href='${urlFicha}'`}"
                 style="animation: subir 0.5s ease-out ${index * 70}ms both"
-                class="group bg-[#1E1E1E] border-2 border-transparent ${esVendido ? 'opacity-60 cursor-default' : 'hover:border-red-600 cursor-pointer'} rounded-3xl overflow-hidden shadow-md flex flex-col h-full mb-6 transition-all duration-300"
+                class="group bg-[#1E1E1E] border-2 border-transparent ${bloqueado ? 'opacity-60 cursor-default' : 'hover:border-red-600 cursor-pointer'} rounded-3xl overflow-hidden shadow-md flex flex-col h-full mb-6 transition-all duration-300"
             >
                 <div class="relative w-full overflow-hidden h-60">
                     <img src="${auto.imagenes[0]}" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" loading="lazy">
                     <img src="${img2}" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110" loading="lazy">
-                    <div class="absolute top-4 right-4 z-10 ${esVendido ? 'bg-gray-600' : es0km ? 'bg-black' : 'bg-red-600'} text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-lg">
-                        ${esVendido ? 'VENDIDO' : es0km ? '0 KM' : 'Usado'}
+                    <div class="absolute top-4 right-4 z-10 ${esVendido ? 'bg-gray-600' : esReservado ? 'bg-orange-500' : es0km ? 'bg-black' : 'bg-red-600'} text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-lg">
+                        ${esVendido ? 'VENDIDO' : esReservado ? 'RESERVADO' : es0km ? '0 KM' : 'Usado'}
                     </div>
                     ${esVendido ? `<div class="absolute inset-0 bg-black/50 flex items-center justify-center z-10">
                         <span class="text-white font-black text-2xl uppercase tracking-widest border-4 border-white px-6 py-2 rotate-[-15deg]">VENDIDO</span>
+                    </div>` : esReservado ? `<div class="absolute inset-0 bg-black/50 flex items-center justify-center z-10">
+                        <span class="text-orange-400 font-black text-2xl uppercase tracking-widest border-4 border-orange-400 px-6 py-2 rotate-[-15deg]">RESERVADO</span>
                     </div>` : ''}
                 </div>
 

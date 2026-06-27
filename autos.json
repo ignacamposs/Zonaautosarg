@@ -5,7 +5,7 @@
     "modelo": "Suran",
     "anio": 2017,
     "km": 126000,
-    "precio": 0,
+    "precio": 16000000,
     "moneda": "ARS",
     "transmision": "Manual",
     "combustible": "Nafta",
@@ -98,7 +98,8 @@
       "img/auto-37-10.webp",
       "img/auto-37-11.webp"
     ],
-    "descripcion": "Version VX \n 2.5 - 180CV \n Traccion 4x4 \n Multimedia GPS \n Servicios Oficiales"
+    "descripcion": "Version VX \n 2.5 - 180CV \n Traccion 4x4 \n Multimedia GPS \n Servicios Oficiales",
+    "reservado": true
   },
   {
     "id": 35,
