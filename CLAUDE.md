@@ -17,6 +17,16 @@ python convertir_autos.py
 ```
 `credentials.json` and `token.json` are Google OAuth files required for Drive access. First run will open a browser for auth; subsequent runs use the cached token.
 
+### Google Drive auth on Railway (`admin.py`)
+
+`convertir_autos.autenticar()` tries a service account first (`service_account.json`, or the `GOOGLE_SERVICE_ACCOUNT_JSON` env var on Railway), falling back to the OAuth flow (`credentials.json`/`token.json`, or `GOOGLE_CREDENTIALS`/`GOOGLE_TOKEN` on Railway) if no service account is configured.
+
+The service account is the preferred path for Railway: unlike the OAuth refresh token, its key doesn't expire, so the admin panel never shows `invalid_grant: Token has been expired or revoked`. Setup:
+1. In Google Cloud Console (same project as the OAuth credentials), create a service account and download its JSON key.
+2. Share the Drive root folder (`CARPETA_RAIZ_DRIVE` in `convertir_autos.py`) with the service account's email (Viewer is enough — the app only needs `drive.readonly`).
+3. Set `GOOGLE_SERVICE_ACCOUNT_JSON` on Railway to the full contents of the key file.
+4. The old `GOOGLE_CREDENTIALS`/`GOOGLE_TOKEN` vars can stay or be removed; they're only used when `GOOGLE_SERVICE_ACCOUNT_JSON` is absent.
+
 ## Architecture
 
 ### Data flow

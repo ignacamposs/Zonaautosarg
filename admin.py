@@ -50,10 +50,17 @@ if IS_RAILWAY:
     # Credenciales Google desde env vars → archivos temporales
     _creds_dir = Path(tempfile.gettempdir()) / "za-creds"
     _creds_dir.mkdir(exist_ok=True)
-    (_creds_dir / "credentials.json").write_text(os.getenv("GOOGLE_CREDENTIALS") or "{}")
-    (_creds_dir / "token.json").write_text(os.getenv("GOOGLE_TOKEN") or "{}")
-    _ca.TOKEN_FILE       = str(_creds_dir / "token.json")
-    _ca.CREDENTIALS_FILE = str(_creds_dir / "credentials.json")
+
+    _sa_json = os.getenv("GOOGLE_SERVICE_ACCOUNT_JSON")
+    if _sa_json:
+        # Cuenta de servicio: no expira, no requiere reautenticación manual.
+        (_creds_dir / "service_account.json").write_text(_sa_json)
+        _ca.SERVICE_ACCOUNT_FILE = str(_creds_dir / "service_account.json")
+    else:
+        (_creds_dir / "credentials.json").write_text(os.getenv("GOOGLE_CREDENTIALS") or "{}")
+        (_creds_dir / "token.json").write_text(os.getenv("GOOGLE_TOKEN") or "{}")
+        _ca.TOKEN_FILE       = str(_creds_dir / "token.json")
+        _ca.CREDENTIALS_FILE = str(_creds_dir / "credentials.json")
 
     # Fotos van a un directorio temporal
     CARPETA_IMG = Path(tempfile.gettempdir()) / "za-img"
