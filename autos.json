@@ -1,5 +1,29 @@
 [
   {
+    "id": 41,
+    "marca": "Toyota",
+    "modelo": "Corolla Cross",
+    "anio": 2025,
+    "km": 9000,
+    "precio": 51000000,
+    "moneda": "ARS",
+    "transmision": "Automática",
+    "combustible": "Nafta",
+    "imagenes": [
+      "img/auto-41-1.webp",
+      "img/auto-41-2.webp",
+      "img/auto-41-3.webp",
+      "img/auto-41-4.webp",
+      "img/auto-41-5.webp",
+      "img/auto-41-6.webp",
+      "img/auto-41-7.webp",
+      "img/auto-41-8.webp",
+      "img/auto-41-9.webp",
+      "img/auto-41-10.webp"
+    ],
+    "descripcion": "Version XLI\r\n2.0 - 170CV\r\nAsistencia de Carril\r\nVel. Crucero\r\nGarantía de Fábrica\r\nExcelente estado listo para transferir"
+  },
+  {
     "id": 40,
     "marca": "Volkswagen",
     "modelo": "Suran",
