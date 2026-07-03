@@ -1,5 +1,29 @@
 [
   {
+    "id": 42,
+    "marca": "Volkswagen",
+    "modelo": "Gol trend",
+    "anio": 2014,
+    "km": 112000,
+    "precio": 12000000,
+    "moneda": "ARS",
+    "transmision": "Manual",
+    "combustible": "Nafta",
+    "imagenes": [
+      "img/auto-42-4.webp",
+      "img/auto-42-5.webp",
+      "img/auto-42-6.webp",
+      "img/auto-42-7.webp",
+      "img/auto-42-8.webp",
+      "img/auto-42-9.webp",
+      "img/auto-42-10.webp",
+      "img/auto-42-1.webp",
+      "img/auto-42-2.webp",
+      "img/auto-42-3.webp"
+    ],
+    "descripcion": "Versión Pack 1\r\n1.6 - 101CV\r\nCierre - Alarma\r\nÚnico Dueño\r\nServicios al día"
+  },
+  {
     "id": 41,
     "marca": "Toyota",
     "modelo": "Corolla Cross",
