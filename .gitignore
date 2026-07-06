@@ -2,7 +2,6 @@
 .env
 credentials.json
 token.json
-service_account.json
 
 # Archivos de estado local
 .procesado_*

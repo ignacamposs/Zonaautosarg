@@ -8,15 +8,27 @@
     <span class="text-white font-medium truncate">{{ auto.marca }} {{ auto.modelo }}</span>
 </div>
 
-<!-- Foto -->
-<div class="mb-6">
-    <img src="{{ site_base }}{{ auto.imagenes[0] }}"
-         class="w-full h-48 object-cover rounded-2xl bg-[#333]"
-         onerror="this.style.display='none'">
-</div>
-
 <!-- Formulario -->
 <form method="POST" action="/editar/{{ auto.id }}" class="space-y-4">
+
+<!-- Fotos -->
+<div>
+    <div class="flex items-center justify-between mb-3">
+        <p class="text-[10px] uppercase tracking-widest text-gray-400 font-bold">Fotos — arrastrá para ordenar</p>
+        <p class="text-[10px] text-gray-600">Botón <span class="bg-red-900 text-red-300 px-1 rounded font-bold">✕</span> = sacar foto</p>
+    </div>
+    <div id="photo-grid" class="grid grid-cols-3 sm:grid-cols-4 gap-2">
+        {% for img in auto.imagenes %}
+        <div class="foto-item relative rounded-xl overflow-hidden border-2 border-transparent cursor-grab active:cursor-grabbing select-none"
+             data-img="{{ img }}">
+            <img src="{{ site_base }}{{ img }}" class="w-full aspect-square object-cover pointer-events-none bg-[#333]">
+            <span class="order-num absolute top-1.5 left-1.5 bg-black/70 text-white text-[10px] font-black px-1.5 py-0.5 rounded-md min-w-[20px] text-center leading-none pt-1"></span>
+            <button type="button" class="btn-sacar absolute top-1.5 right-1.5 bg-black/60 hover:bg-red-600 text-white text-[10px] font-black px-1.5 py-0.5 rounded-md transition-colors leading-none pt-1">✕</button>
+        </div>
+        {% endfor %}
+    </div>
+    <input type="hidden" name="imagenes_order" id="imagenes_order_input">
+</div>
 
     <div class="grid grid-cols-2 gap-3">
         <div>
@@ -99,10 +111,46 @@
     </div>
 
     <button type="submit"
+        onclick="syncFotos()"
         class="w-full bg-red-600 hover:bg-red-500 active:scale-[0.99] text-white font-black py-4 rounded-2xl text-base transition-all mt-2">
         Guardar cambios →
     </button>
 
 </form>
+
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.3/Sortable.min.js"></script>
+<script>
+    const removidas = new Set();
+
+    Sortable.create(document.getElementById('photo-grid'), {
+        animation: 150,
+        ghostClass: 'opacity-30',
+        onEnd: updateBadges
+    });
+
+    document.querySelectorAll('.btn-sacar').forEach(btn => {
+        btn.addEventListener('click', function () {
+            const item = this.closest('.foto-item');
+            removidas.add(item.dataset.img);
+            item.remove();
+            updateBadges();
+        });
+    });
+
+    function updateBadges() {
+        let num = 1;
+        document.querySelectorAll('#photo-grid .foto-item').forEach(item => {
+            item.querySelector('.order-num').textContent = num++;
+        });
+    }
+
+    function syncFotos() {
+        const orden = Array.from(document.querySelectorAll('#photo-grid .foto-item'))
+            .map(item => item.dataset.img);
+        document.getElementById('imagenes_order_input').value = orden.join(',');
+    }
+
+    updateBadges();
+</script>
 
 {% endblock %}
