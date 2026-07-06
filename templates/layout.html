@@ -18,12 +18,20 @@
     </div>
 
     <header class="bg-[#222] border-b border-white/10 px-6 py-4 sticky top-0 z-40">
-        <div class="max-w-xl mx-auto flex items-center gap-3">
+        <div class="max-w-xl mx-auto flex items-center justify-between">
             <a href="/" class="text-red-500 font-black text-lg tracking-tight hover:text-red-400 transition-colors">
                 ZONA AUTOS
             </a>
-            <span class="text-gray-600">/</span>
-            <span class="text-gray-400 text-sm">Admin</span>
+            <nav class="flex items-center gap-1">
+                <a href="/"
+                   class="text-xs font-bold px-3 py-1.5 rounded-full transition-colors {% if request.path == '/' %}bg-white/10 text-white{% else %}text-gray-400 hover:text-white{% endif %}">
+                    Cargar
+                </a>
+                <a href="/gestionar"
+                   class="text-xs font-bold px-3 py-1.5 rounded-full transition-colors {% if request.path.startswith('/gestionar') or request.path.startswith('/editar') %}bg-white/10 text-white{% else %}text-gray-400 hover:text-white{% endif %}">
+                    Gestionar
+                </a>
+            </nav>
         </div>
     </header>
 

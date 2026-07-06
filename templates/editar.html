@@ -1,0 +1,108 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<!-- Breadcrumb -->
+<div class="flex items-center gap-2 mb-6 text-sm text-gray-400">
+    <a href="/gestionar" class="hover:text-white transition-colors">← Gestionar</a>
+    <span class="text-gray-600">/</span>
+    <span class="text-white font-medium truncate">{{ auto.marca }} {{ auto.modelo }}</span>
+</div>
+
+<!-- Foto -->
+<div class="mb-6">
+    <img src="{{ site_base }}{{ auto.imagenes[0] }}"
+         class="w-full h-48 object-cover rounded-2xl bg-[#333]"
+         onerror="this.style.display='none'">
+</div>
+
+<!-- Formulario -->
+<form method="POST" action="/editar/{{ auto.id }}" class="space-y-4">
+
+    <div class="grid grid-cols-2 gap-3">
+        <div>
+            <label class="block text-[10px] uppercase tracking-widest text-gray-400 mb-1.5 font-bold">Marca</label>
+            <input type="text" name="marca" required value="{{ auto.marca }}"
+                class="w-full bg-[#242424] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-red-600 transition-colors text-sm">
+        </div>
+        <div>
+            <label class="block text-[10px] uppercase tracking-widest text-gray-400 mb-1.5 font-bold">Modelo</label>
+            <input type="text" name="modelo" required value="{{ auto.modelo }}"
+                class="w-full bg-[#242424] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-red-600 transition-colors text-sm">
+        </div>
+    </div>
+
+    <div class="grid grid-cols-2 gap-3">
+        <div>
+            <label class="block text-[10px] uppercase tracking-widest text-gray-400 mb-1.5 font-bold">Año</label>
+            <input type="number" name="anio" required value="{{ auto.anio }}" min="1990" max="2030"
+                class="w-full bg-[#242424] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-red-600 transition-colors text-sm">
+        </div>
+        <div>
+            <label class="block text-[10px] uppercase tracking-widest text-gray-400 mb-1.5 font-bold">KM</label>
+            <input type="number" name="km" required value="{{ auto.km }}" min="0"
+                class="w-full bg-[#242424] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-red-600 transition-colors text-sm">
+        </div>
+    </div>
+
+    <div class="grid grid-cols-2 gap-3">
+        <div>
+            <label class="block text-[10px] uppercase tracking-widest text-gray-400 mb-1.5 font-bold">Moneda</label>
+            <select name="moneda"
+                class="w-full bg-[#242424] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-red-600 transition-colors text-sm">
+                <option value="ARS" {% if auto.moneda == "ARS" %}selected{% endif %}>$ Pesos (ARS)</option>
+                <option value="USD" {% if auto.moneda == "USD" %}selected{% endif %}>u$s Dólares (USD)</option>
+            </select>
+        </div>
+        <div>
+            <label class="block text-[10px] uppercase tracking-widest text-gray-400 mb-1.5 font-bold">
+                Precio <span class="text-gray-600 normal-case font-normal">(0 = Consultar)</span>
+            </label>
+            <input type="number" name="precio" required value="{{ auto.precio }}" min="0"
+                class="w-full bg-[#242424] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-red-600 transition-colors text-sm">
+        </div>
+    </div>
+
+    <div class="grid grid-cols-2 gap-3">
+        <div>
+            <label class="block text-[10px] uppercase tracking-widest text-gray-400 mb-1.5 font-bold">Transmisión</label>
+            <select name="transmision"
+                class="w-full bg-[#242424] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-red-600 transition-colors text-sm">
+                <option value="Manual"    {% if auto.transmision == "Manual" %}selected{% endif %}>Manual</option>
+                <option value="Automática" {% if auto.transmision == "Automática" %}selected{% endif %}>Automática</option>
+            </select>
+        </div>
+        <div>
+            <label class="block text-[10px] uppercase tracking-widest text-gray-400 mb-1.5 font-bold">Combustible</label>
+            <select name="combustible"
+                class="w-full bg-[#242424] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-red-600 transition-colors text-sm">
+                <option value="Nafta"  {% if auto.combustible == "Nafta" %}selected{% endif %}>Nafta</option>
+                <option value="Diesel" {% if auto.combustible == "Diesel" %}selected{% endif %}>Diesel</option>
+            </select>
+        </div>
+    </div>
+
+    <div>
+        <label class="block text-[10px] uppercase tracking-widest text-gray-400 mb-1.5 font-bold">Estado</label>
+        <select name="estado"
+            class="w-full bg-[#242424] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-red-600 transition-colors text-sm">
+            <option value="disponible" {% if auto._estado == "disponible" %}selected{% endif %}>Disponible</option>
+            <option value="reservado"  {% if auto._estado == "reservado"  %}selected{% endif %}>Reservado</option>
+            <option value="vendido"    {% if auto._estado == "vendido"    %}selected{% endif %}>Vendido</option>
+        </select>
+    </div>
+
+    <div>
+        <label class="block text-[10px] uppercase tracking-widest text-gray-400 mb-1.5 font-bold">Descripción</label>
+        <textarea name="descripcion" rows="5"
+            class="w-full bg-[#242424] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-red-600 transition-colors text-sm resize-none">{{ auto.descripcion }}</textarea>
+        <p class="text-[10px] text-gray-600 mt-1">Una característica por línea</p>
+    </div>
+
+    <button type="submit"
+        class="w-full bg-red-600 hover:bg-red-500 active:scale-[0.99] text-white font-black py-4 rounded-2xl text-base transition-all mt-2">
+        Guardar cambios →
+    </button>
+
+</form>
+
+{% endblock %}

@@ -37,6 +37,7 @@ from convertir_autos import (
     CARPETA_RAIZ_DRIVE,
     CARPETA_IMG as _CARPETA_IMG_LOCAL,
     CARPETA_UNIDADES,
+    AUTOS_JSON,
 )
 
 # ── Detección de entorno ─────────────────────────────────────────
@@ -63,6 +64,45 @@ else:
 
 app = Flask(__name__)
 app.secret_key = os.getenv("SECRET_KEY", "zonautos-admin-2026")
+
+SITE_BASE = "https://zonaautosarg.com/"
+
+@app.template_filter("miles")
+def miles_filter(n):
+    return formatear_miles(int(n))
+
+
+# ── Helpers de autos.json ────────────────────────────────────────
+
+def _cargar_autos():
+    """Carga autos.json desde GitHub (Railway) o disco (local)."""
+    if IS_RAILWAY:
+        content, _ = _gh_get_file("autos.json")
+        return json_module.loads(content) if content else []
+    else:
+        with open(AUTOS_JSON, encoding="utf-8-sig") as f:
+            return json_module.load(f)
+
+
+def _guardar_autos(autos, mensaje="Actualizar autos.json"):
+    """Guarda autos.json en GitHub (Railway) o disco (local)."""
+    if IS_RAILWAY:
+        from github import InputGitTreeElement
+        repo       = _gh_repo()
+        ref        = repo.get_git_ref(f"heads/{GITHUB_BRANCH}")
+        base_commit = repo.get_git_commit(ref.object.sha)
+        base_tree  = base_commit.tree
+        autos_str  = json_module.dumps(autos, ensure_ascii=False, indent=2)
+        blob       = repo.create_git_blob(base64.b64encode(autos_str.encode()).decode(), "base64")
+        new_tree   = repo.create_git_tree(
+            [InputGitTreeElement(path="autos.json", mode="100644", type="blob", sha=blob.sha)],
+            base_tree,
+        )
+        new_commit = repo.create_git_commit(mensaje, new_tree, [base_commit])
+        ref.edit(new_commit.sha)
+    else:
+        with open(AUTOS_JSON, "w", encoding="utf-8") as f:
+            json_module.dump(autos, f, ensure_ascii=False, indent=2)
 
 
 # ── GitHub helpers (solo Railway) ────────────────────────────────
@@ -363,6 +403,77 @@ Reglas estrictas:
 @app.route("/img/<filename>")
 def imagen(filename):
     return send_from_directory(str(CARPETA_IMG), filename)
+
+
+# ── Gestionar autos existentes ───────────────────────────────────
+
+@app.route("/gestionar")
+def gestionar():
+    autos = _cargar_autos()
+    return render_template("gestionar.html", autos=autos, site_base=SITE_BASE)
+
+
+@app.route("/estado/<int:auto_id>/<estado>")
+def cambiar_estado(auto_id, estado):
+    try:
+        autos = _cargar_autos()
+        auto  = next((a for a in autos if a["id"] == auto_id), None)
+        if not auto:
+            flash("Auto no encontrado.")
+            return redirect(url_for("gestionar"))
+
+        auto.pop("vendido",   None)
+        auto.pop("reservado", None)
+        if estado == "vendido":
+            auto["vendido"]   = True
+        elif estado == "reservado":
+            auto["reservado"] = True
+
+        nombre = f"{auto['marca']} {auto['modelo']}"
+        _guardar_autos(autos, f"{nombre} → {estado}")
+        flash(f"✓ {nombre} marcado como {estado}")
+    except Exception as e:
+        flash(f"Error: {e}")
+    return redirect(url_for("gestionar"))
+
+
+@app.route("/editar/<int:auto_id>", methods=["GET", "POST"])
+def editar(auto_id):
+    autos = _cargar_autos()
+    auto  = next((a for a in autos if a["id"] == auto_id), None)
+    if not auto:
+        flash("Auto no encontrado.")
+        return redirect(url_for("gestionar"))
+
+    if request.method == "POST":
+        try:
+            precio_raw = request.form["precio"].replace(".", "").replace(",", "").strip()
+            auto["marca"]       = request.form["marca"].strip()
+            auto["modelo"]      = request.form["modelo"].strip()
+            auto["anio"]        = int(request.form["anio"])
+            auto["km"]          = int(request.form["km"])
+            auto["precio"]      = int(precio_raw) if precio_raw else 0
+            auto["moneda"]      = request.form["moneda"]
+            auto["transmision"] = request.form["transmision"]
+            auto["combustible"] = request.form["combustible"]
+            auto["descripcion"] = request.form["descripcion"].strip()
+
+            estado = request.form.get("estado", "disponible")
+            auto.pop("vendido",   None)
+            auto.pop("reservado", None)
+            if estado == "vendido":
+                auto["vendido"]   = True
+            elif estado == "reservado":
+                auto["reservado"] = True
+
+            _guardar_autos(autos, f"Editar {auto['marca']} {auto['modelo']}")
+            flash(f"✓ {auto['marca']} {auto['modelo']} actualizado")
+            return redirect(url_for("gestionar"))
+        except Exception as e:
+            flash(f"Error al guardar: {e}")
+
+    auto["_estado"] = "vendido" if auto.get("vendido") else "reservado" if auto.get("reservado") else "disponible"
+    return render_template("editar.html", auto=auto, site_base=SITE_BASE)
 
 
 # ────────────────────────────────────────────────────────────────
