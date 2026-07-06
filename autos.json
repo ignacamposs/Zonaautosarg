@@ -1,5 +1,78 @@
 [
   {
+    "id": 43,
+    "marca": "Mercedes Benz",
+    "modelo": "Sprinter",
+    "anio": 2025,
+    "km": 35000,
+    "precio": 52000,
+    "moneda": "USD",
+    "transmision": "Manual",
+    "combustible": "Diesel",
+    "imagenes": [
+      "img/auto-43-1.webp",
+      "img/auto-43-2.webp",
+      "img/auto-43-3.webp",
+      "img/auto-43-4.webp",
+      "img/auto-43-5.webp",
+      "img/auto-43-6.webp",
+      "img/auto-43-7.webp",
+      "img/auto-43-8.webp",
+      "img/auto-43-9.webp",
+      "img/auto-43-10.webp",
+      "img/auto-43-11.webp"
+    ],
+    "descripcion": "Versión 414\r\n15+1 Asientos\r\n2.0 - 143CV\r\nÚnico dueño\r\nServicios al día"
+  },
+  {
+    "id": 42,
+    "marca": "Volkswagen",
+    "modelo": "Gol trend",
+    "anio": 2014,
+    "km": 112000,
+    "precio": 12000000,
+    "moneda": "ARS",
+    "transmision": "Manual",
+    "combustible": "Nafta",
+    "imagenes": [
+      "img/auto-42-4.webp",
+      "img/auto-42-5.webp",
+      "img/auto-42-6.webp",
+      "img/auto-42-7.webp",
+      "img/auto-42-8.webp",
+      "img/auto-42-9.webp",
+      "img/auto-42-10.webp",
+      "img/auto-42-1.webp",
+      "img/auto-42-2.webp",
+      "img/auto-42-3.webp"
+    ],
+    "descripcion": "Versión Pack 1\r\n1.6 - 101CV\r\nCierre - Alarma\r\nÚnico Dueño\r\nServicios al día"
+  },
+  {
+    "id": 41,
+    "marca": "Toyota",
+    "modelo": "Corolla Cross",
+    "anio": 2025,
+    "km": 9000,
+    "precio": 51000000,
+    "moneda": "ARS",
+    "transmision": "Automática",
+    "combustible": "Nafta",
+    "imagenes": [
+      "img/auto-41-1.webp",
+      "img/auto-41-2.webp",
+      "img/auto-41-3.webp",
+      "img/auto-41-4.webp",
+      "img/auto-41-5.webp",
+      "img/auto-41-6.webp",
+      "img/auto-41-7.webp",
+      "img/auto-41-8.webp",
+      "img/auto-41-9.webp",
+      "img/auto-41-10.webp"
+    ],
+    "descripcion": "Version XLI\r\n2.0 - 170CV\r\nAsistencia de Carril\r\nVel. Crucero\r\nGarantía de Fábrica\r\nExcelente estado listo para transferir"
+  },
+  {
     "id": 40,
     "marca": "Volkswagen",
     "modelo": "Suran",

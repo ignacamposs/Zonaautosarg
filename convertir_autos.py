@@ -17,6 +17,7 @@ from pathlib import Path
 
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
+from google.oauth2.service_account import Credentials as ServiceAccountCredentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaIoBaseDownload
@@ -35,15 +36,23 @@ AUTOS_JSON         = REPO_ROOT / "autos.json"
 CALIDAD_WEBP       = 85
 MAX_PX             = 1200  # lado máximo en píxeles
 
-SCOPES             = ["https://www.googleapis.com/auth/drive.readonly"]
-TOKEN_FILE         = "token.json"
-CREDENTIALS_FILE   = "credentials.json"
+SCOPES               = ["https://www.googleapis.com/auth/drive.readonly"]
+TOKEN_FILE           = "token.json"
+CREDENTIALS_FILE     = "credentials.json"
+SERVICE_ACCOUNT_FILE = "service_account.json"
 # ────────────────────────────────────────────────────────────────
 
 
 # ── Google Drive ─────────────────────────────────────────────────
 
 def autenticar():
+    # Cuenta de servicio: sin flujo de navegador, el token no expira.
+    if os.path.exists(SERVICE_ACCOUNT_FILE):
+        creds = ServiceAccountCredentials.from_service_account_file(
+            SERVICE_ACCOUNT_FILE, scopes=SCOPES
+        )
+        return build("drive", "v3", credentials=creds)
+
     creds = None
     if os.path.exists(TOKEN_FILE):
         creds = Credentials.from_authorized_user_file(TOKEN_FILE, SCOPES)
