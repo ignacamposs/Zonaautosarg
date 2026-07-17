@@ -222,7 +222,8 @@
       "img/auto-34-10.webp",
       "img/auto-34-11.webp"
     ],
-    "descripcion": "Version SEL \n 1.5 - 120CV \n Servicios al dia"
+    "descripcion": "Version SEL \n 1.5 - 120CV \n Servicios al dia",
+    "vendido": true
   },
   {
     "id": 31,
