@@ -494,7 +494,7 @@
     "modelo": "Sandero Life",
     "anio": 2022,
     "km": 40000,
-    "precio": 19200000,
+    "precio": 18500000,
     "moneda": "ARS",
     "transmision": "Manual",
     "combustible": "Nafta",
@@ -511,7 +511,7 @@
       "img/auto-20-10.webp",
       "img/auto-20-11.webp"
     ],
-    "descripcion": "1.6 - 115CV \n Unica Mano \n Servicios Oficiales"
+    "descripcion": "1.6 - 115CV \r\n Unica Mano \r\n Servicios Oficiales"
   },
   {
     "id": 9,
