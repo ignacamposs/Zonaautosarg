@@ -697,7 +697,7 @@
     "modelo": "Tracker LTZ",
     "anio": 2024,
     "km": 39000,
-    "precio": 32000000,
+    "precio": 31000000,
     "moneda": "ARS",
     "transmision": "Automática",
     "combustible": "Nafta",
@@ -713,7 +713,7 @@
       "img/auto-12-9.webp",
       "img/auto-12-10.webp"
     ],
-    "descripcion": "1.2 - 132CV\n Servicios al dia"
+    "descripcion": "1.2 - 132CV\r\n Servicios al dia"
   },
   {
     "id": 25,
