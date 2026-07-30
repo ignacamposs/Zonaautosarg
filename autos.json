@@ -1,5 +1,30 @@
 [
   {
+    "id": 47,
+    "marca": "Volkswagen",
+    "modelo": "Amarok",
+    "anio": 2021,
+    "km": 98000,
+    "precio": 32000000,
+    "moneda": "ARS",
+    "transmision": "Manual",
+    "combustible": "Nafta",
+    "imagenes": [
+      "img/auto-47-1.webp",
+      "img/auto-47-2.webp",
+      "img/auto-47-3.webp",
+      "img/auto-47-4.webp",
+      "img/auto-47-5.webp",
+      "img/auto-47-6.webp",
+      "img/auto-47-7.webp",
+      "img/auto-47-8.webp",
+      "img/auto-47-9.webp",
+      "img/auto-47-10.webp",
+      "img/auto-47-11.webp"
+    ],
+    "descripcion": "Version Trendline\r\n2.0 - 140CV\r\nTracción 4X4\r\nExcelente estado listo para transferir\r\nPermuto y Financio"
+  },
+  {
     "id": 46,
     "marca": "Toyota",
     "modelo": "SW4",
