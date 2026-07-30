@@ -1,5 +1,30 @@
 [
   {
+    "id": 46,
+    "marca": "Toyota",
+    "modelo": "SW4",
+    "anio": 2010,
+    "km": 282000,
+    "precio": 21500,
+    "moneda": "USD",
+    "transmision": "Manual",
+    "combustible": "Diesel",
+    "imagenes": [
+      "img/auto-46-5.webp",
+      "img/auto-46-6.webp",
+      "img/auto-46-7.webp",
+      "img/auto-46-8.webp",
+      "img/auto-46-9.webp",
+      "img/auto-46-10.webp",
+      "img/auto-46-11.webp",
+      "img/auto-46-1.webp",
+      "img/auto-46-2.webp",
+      "img/auto-46-3.webp",
+      "img/auto-46-4.webp"
+    ],
+    "descripcion": "Versión SRV\r\n3.0 - 163CV\r\nTracción Integral\r\nTracción 4X4\r\n7 Asientos\r\nExcelente estado listo para transferir"
+  },
+  {
     "id": 45,
     "marca": "Chevrolet",
     "modelo": "Tracker",
