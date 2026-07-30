@@ -1,5 +1,31 @@
 [
   {
+    "id": 44,
+    "marca": "Hyundai",
+    "modelo": "Tucson",
+    "anio": 2013,
+    "km": 190000,
+    "precio": 22500000,
+    "moneda": "ARS",
+    "transmision": "Automática",
+    "combustible": "Nafta",
+    "imagenes": [
+      "img/auto-44-1.webp",
+      "img/auto-44-2.webp",
+      "img/auto-44-3.webp",
+      "img/auto-44-4.webp",
+      "img/auto-44-6.webp",
+      "img/auto-44-5.webp",
+      "img/auto-44-7.webp",
+      "img/auto-44-9.webp",
+      "img/auto-44-8.webp",
+      "img/auto-44-10.webp",
+      "img/auto-44-11.webp",
+      "img/auto-44-12.webp"
+    ],
+    "descripcion": "Versión GLS Premium\r\n2.0 - 155CV\r\nTracción 4X4\r\nVel. Crucero\r\nExcelente estado listo para transferir"
+  },
+  {
     "id": 43,
     "marca": "Mercedes Benz",
     "modelo": "Sprinter",
