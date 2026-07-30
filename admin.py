@@ -119,12 +119,19 @@ def _gh_repo():
     return Github(os.getenv("GITHUB_TOKEN")).get_repo(GITHUB_REPO)
 
 
+_ULTIMO_ERROR_GH = None
+
+
 def _gh_get_file(path):
     """Devuelve (contenido_str, sha) o (None, None)."""
+    global _ULTIMO_ERROR_GH
     try:
         f = _gh_repo().get_contents(path, ref=GITHUB_BRANCH)
+        _ULTIMO_ERROR_GH = None
         return f.decoded_content.decode("utf-8-sig"), f.sha
-    except Exception:
+    except Exception as e:
+        _ULTIMO_ERROR_GH = str(e)
+        print(f"[_gh_get_file] Error leyendo '{path}': {e}")
         return None, None
 
 
@@ -222,6 +229,8 @@ def home():
 
     if IS_RAILWAY:
         procesados = _get_procesados()
+        if not procesados and _ULTIMO_ERROR_GH:
+            flash(f"No se pudo leer '.procesados.json' de GitHub: {_ULTIMO_ERROR_GH}")
         nuevas     = [c for c in carpetas if c["id"] not in procesados]
         procesadas = [c for c in carpetas if c["id"] in procesados]
     else:
@@ -417,6 +426,8 @@ def imagen(filename):
 @app.route("/gestionar")
 def gestionar():
     autos = _cargar_autos()
+    if not autos and IS_RAILWAY and _ULTIMO_ERROR_GH:
+        flash(f"No se pudo leer 'autos.json' de GitHub: {_ULTIMO_ERROR_GH}")
     return render_template("gestionar.html", autos=autos, site_base=SITE_BASE)
 
 
