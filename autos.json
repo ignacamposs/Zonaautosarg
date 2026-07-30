@@ -1,5 +1,30 @@
 [
   {
+    "id": 45,
+    "marca": "Chevrolet",
+    "modelo": "Tracker",
+    "anio": 2017,
+    "km": 152000,
+    "precio": 19500000,
+    "moneda": "ARS",
+    "transmision": "Automática",
+    "combustible": "Nafta",
+    "imagenes": [
+      "img/auto-45-1.webp",
+      "img/auto-45-2.webp",
+      "img/auto-45-3.webp",
+      "img/auto-45-4.webp",
+      "img/auto-45-5.webp",
+      "img/auto-45-6.webp",
+      "img/auto-45-7.webp",
+      "img/auto-45-8.webp",
+      "img/auto-45-9.webp",
+      "img/auto-45-10.webp",
+      "img/auto-45-11.webp"
+    ],
+    "descripcion": "Version LTZ+\r\n1.8 - 140CV\r\nTracción 4X4\r\nVel. Crucero\r\nExcelente estado listo para transferir"
+  },
+  {
     "id": 44,
     "marca": "Hyundai",
     "modelo": "Tucson",
