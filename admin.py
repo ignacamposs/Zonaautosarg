@@ -216,6 +216,34 @@ def _push_auto_to_github(datos, fotos_paths, html_content):
     return nuevo_id, slug
 
 
+def _guardar_edicion_to_github(autos, html_content, slug_nuevo, slug_anterior, mensaje):
+    """Actualiza autos.json y la ficha HTML (renombrando si cambió el slug) en un único commit."""
+    from github import InputGitTreeElement
+
+    repo        = _gh_repo()
+    ref         = repo.get_git_ref(f"heads/{GITHUB_BRANCH}")
+    base_commit = repo.get_git_commit(ref.object.sha)
+    base_tree   = base_commit.tree
+
+    autos_str  = json_module.dumps(autos, ensure_ascii=False, indent=2)
+    autos_blob = repo.create_git_blob(base64.b64encode(autos_str.encode()).decode(), "base64")
+    html_blob  = repo.create_git_blob(base64.b64encode(html_content.encode()).decode(), "base64")
+
+    elementos = [
+        InputGitTreeElement(path="autos.json", mode="100644", type="blob", sha=autos_blob.sha),
+        InputGitTreeElement(path=f"unidades/{slug_nuevo}.html", mode="100644", type="blob", sha=html_blob.sha),
+    ]
+    if slug_anterior != slug_nuevo:
+        # sha=None le indica a la Git Data API que borre ese path del árbol.
+        elementos.append(InputGitTreeElement(
+            path=f"unidades/{slug_anterior}.html", mode="100644", type="blob", sha=None
+        ))
+
+    new_tree   = repo.create_git_tree(elementos, base_tree)
+    new_commit = repo.create_git_commit(mensaje, new_tree, [base_commit])
+    ref.edit(new_commit.sha)
+
+
 # ── Rutas ────────────────────────────────────────────────────────
 
 @app.route("/")
@@ -465,6 +493,8 @@ def editar(auto_id):
 
     if request.method == "POST":
         try:
+            slug_anterior = slugify(f"{auto['marca']} {auto['modelo']}")
+
             precio_raw = request.form["precio"].replace(".", "").replace(",", "").strip()
             auto["marca"]       = request.form["marca"].strip()
             auto["modelo"]      = request.form["modelo"].strip()
@@ -488,7 +518,26 @@ def editar(auto_id):
             if imagenes_order:
                 auto["imagenes"] = [img for img in imagenes_order.split(",") if img.strip()]
 
-            _guardar_autos(autos, f"Editar {auto['marca']} {auto['modelo']}")
+            # La marca/modelo pudo cambiar → el slug de la ficha también,
+            # así que siempre regeneramos unidades/{slug}.html a partir de los datos actuales.
+            slug_nuevo = slugify(f"{auto['marca']} {auto['modelo']}")
+            datos_html = {k: auto[k] for k in (
+                "marca", "modelo", "anio", "km", "precio", "moneda",
+                "transmision", "combustible", "descripcion",
+            )}
+            html_content = generar_html(datos_html, auto["imagenes"])
+
+            if IS_RAILWAY:
+                _guardar_edicion_to_github(
+                    autos, html_content, slug_nuevo, slug_anterior,
+                    f"Editar {auto['marca']} {auto['modelo']}",
+                )
+            else:
+                if slug_anterior != slug_nuevo:
+                    (CARPETA_UNIDADES / f"{slug_anterior}.html").unlink(missing_ok=True)
+                (CARPETA_UNIDADES / f"{slug_nuevo}.html").write_text(html_content, encoding="utf-8")
+                _guardar_autos(autos, f"Editar {auto['marca']} {auto['modelo']}")
+
             flash(f"✓ {auto['marca']} {auto['modelo']} actualizado")
             return redirect(url_for("gestionar"))
         except Exception as e:

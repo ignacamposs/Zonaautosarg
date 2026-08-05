@@ -80,7 +80,7 @@ async function cargarDatosYRenderizar() {
 
         // HOME: Destacados
         if (document.getElementById('contenedor-destacados')) {
-            renderizarTarjetas(todosLosAutos.slice(0, 4), 'contenedor-destacados');
+            renderizarTarjetas(conVendidosAlFinal(todosLosAutos).slice(0, 4), 'contenedor-destacados');
         }
 
         // CATÁLOGO
@@ -187,10 +187,17 @@ function actualizarInfoFiltros(count, marcaActiva) {
     infoDiv.innerHTML = html;
 }
 
+// --- VENDIDOS AL FINAL (sin alterar el resto del orden) ---
+function conVendidosAlFinal(lista) {
+    return [...lista].sort((a, b) => (a.vendido === true ? 1 : 0) - (b.vendido === true ? 1 : 0));
+}
+
 // --- RENDERIZADO DE TARJETAS ---
 function renderizarTarjetas(lista, idContenedor, marcaActiva = '') {
     const contenedor = document.getElementById(idContenedor);
     if (!contenedor) return;
+
+    lista = conVendidosAlFinal(lista);
 
     actualizarInfoFiltros(lista.length, marcaActiva);
 
