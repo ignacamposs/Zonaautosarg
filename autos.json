@@ -581,7 +581,7 @@
     "modelo": "Palio Pack Seg",
     "anio": 2015,
     "km": 130000,
-    "precio": 12200000,
+    "precio": 12000000,
     "moneda": "ARS",
     "transmision": "Manual",
     "combustible": "Nafta",
@@ -598,7 +598,7 @@
       "img/auto-17-10.webp",
       "img/auto-17-11.webp"
     ],
-    "descripcion": "1.4 - 90CV \n Unica mano \n Neumaticos Nuevos \n Servicios al dia"
+    "descripcion": "1.4 - 90CV \r\n Unica mano \r\n Neumaticos Nuevos \r\n Servicios al dia"
   },
   {
     "id": 13,
