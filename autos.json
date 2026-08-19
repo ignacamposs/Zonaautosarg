@@ -397,7 +397,8 @@
       "img/auto-7-11.webp",
       "img/auto-7-12.webp"
     ],
-    "descripcion": "2.4 - 150CV \n Traccion 4x4 \n Garantia de Fabrica"
+    "descripcion": "2.4 - 150CV \n Traccion 4x4 \n Garantia de Fabrica",
+    "vendido": true
   },
   {
     "id": 3,
