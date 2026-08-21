@@ -54,7 +54,7 @@
     "marca": "Chevrolet",
     "modelo": "Tracker 4x4",
     "anio": 2017,
-    "km": 45000,
+    "km": 152000,
     "precio": 19500000,
     "moneda": "ARS",
     "transmision": "Automática",
@@ -376,7 +376,7 @@
     "modelo": "Sw4 SRX 4x4",
     "anio": 2025,
     "km": 12000,
-    "precio": 84000000,
+    "precio": 0,
     "moneda": "ARS",
     "transmision": "Automática",
     "combustible": "Diesel",
@@ -629,7 +629,7 @@
     "marca": "Chevrolet",
     "modelo": "Tracker LTZ",
     "anio": 2024,
-    "km": 39000,
+    "km": 45000,
     "precio": 30000000,
     "moneda": "ARS",
     "transmision": "Automática",
@@ -670,7 +670,8 @@
       "img/auto-16-9.webp",
       "img/auto-16-10.webp"
     ],
-    "descripcion": "Authentique 1PLC \n 1.6 - 16CV \n Neumaticos Nuevos \n Servicios al dia"
+    "descripcion": "Authentique 1PLC \n 1.6 - 16CV \n Neumaticos Nuevos \n Servicios al dia",
+    "vendido": true
   },
   {
     "id": 43,
