@@ -30,7 +30,7 @@
     "modelo": "SW4 4x4",
     "anio": 2010,
     "km": 282000,
-    "precio": 21500,
+    "precio": 21000,
     "moneda": "USD",
     "transmision": "Manual",
     "combustible": "Diesel",
@@ -123,31 +123,6 @@
       "img/auto-40-4.webp"
     ],
     "descripcion": "Version Trendline\r\n1.6 - 110CV\r\nSegunda mano\r\nServicios al día\r\nExcelente estado listo para transferir"
-  },
-  {
-    "id": 39,
-    "marca": "Peugeot",
-    "modelo": "208 Active",
-    "anio": 2020,
-    "km": 72000,
-    "precio": 16000000,
-    "moneda": "ARS",
-    "transmision": "Manual",
-    "combustible": "Nafta",
-    "imagenes": [
-      "img/auto-39-1.webp",
-      "img/auto-39-2.webp",
-      "img/auto-39-3.webp",
-      "img/auto-39-4.webp",
-      "img/auto-39-5.webp",
-      "img/auto-39-6.webp",
-      "img/auto-39-7.webp",
-      "img/auto-39-8.webp",
-      "img/auto-39-9.webp",
-      "img/auto-39-10.webp",
-      "img/auto-39-11.webp"
-    ],
-    "descripcion": "Version Active \n 1.6 - 115CV \n Unica Mano \n Servicios al dia"
   },
   {
     "id": 35,
@@ -503,8 +478,8 @@
     "marca": "Toyota",
     "modelo": "Corolla Cross XLI",
     "anio": 2025,
-    "km": 10000,
-    "precio": 0,
+    "km": 12000,
+    "precio": 47500000,
     "moneda": "ARS",
     "transmision": "Automática",
     "combustible": "Nafta",
@@ -574,6 +549,32 @@
       "img/auto-12-10.webp"
     ],
     "descripcion": "1.2 - 132CV\r\n Servicios al dia"
+  },
+  {
+    "id": 39,
+    "marca": "Peugeot",
+    "modelo": "208 Active",
+    "anio": 2020,
+    "km": 72000,
+    "precio": 16000000,
+    "moneda": "ARS",
+    "transmision": "Manual",
+    "combustible": "Nafta",
+    "imagenes": [
+      "img/auto-39-1.webp",
+      "img/auto-39-2.webp",
+      "img/auto-39-3.webp",
+      "img/auto-39-4.webp",
+      "img/auto-39-5.webp",
+      "img/auto-39-6.webp",
+      "img/auto-39-7.webp",
+      "img/auto-39-8.webp",
+      "img/auto-39-9.webp",
+      "img/auto-39-10.webp",
+      "img/auto-39-11.webp"
+    ],
+    "descripcion": "Version Active \n 1.6 - 115CV \n Unica Mano \n Servicios al dia",
+    "vendido": true
   },
   {
     "id": 45,
