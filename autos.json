@@ -1,5 +1,31 @@
 [
   {
+    "id": 48,
+    "marca": "Mercedes Benz",
+    "modelo": "Sprinter 311",
+    "anio": 2023,
+    "km": 59900,
+    "precio": 0,
+    "moneda": "ARS",
+    "transmision": "Manual",
+    "combustible": "Diesel",
+    "imagenes": [
+      "img/auto-48-1.webp",
+      "img/auto-48-2.webp",
+      "img/auto-48-3.webp",
+      "img/auto-48-4.webp",
+      "img/auto-48-5.webp",
+      "img/auto-48-6.webp",
+      "img/auto-48-7.webp",
+      "img/auto-48-8.webp",
+      "img/auto-48-9.webp",
+      "img/auto-48-10.webp",
+      "img/auto-48-11.webp",
+      "img/auto-48-12.webp"
+    ],
+    "descripcion": "Versión 311 3250 4+1 \n 2.0 - 115CV \n Servicios al día \n Excelente estado, listo para transferir"
+  },
+  {
     "id": 47,
     "marca": "Volkswagen",
     "modelo": "Amarok 4x4",

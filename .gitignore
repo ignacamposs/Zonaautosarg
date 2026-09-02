@@ -7,6 +7,9 @@ service_account.json
 # Archivos de estado local
 .procesado_*
 
+# Fotos originales sin procesar (HEIC/JPG) antes de convertir a WebP
+_fotos-nuevas/
+
 # Python
 __pycache__/
 *.pyc
