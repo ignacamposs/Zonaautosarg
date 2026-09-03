@@ -1,5 +1,30 @@
 [
   {
+    "id": 49,
+    "marca": "Renault",
+    "modelo": "Koleos Privilege",
+    "anio": 2012,
+    "km": 130000,
+    "precio": 0,
+    "moneda": "ARS",
+    "transmision": "Manual",
+    "combustible": "Nafta",
+    "imagenes": [
+      "img/auto-49-1.webp",
+      "img/auto-49-2.webp",
+      "img/auto-49-3.webp",
+      "img/auto-49-4.webp",
+      "img/auto-49-5.webp",
+      "img/auto-49-6.webp",
+      "img/auto-49-7.webp",
+      "img/auto-49-8.webp",
+      "img/auto-49-9.webp",
+      "img/auto-49-10.webp",
+      "img/auto-49-11.webp"
+    ],
+    "descripcion": "Versión Privilege \n 2.5 - 170CV \n Tracción 4x4 \n Cuero - Navegador \n Servicios al día"
+  },
+  {
     "id": 48,
     "marca": "Mercedes Benz",
     "modelo": "Sprinter 311",
