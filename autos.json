@@ -10,10 +10,10 @@
     "transmision": "Manual",
     "combustible": "Nafta",
     "imagenes": [
-      "img/auto-49-2.webp",
-      "img/auto-49-1.webp",
-      "img/auto-49-6.webp",
       "img/auto-49-11.webp",
+      "img/auto-49-1.webp",
+      "img/auto-49-2.webp",
+      "img/auto-49-6.webp",
       "img/auto-49-5.webp",
       "img/auto-49-3.webp",
       "img/auto-49-4.webp",
