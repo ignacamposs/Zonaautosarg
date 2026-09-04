@@ -1,5 +1,31 @@
 [
   {
+    "id": 50,
+    "marca": "Volkswagen",
+    "modelo": "Amarok Trendline 4x4",
+    "anio": 2013,
+    "km": 89000,
+    "precio": 0,
+    "moneda": "ARS",
+    "transmision": "Manual",
+    "combustible": "Diesel",
+    "imagenes": [
+      "img/auto-50-1.webp",
+      "img/auto-50-7.webp",
+      "img/auto-50-2.webp",
+      "img/auto-50-3.webp",
+      "img/auto-50-8.webp",
+      "img/auto-50-6.webp",
+      "img/auto-50-4.webp",
+      "img/auto-50-5.webp",
+      "img/auto-50-12.webp",
+      "img/auto-50-11.webp",
+      "img/auto-50-9.webp",
+      "img/auto-50-10.webp"
+    ],
+    "descripcion": "Versión Trendline \n 2.0 - 180CV \n Tracción 4x4 \n BF Goodrich - Snorkel \n Único dueño \n Servicios al día"
+  },
+  {
     "id": 49,
     "marca": "Renault",
     "modelo": "Koleos Privilege 4x4",
