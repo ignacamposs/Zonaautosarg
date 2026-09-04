@@ -2,10 +2,10 @@
   {
     "id": 49,
     "marca": "Renault",
-    "modelo": "Koleos Privilege",
+    "modelo": "Koleos Privilege 4x4",
     "anio": 2012,
     "km": 130000,
-    "precio": 18400000,
+    "precio": 18500000,
     "moneda": "ARS",
     "transmision": "Manual",
     "combustible": "Nafta",
