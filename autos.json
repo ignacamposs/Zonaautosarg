@@ -1,5 +1,33 @@
 [
   {
+    "id": 51,
+    "marca": "Ford",
+    "modelo": "Ranger XLT 2020 4x4",
+    "anio": 2020,
+    "km": 98000,
+    "precio": 0,
+    "moneda": "ARS",
+    "transmision": "Automática",
+    "combustible": "Diesel",
+    "imagenes": [
+      "img/auto-51-4.webp",
+      "img/auto-51-6.webp",
+      "img/auto-51-5.webp",
+      "img/auto-51-10.webp",
+      "img/auto-51-12.webp",
+      "img/auto-51-11.webp",
+      "img/auto-51-7.webp",
+      "img/auto-51-9.webp",
+      "img/auto-51-8.webp",
+      "img/auto-51-13.webp",
+      "img/auto-51-14.webp",
+      "img/auto-51-1.webp",
+      "img/auto-51-3.webp",
+      "img/auto-51-2.webp"
+    ],
+    "descripcion": "Versión XLT \n 3.2 - 200CV \n Tracción 4x4 \n BF Goodrich - Amortiguadores Baratec \n Bumper x2 - Snorkel - Malacate \n Accesorios Rhino \n Segundo dueño \n Servicios Oficiales"
+  },
+  {
     "id": 50,
     "marca": "Volkswagen",
     "modelo": "Amarok Trendline 4x4",
