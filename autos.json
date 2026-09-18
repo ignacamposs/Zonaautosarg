@@ -1,5 +1,29 @@
 [
   {
+    "id": 52,
+    "marca": "Chevrolet",
+    "modelo": "Onix LS+",
+    "anio": 2019,
+    "km": 140000,
+    "precio": 0,
+    "moneda": "ARS",
+    "transmision": "Manual",
+    "combustible": "Nafta",
+    "imagenes": [
+      "img/auto-52-1.webp",
+      "img/auto-52-2.webp",
+      "img/auto-52-3.webp",
+      "img/auto-52-10.webp",
+      "img/auto-52-4.webp",
+      "img/auto-52-6.webp",
+      "img/auto-52-5.webp",
+      "img/auto-52-8.webp",
+      "img/auto-52-9.webp",
+      "img/auto-52-7.webp"
+    ],
+    "descripcion": "Versión LS+ \n 1.4 - 98CV \n Servicios al día"
+  },
+  {
     "id": 51,
     "marca": "Ford",
     "modelo": "Ranger XLT 2020 4x4",
