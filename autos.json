@@ -5,7 +5,7 @@
     "modelo": "Onix LS+",
     "anio": 2019,
     "km": 140000,
-    "precio": 0,
+    "precio": 14500000,
     "moneda": "ARS",
     "transmision": "Manual",
     "combustible": "Nafta",
@@ -259,7 +259,7 @@
     "modelo": "T-Cross 170TSI",
     "anio": 2024,
     "km": 56000,
-    "precio": 32500000,
+    "precio": 31500000,
     "moneda": "ARS",
     "transmision": "Manual",
     "combustible": "Nafta",
@@ -600,7 +600,8 @@
       "img/auto-4-11.webp",
       "img/auto-4-12.webp"
     ],
-    "descripcion": "1.5 - 123CV\nServicios al dia"
+    "descripcion": "1.5 - 123CV\nServicios al dia",
+    "vendido": true
   },
   {
     "id": 20,
