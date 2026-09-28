@@ -1,5 +1,31 @@
 [
   {
+    "id": 55,
+    "marca": "Volkswagen",
+    "modelo": "Up Take",
+    "anio": 2019,
+    "km": 79000,
+    "precio": 0,
+    "moneda": "ARS",
+    "transmision": "Manual",
+    "combustible": "Nafta",
+    "imagenes": [
+      "img/auto-55-6.webp",
+      "img/auto-55-7.webp",
+      "img/auto-55-8.webp",
+      "img/auto-55-12.webp",
+      "img/auto-55-9.webp",
+      "img/auto-55-11.webp",
+      "img/auto-55-10.webp",
+      "img/auto-55-4.webp",
+      "img/auto-55-3.webp",
+      "img/auto-55-5.webp",
+      "img/auto-55-1.webp",
+      "img/auto-55-2.webp"
+    ],
+    "descripcion": "Versión Take \n 1.0 - 75CV \n Servicios al día"
+  },
+  {
     "id": 54,
     "marca": "Nissan",
     "modelo": "Versa Sense+",
