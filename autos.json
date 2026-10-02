@@ -1,5 +1,30 @@
 [
   {
+    "id": 56,
+    "marca": "Toyota",
+    "modelo": "SW4 SRX 4x4 2019",
+    "anio": 2019,
+    "km": 210000,
+    "precio": 0,
+    "moneda": "ARS",
+    "transmision": "Automática",
+    "combustible": "Diesel",
+    "imagenes": [
+      "img/auto-56-1.webp",
+      "img/auto-56-2.webp",
+      "img/auto-56-6.webp",
+      "img/auto-56-11.webp",
+      "img/auto-56-3.webp",
+      "img/auto-56-5.webp",
+      "img/auto-56-4.webp",
+      "img/auto-56-10.webp",
+      "img/auto-56-9.webp",
+      "img/auto-56-7.webp",
+      "img/auto-56-8.webp"
+    ],
+    "descripcion": "Versión SRX \n 2.8 - 177CV \n Tracción 4x4 \n 7 Asientos \n Automática"
+  },
+  {
     "id": 55,
     "marca": "Volkswagen",
     "modelo": "Up Take",
