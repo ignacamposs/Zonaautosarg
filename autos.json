@@ -130,7 +130,8 @@
       "img/auto-50-9.webp",
       "img/auto-50-10.webp"
     ],
-    "descripcion": "Versión Trendline \n 2.0 - 180CV \n Tracción 4x4 \n BF Goodrich - Snorkel \n Único dueño \n Servicios al día"
+    "descripcion": "Versión Trendline \n 2.0 - 180CV \n Tracción 4x4 \n BF Goodrich - Snorkel \n Único dueño \n Servicios al día",
+    "vendido": true
   },
   {
     "id": 49,
@@ -231,7 +232,8 @@
       "img/auto-46-3.webp",
       "img/auto-46-4.webp"
     ],
-    "descripcion": "Versión SRV\r\n3.0 - 163CV\r\nTracción Integral\r\nTracción 4X4\r\n7 Asientos\r\nExcelente estado listo para transferir"
+    "descripcion": "Versión SRV\r\n3.0 - 163CV\r\nTracción Integral\r\nTracción 4X4\r\n7 Asientos\r\nExcelente estado listo para transferir",
+    "vendido": true
   },
   {
     "id": 44,
@@ -629,7 +631,8 @@
       "img/auto-1-9.webp",
       "img/auto-1-10.webp"
     ],
-    "descripcion": "1.6 - 125CV \n Servicios al dia"
+    "descripcion": "1.6 - 125CV \n Servicios al dia",
+    "vendido": true
   },
   {
     "id": 16,
