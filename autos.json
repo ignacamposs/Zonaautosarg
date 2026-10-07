@@ -1,5 +1,31 @@
 [
   {
+    "id": 57,
+    "marca": "Renault",
+    "modelo": "Logan Life 2024",
+    "anio": 2024,
+    "km": 49000,
+    "precio": 0,
+    "moneda": "ARS",
+    "transmision": "Manual",
+    "combustible": "Nafta",
+    "imagenes": [
+      "img/auto-57-1.webp",
+      "img/auto-57-3.webp",
+      "img/auto-57-2.webp",
+      "img/auto-57-7.webp",
+      "img/auto-57-4.webp",
+      "img/auto-57-6.webp",
+      "img/auto-57-5.webp",
+      "img/auto-57-10.webp",
+      "img/auto-57-11.webp",
+      "img/auto-57-8.webp",
+      "img/auto-57-12.webp",
+      "img/auto-57-9.webp"
+    ],
+    "descripcion": "Versión Life \n 1.6 - 115CV \n Motor Cadenero \n Servicios al día"
+  },
+  {
     "id": 56,
     "marca": "Toyota",
     "modelo": "SW4 SRX 4x4 2019",
