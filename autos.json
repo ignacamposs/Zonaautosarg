@@ -5,8 +5,8 @@
     "modelo": "SW4 SRX 4x4 2019",
     "anio": 2019,
     "km": 210000,
-    "precio": 0,
-    "moneda": "ARS",
+    "precio": 33500,
+    "moneda": "USD",
     "transmision": "Automática",
     "combustible": "Diesel",
     "imagenes": [
@@ -391,7 +391,7 @@
     "modelo": "Logan Life",
     "anio": 2021,
     "km": 75000,
-    "precio": 17000000,
+    "precio": 16500000,
     "moneda": "ARS",
     "transmision": "Manual",
     "combustible": "Nafta",
@@ -565,7 +565,7 @@
     "modelo": "Ranger XLT 2014 4x4",
     "anio": 2014,
     "km": 180000,
-    "precio": 26500000,
+    "precio": 24500000,
     "moneda": "ARS",
     "transmision": "Manual",
     "combustible": "Diesel",
@@ -632,7 +632,8 @@
       "img/auto-17-10.webp",
       "img/auto-17-11.webp"
     ],
-    "descripcion": "1.4 - 90CV \r\n Unica mano \r\n Neumaticos Nuevos \r\n Servicios al dia"
+    "descripcion": "1.4 - 90CV \r\n Unica mano \r\n Neumaticos Nuevos \r\n Servicios al dia",
+    "vendido": true
   },
   {
     "id": 13,
