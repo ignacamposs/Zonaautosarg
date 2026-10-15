@@ -1,5 +1,31 @@
 [
   {
+    "id": 59,
+    "marca": "RAM",
+    "modelo": "1500 Laramie 4x4",
+    "anio": 2018,
+    "km": 100000,
+    "precio": 38500,
+    "moneda": "USD",
+    "transmision": "Automática",
+    "combustible": "Nafta",
+    "imagenes": [
+      "img/auto-59-1.webp",
+      "img/auto-59-3.webp",
+      "img/auto-59-2.webp",
+      "img/auto-59-7.webp",
+      "img/auto-59-4.webp",
+      "img/auto-59-6.webp",
+      "img/auto-59-5.webp",
+      "img/auto-59-9.webp",
+      "img/auto-59-10.webp",
+      "img/auto-59-8.webp",
+      "img/auto-59-12.webp",
+      "img/auto-59-11.webp"
+    ],
+    "descripcion": "Versión Laramie \n 5.7 - 395CV \n Tracción 4x4 \n Automática \n Servicios al día"
+  },
+  {
     "id": 58,
     "marca": "Toyota",
     "modelo": "Yaris XS 2022",
