@@ -310,7 +310,8 @@
       "img/auto-47-10.webp",
       "img/auto-47-11.webp"
     ],
-    "descripcion": "Version Trendline\r\n2.0 - 140CV\r\nTracción 4X4\r\nExcelente estado listo para transferir\r\nPermuto y Financio"
+    "descripcion": "Version Trendline\r\n2.0 - 140CV\r\nTracción 4X4\r\nExcelente estado listo para transferir\r\nPermuto y Financio",
+    "vendido": true
   },
   {
     "id": 46,
@@ -610,7 +611,8 @@
       "img/auto-25-11.webp",
       "img/auto-25-12.webp"
     ],
-    "descripcion": "Version SRX\n Traccion 4x4 \n 7 Asientos \n Camara 360° \n Garantia de fabrica"
+    "descripcion": "Version SRX\n Traccion 4x4 \n 7 Asientos \n Camara 360° \n Garantia de fabrica",
+    "vendido": true
   },
   {
     "id": 7,
@@ -685,7 +687,8 @@
       "img/auto-18-10.webp",
       "img/auto-18-11.webp"
     ],
-    "descripcion": "1.3 - 100CV \n Navegador \n Garantia de Fabrica \n Servicios Oficiales"
+    "descripcion": "1.3 - 100CV \n Navegador \n Garantia de Fabrica \n Servicios Oficiales",
+    "vendido": true
   },
   {
     "id": 11,
@@ -814,7 +817,8 @@
       "img/auto-12-9.webp",
       "img/auto-12-10.webp"
     ],
-    "descripcion": "1.2 - 132CV\r\n Servicios al dia"
+    "descripcion": "1.2 - 132CV\r\n Servicios al dia",
+    "vendido": true
   },
   {
     "id": 39,
