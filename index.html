@@ -37,10 +37,10 @@
   <style>
     @keyframes brand-scroll {
       from { transform: translateX(0); }
-      to { transform: translateX(-50%); }
+      to { transform: translateX(-33.3333%); }
     }
     .brand-track {
-      animation: brand-scroll 28s linear infinite;
+      animation: brand-scroll 42s linear infinite;
     }
     .brand-track:hover {
       animation-play-state: paused;
@@ -163,37 +163,61 @@
     <section class="bg-[#121212] py-14 px-6 border-t border-[#333333] overflow-hidden">
         <p class="text-center text-gray-400 font-medium uppercase text-xs tracking-widest mb-8">Marcas con las que trabajamos</p>
         <div class="overflow-hidden">
-            <div class="flex items-center gap-16 w-max brand-track">
-                <img src="https://cdn.simpleicons.org/chevrolet/ffffff" alt="Chevrolet" class="h-9 flex-shrink-0 opacity-50 hover:opacity-100 transition-opacity">
-                <img src="https://cdn.simpleicons.org/ford/ffffff" alt="Ford" class="h-9 flex-shrink-0 opacity-50 hover:opacity-100 transition-opacity">
-                <img src="https://cdn.simpleicons.org/hyundai/ffffff" alt="Hyundai" class="h-9 flex-shrink-0 opacity-50 hover:opacity-100 transition-opacity">
-                <svg viewBox="0 0 100 100" class="h-9 w-9 flex-shrink-0 opacity-50 hover:opacity-100 transition-opacity" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <title>Mercedes Benz</title>
-                    <circle cx="50" cy="50" r="46" stroke="white" stroke-width="5"/>
-                    <line x1="50" y1="50" x2="50" y2="8" stroke="white" stroke-width="5" stroke-linecap="round"/>
-                    <line x1="50" y1="50" x2="86.4" y2="71" stroke="white" stroke-width="5" stroke-linecap="round"/>
-                    <line x1="50" y1="50" x2="13.6" y2="71" stroke="white" stroke-width="5" stroke-linecap="round"/>
-                </svg>
-                <img src="https://cdn.simpleicons.org/nissan/ffffff" alt="Nissan" class="h-9 flex-shrink-0 opacity-50 hover:opacity-100 transition-opacity">
-                <img src="https://cdn.simpleicons.org/ram/ffffff" alt="RAM" class="h-9 flex-shrink-0 opacity-50 hover:opacity-100 transition-opacity">
-                <img src="https://cdn.simpleicons.org/renault/ffffff" alt="Renault" class="h-9 flex-shrink-0 opacity-50 hover:opacity-100 transition-opacity">
-                <img src="https://cdn.simpleicons.org/toyota/ffffff" alt="Toyota" class="h-9 flex-shrink-0 opacity-50 hover:opacity-100 transition-opacity">
-                <img src="https://cdn.simpleicons.org/volkswagen/ffffff" alt="Volkswagen" class="h-9 flex-shrink-0 opacity-50 hover:opacity-100 transition-opacity">
+            <div class="flex items-center gap-24 w-max brand-track">
+                <!-- set 1 -->
+                <a href="catalogo.html?marca=Chevrolet" class="flex-shrink-0"><img src="https://cdn.simpleicons.org/chevrolet/ffffff" alt="Chevrolet" class="h-16 opacity-50 hover:opacity-100 transition-opacity"></a>
+                <a href="catalogo.html?marca=Ford" class="flex-shrink-0"><img src="https://cdn.simpleicons.org/ford/ffffff" alt="Ford" class="h-16 opacity-50 hover:opacity-100 transition-opacity"></a>
+                <a href="catalogo.html?marca=Hyundai" class="flex-shrink-0"><img src="https://cdn.simpleicons.org/hyundai/ffffff" alt="Hyundai" class="h-16 opacity-50 hover:opacity-100 transition-opacity"></a>
+                <a href="catalogo.html?marca=Mercedes%20Benz" class="flex-shrink-0">
+                    <svg viewBox="0 0 100 100" class="h-16 w-16 opacity-50 hover:opacity-100 transition-opacity" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <title>Mercedes Benz</title>
+                        <circle cx="50" cy="50" r="46" stroke="white" stroke-width="5"/>
+                        <line x1="50" y1="50" x2="50" y2="8" stroke="white" stroke-width="5" stroke-linecap="round"/>
+                        <line x1="50" y1="50" x2="86.4" y2="71" stroke="white" stroke-width="5" stroke-linecap="round"/>
+                        <line x1="50" y1="50" x2="13.6" y2="71" stroke="white" stroke-width="5" stroke-linecap="round"/>
+                    </svg>
+                </a>
+                <a href="catalogo.html?marca=Nissan" class="flex-shrink-0"><img src="https://cdn.simpleicons.org/nissan/ffffff" alt="Nissan" class="h-16 opacity-50 hover:opacity-100 transition-opacity"></a>
+                <a href="catalogo.html?marca=RAM" class="flex-shrink-0"><img src="https://cdn.simpleicons.org/ram/ffffff" alt="RAM" class="h-16 opacity-50 hover:opacity-100 transition-opacity"></a>
+                <a href="catalogo.html?marca=Renault" class="flex-shrink-0"><img src="https://cdn.simpleicons.org/renault/ffffff" alt="Renault" class="h-16 opacity-50 hover:opacity-100 transition-opacity"></a>
+                <a href="catalogo.html?marca=Toyota" class="flex-shrink-0"><img src="https://cdn.simpleicons.org/toyota/ffffff" alt="Toyota" class="h-16 opacity-50 hover:opacity-100 transition-opacity"></a>
+                <a href="catalogo.html?marca=Volkswagen" class="flex-shrink-0"><img src="https://cdn.simpleicons.org/volkswagen/ffffff" alt="Volkswagen" class="h-16 opacity-50 hover:opacity-100 transition-opacity"></a>
 
-                <img src="https://cdn.simpleicons.org/chevrolet/ffffff" alt="" aria-hidden="true" class="h-9 flex-shrink-0 opacity-50 hover:opacity-100 transition-opacity">
-                <img src="https://cdn.simpleicons.org/ford/ffffff" alt="" aria-hidden="true" class="h-9 flex-shrink-0 opacity-50 hover:opacity-100 transition-opacity">
-                <img src="https://cdn.simpleicons.org/hyundai/ffffff" alt="" aria-hidden="true" class="h-9 flex-shrink-0 opacity-50 hover:opacity-100 transition-opacity">
-                <svg viewBox="0 0 100 100" aria-hidden="true" class="h-9 w-9 flex-shrink-0 opacity-50 hover:opacity-100 transition-opacity" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50" cy="50" r="46" stroke="white" stroke-width="5"/>
-                    <line x1="50" y1="50" x2="50" y2="8" stroke="white" stroke-width="5" stroke-linecap="round"/>
-                    <line x1="50" y1="50" x2="86.4" y2="71" stroke="white" stroke-width="5" stroke-linecap="round"/>
-                    <line x1="50" y1="50" x2="13.6" y2="71" stroke="white" stroke-width="5" stroke-linecap="round"/>
-                </svg>
-                <img src="https://cdn.simpleicons.org/nissan/ffffff" alt="" aria-hidden="true" class="h-9 flex-shrink-0 opacity-50 hover:opacity-100 transition-opacity">
-                <img src="https://cdn.simpleicons.org/ram/ffffff" alt="" aria-hidden="true" class="h-9 flex-shrink-0 opacity-50 hover:opacity-100 transition-opacity">
-                <img src="https://cdn.simpleicons.org/renault/ffffff" alt="" aria-hidden="true" class="h-9 flex-shrink-0 opacity-50 hover:opacity-100 transition-opacity">
-                <img src="https://cdn.simpleicons.org/toyota/ffffff" alt="" aria-hidden="true" class="h-9 flex-shrink-0 opacity-50 hover:opacity-100 transition-opacity">
-                <img src="https://cdn.simpleicons.org/volkswagen/ffffff" alt="" aria-hidden="true" class="h-9 flex-shrink-0 opacity-50 hover:opacity-100 transition-opacity">
+                <!-- set 2 (duplicate for seamless loop) -->
+                <a href="catalogo.html?marca=Chevrolet" aria-hidden="true" tabindex="-1" class="flex-shrink-0"><img src="https://cdn.simpleicons.org/chevrolet/ffffff" alt="" class="h-16 opacity-50 hover:opacity-100 transition-opacity"></a>
+                <a href="catalogo.html?marca=Ford" aria-hidden="true" tabindex="-1" class="flex-shrink-0"><img src="https://cdn.simpleicons.org/ford/ffffff" alt="" class="h-16 opacity-50 hover:opacity-100 transition-opacity"></a>
+                <a href="catalogo.html?marca=Hyundai" aria-hidden="true" tabindex="-1" class="flex-shrink-0"><img src="https://cdn.simpleicons.org/hyundai/ffffff" alt="" class="h-16 opacity-50 hover:opacity-100 transition-opacity"></a>
+                <a href="catalogo.html?marca=Mercedes%20Benz" aria-hidden="true" tabindex="-1" class="flex-shrink-0">
+                    <svg viewBox="0 0 100 100" class="h-16 w-16 opacity-50 hover:opacity-100 transition-opacity" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="46" stroke="white" stroke-width="5"/>
+                        <line x1="50" y1="50" x2="50" y2="8" stroke="white" stroke-width="5" stroke-linecap="round"/>
+                        <line x1="50" y1="50" x2="86.4" y2="71" stroke="white" stroke-width="5" stroke-linecap="round"/>
+                        <line x1="50" y1="50" x2="13.6" y2="71" stroke="white" stroke-width="5" stroke-linecap="round"/>
+                    </svg>
+                </a>
+                <a href="catalogo.html?marca=Nissan" aria-hidden="true" tabindex="-1" class="flex-shrink-0"><img src="https://cdn.simpleicons.org/nissan/ffffff" alt="" class="h-16 opacity-50 hover:opacity-100 transition-opacity"></a>
+                <a href="catalogo.html?marca=RAM" aria-hidden="true" tabindex="-1" class="flex-shrink-0"><img src="https://cdn.simpleicons.org/ram/ffffff" alt="" class="h-16 opacity-50 hover:opacity-100 transition-opacity"></a>
+                <a href="catalogo.html?marca=Renault" aria-hidden="true" tabindex="-1" class="flex-shrink-0"><img src="https://cdn.simpleicons.org/renault/ffffff" alt="" class="h-16 opacity-50 hover:opacity-100 transition-opacity"></a>
+                <a href="catalogo.html?marca=Toyota" aria-hidden="true" tabindex="-1" class="flex-shrink-0"><img src="https://cdn.simpleicons.org/toyota/ffffff" alt="" class="h-16 opacity-50 hover:opacity-100 transition-opacity"></a>
+                <a href="catalogo.html?marca=Volkswagen" aria-hidden="true" tabindex="-1" class="flex-shrink-0"><img src="https://cdn.simpleicons.org/volkswagen/ffffff" alt="" class="h-16 opacity-50 hover:opacity-100 transition-opacity"></a>
+
+                <!-- set 3 (extra padding so the loop stays seamless on wide screens) -->
+                <a href="catalogo.html?marca=Chevrolet" aria-hidden="true" tabindex="-1" class="flex-shrink-0"><img src="https://cdn.simpleicons.org/chevrolet/ffffff" alt="" class="h-16 opacity-50 hover:opacity-100 transition-opacity"></a>
+                <a href="catalogo.html?marca=Ford" aria-hidden="true" tabindex="-1" class="flex-shrink-0"><img src="https://cdn.simpleicons.org/ford/ffffff" alt="" class="h-16 opacity-50 hover:opacity-100 transition-opacity"></a>
+                <a href="catalogo.html?marca=Hyundai" aria-hidden="true" tabindex="-1" class="flex-shrink-0"><img src="https://cdn.simpleicons.org/hyundai/ffffff" alt="" class="h-16 opacity-50 hover:opacity-100 transition-opacity"></a>
+                <a href="catalogo.html?marca=Mercedes%20Benz" aria-hidden="true" tabindex="-1" class="flex-shrink-0">
+                    <svg viewBox="0 0 100 100" class="h-16 w-16 opacity-50 hover:opacity-100 transition-opacity" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="46" stroke="white" stroke-width="5"/>
+                        <line x1="50" y1="50" x2="50" y2="8" stroke="white" stroke-width="5" stroke-linecap="round"/>
+                        <line x1="50" y1="50" x2="86.4" y2="71" stroke="white" stroke-width="5" stroke-linecap="round"/>
+                        <line x1="50" y1="50" x2="13.6" y2="71" stroke="white" stroke-width="5" stroke-linecap="round"/>
+                    </svg>
+                </a>
+                <a href="catalogo.html?marca=Nissan" aria-hidden="true" tabindex="-1" class="flex-shrink-0"><img src="https://cdn.simpleicons.org/nissan/ffffff" alt="" class="h-16 opacity-50 hover:opacity-100 transition-opacity"></a>
+                <a href="catalogo.html?marca=RAM" aria-hidden="true" tabindex="-1" class="flex-shrink-0"><img src="https://cdn.simpleicons.org/ram/ffffff" alt="" class="h-16 opacity-50 hover:opacity-100 transition-opacity"></a>
+                <a href="catalogo.html?marca=Renault" aria-hidden="true" tabindex="-1" class="flex-shrink-0"><img src="https://cdn.simpleicons.org/renault/ffffff" alt="" class="h-16 opacity-50 hover:opacity-100 transition-opacity"></a>
+                <a href="catalogo.html?marca=Toyota" aria-hidden="true" tabindex="-1" class="flex-shrink-0"><img src="https://cdn.simpleicons.org/toyota/ffffff" alt="" class="h-16 opacity-50 hover:opacity-100 transition-opacity"></a>
+                <a href="catalogo.html?marca=Volkswagen" aria-hidden="true" tabindex="-1" class="flex-shrink-0"><img src="https://cdn.simpleicons.org/volkswagen/ffffff" alt="" class="h-16 opacity-50 hover:opacity-100 transition-opacity"></a>
             </div>
         </div>
     </section>
