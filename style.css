@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700;800&display=swap');
+
 .thumbnails-container {
     scrollbar-width: none;
 }
@@ -57,7 +59,12 @@ body{
      overflow-x: hidden;
     /* 🛡️ Bloquea el scroll horizontal "fantasma" */
      width: 100%;
-     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Titulares con tipografia propia: mas presencia de marca que la fuente de sistema */
+h1, h2, h3 {
+    font-family: 'Oswald', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Ocultar barra de scroll pero mantener funcionalidad */
