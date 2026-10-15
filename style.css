@@ -95,12 +95,18 @@ body{
   animation: hero-enter 1s cubic-bezier(0.22, 1, 0.36, 1) 0.4s both;
 }
 
-/* Primero definimos el fondo para PC (lo que ya tenías) */
-.hero-bg {
+/* Fondo del hero con efecto Ken Burns (zoom lento continuo) */
+.hero-bg-img {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)),
                       url("img/hero-bg-desktop.jpg");
     background-size: cover;
     background-position: center;
+    animation: hero-kenburns 24s ease-in-out infinite alternate;
+}
+
+@keyframes hero-kenburns {
+    from { transform: scale(1); }
+    to { transform: scale(1.12); }
 }
 
 /* Efecto de pulso para el botón de WhatsApp */
@@ -111,8 +117,8 @@ body{
 
 /* EL TRUCO: Media Query para celulares (pantallas menores a 768px) */
 @media (max-width: 768px) {
-    .hero-bg {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), 
+    .hero-bg-img {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
                           url("img/bg-cel.jpeg"); /* <--- Foto vertical aquí */
         background-position: center bottom; /* Ajusta la posición para que se vea el auto */
     }
