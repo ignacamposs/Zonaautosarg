@@ -1,5 +1,29 @@
 [
   {
+    "id": 60,
+    "marca": "Toyota",
+    "modelo": "RAV4 VX 2014",
+    "anio": 2014,
+    "km": 200000,
+    "precio": 27000000,
+    "moneda": "ARS",
+    "transmision": "Automática",
+    "combustible": "Nafta",
+    "imagenes": [
+      "img/auto-60-1.webp",
+      "img/auto-60-2.webp",
+      "img/auto-60-3.webp",
+      "img/auto-60-4.webp",
+      "img/auto-60-5.webp",
+      "img/auto-60-6.webp",
+      "img/auto-60-7.webp",
+      "img/auto-60-8.webp",
+      "img/auto-60-9.webp",
+      "img/auto-60-10.webp"
+    ],
+    "descripcion": "Versión VX \n 2.0 - 146 CV \n Tracción 4x2 \n Automática \n Servicios al día"
+  },
+  {
     "id": 59,
     "marca": "RAM",
     "modelo": "1500 Laramie 4x4",
@@ -345,7 +369,7 @@
     "modelo": "Tucson 4x4",
     "anio": 2013,
     "km": 190000,
-    "precio": 22000000,
+    "precio": 20000000,
     "moneda": "ARS",
     "transmision": "Automática",
     "combustible": "Nafta",
@@ -437,7 +461,8 @@
       "img/auto-35-10.webp",
       "img/auto-35-11.webp"
     ],
-    "descripcion": "1.0T - 101CV \n Version 170TSI  \n Unica Mano \n Servicios al dia"
+    "descripcion": "1.0T - 101CV \n Version 170TSI  \n Unica Mano \n Servicios al dia",
+    "vendido": true
   },
   {
     "id": 31,
