@@ -1,5 +1,29 @@
 [
   {
+    "id": 61,
+    "marca": "Volkswagen",
+    "modelo": "Amarok V6 Confortline 2023",
+    "anio": 2023,
+    "km": 80000,
+    "precio": 46000000,
+    "moneda": "ARS",
+    "transmision": "Automática",
+    "combustible": "Diesel",
+    "imagenes": [
+      "img/auto-61-1.webp",
+      "img/auto-61-2.webp",
+      "img/auto-61-3.webp",
+      "img/auto-61-4.webp",
+      "img/auto-61-5.webp",
+      "img/auto-61-6.webp",
+      "img/auto-61-7.webp",
+      "img/auto-61-8.webp",
+      "img/auto-61-9.webp",
+      "img/auto-61-10.webp"
+    ],
+    "descripcion": "Versión Confortline \n 3.0 V6 - 258CV \n Tracción 4x4 \n Levas al volante \n Único dueño \n Servicios oficiales \n Garantía oficial \n Neumáticos nuevos"
+  },
+  {
     "id": 60,
     "marca": "Toyota",
     "modelo": "RAV4 VX 2014",
@@ -203,7 +227,8 @@
       "img/auto-53-12.webp",
       "img/auto-53-13.webp"
     ],
-    "descripcion": "Versión Seg Hybrida \n 1.8 - 170CV \n Servicios oficiales"
+    "descripcion": "Versión Seg Hybrida \n 1.8 - 170CV \n Servicios oficiales",
+    "vendido": true
   },
   {
     "id": 51,
@@ -419,7 +444,7 @@
     "modelo": "Suran",
     "anio": 2017,
     "km": 126000,
-    "precio": 16500000,
+    "precio": 0,
     "moneda": "ARS",
     "transmision": "Manual",
     "combustible": "Nafta",
@@ -520,7 +545,7 @@
     "modelo": "Amarok Highline 4x4",
     "anio": 2017,
     "km": 193000,
-    "precio": 30500000,
+    "precio": 28500000,
     "moneda": "ARS",
     "transmision": "Manual",
     "combustible": "Diesel",
@@ -687,7 +712,8 @@
       "img/auto-21-10.webp",
       "img/auto-21-11.webp"
     ],
-    "descripcion": "3.2 - 200CV \n Traccion 4x4\n Segunda Mano\n Neumaticos Nuevos \n Servicios al Dia"
+    "descripcion": "3.2 - 200CV \n Traccion 4x4\n Segunda Mano\n Neumaticos Nuevos \n Servicios al Dia",
+    "vendido": true
   },
   {
     "id": 10,
