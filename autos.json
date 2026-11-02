@@ -1,5 +1,30 @@
 [
   {
+    "id": 62,
+    "marca": "Fiat",
+    "modelo": "Palio Attractive 2016",
+    "anio": 2016,
+    "km": 84000,
+    "precio": 14250000,
+    "moneda": "ARS",
+    "transmision": "Manual",
+    "combustible": "Nafta",
+    "imagenes": [
+      "img/auto-62-1.webp",
+      "img/auto-62-2.webp",
+      "img/auto-62-3.webp",
+      "img/auto-62-4.webp",
+      "img/auto-62-5.webp",
+      "img/auto-62-6.webp",
+      "img/auto-62-7.webp",
+      "img/auto-62-8.webp",
+      "img/auto-62-9.webp",
+      "img/auto-62-10.webp",
+      "img/auto-62-11.webp"
+    ],
+    "descripcion": "Versión Attractive \n 1.4 - 85CV \n Manual \n Servicios al día"
+  },
+  {
     "id": 61,
     "marca": "Volkswagen",
     "modelo": "Amarok V6 Confortline 2023",
@@ -156,7 +181,7 @@
     "modelo": "Up Take",
     "anio": 2019,
     "km": 79000,
-    "precio": 15000000,
+    "precio": 13750000,
     "moneda": "ARS",
     "transmision": "Manual",
     "combustible": "Nafta",
