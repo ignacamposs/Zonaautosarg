@@ -1,5 +1,30 @@
 [
   {
+    "id": 63,
+    "marca": "Ford",
+    "modelo": "Bronco Sport Big Bend 2023",
+    "anio": 2023,
+    "km": 22000,
+    "precio": 46500000,
+    "moneda": "ARS",
+    "transmision": "Automática",
+    "combustible": "Nafta",
+    "imagenes": [
+      "img/auto-63-1.webp",
+      "img/auto-63-2.webp",
+      "img/auto-63-3.webp",
+      "img/auto-63-4.webp",
+      "img/auto-63-5.webp",
+      "img/auto-63-6.webp",
+      "img/auto-63-7.webp",
+      "img/auto-63-8.webp",
+      "img/auto-63-9.webp",
+      "img/auto-63-10.webp",
+      "img/auto-63-11.webp"
+    ],
+    "descripcion": "Versión Big Bend \n 1.5 - 184CV \n Tracción 4x4 \n 5 modos de manejo \n Única dueña \n Servicios oficiales \n Garantía oficial"
+  },
+  {
     "id": 62,
     "marca": "Fiat",
     "modelo": "Palio Attractive 2016",
@@ -225,7 +250,8 @@
       "img/auto-54-11.webp",
       "img/auto-54-12.webp"
     ],
-    "descripcion": "Versión Sense+ \n 1.6 - 118CV \n Servicios al día"
+    "descripcion": "Versión Sense+ \n 1.6 - 118CV \n Servicios al día",
+    "vendido": true
   },
   {
     "id": 53,
@@ -486,7 +512,8 @@
       "img/auto-40-3.webp",
       "img/auto-40-4.webp"
     ],
-    "descripcion": "Version Trendline\r\n1.6 - 110CV\r\nSegunda mano\r\nServicios al día\r\nExcelente estado listo para transferir"
+    "descripcion": "Version Trendline\r\n1.6 - 110CV\r\nSegunda mano\r\nServicios al día\r\nExcelente estado listo para transferir",
+    "vendido": true
   },
   {
     "id": 35,
