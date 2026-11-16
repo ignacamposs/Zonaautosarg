@@ -342,8 +342,8 @@
     "modelo": "Koleos Privilege 4x4",
     "anio": 2012,
     "km": 130000,
-    "precio": "Consultar",
-    "moneda": "ARS",
+    "precio": 0,
+    "moneda": "",
     "transmision": "Manual",
     "combustible": "Nafta",
     "imagenes": [
