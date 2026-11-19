@@ -1,4 +1,28 @@
-[
+[{
+    "id": 64,
+    "marca": "Toyota",
+    "modelo": "Hilux DX Pack 4x4",
+    "anio": 2014,
+    "km": 305000,
+    "precio": 26500000,
+    "moneda": "ARS",
+    "transmision": "Manual",
+    "combustible": "Nafta",
+    "imagenes": [
+      "img/auto-64-1.jpg",
+      "img/auto-64-2.jpg",
+      "img/auto-64-3.jpg",
+      "img/auto-64-4.jpg",
+      "img/auto-64-5.jpg",
+      "img/auto-64-6.jpg",
+      "img/auto-64-7.jpg",
+      "img/auto-64-8.jpg",
+      "img/auto-64-9.jpg",
+      "img/auto-64-10.jpg",
+      "img/auto-64-11.jpg"
+    ],
+    "descripcion": "Traccion 4x4 \n 2.5 - 122CV \n Servicios al día"
+  },
   {
     "id": 63,
     "marca": "Ford",
@@ -30,7 +54,7 @@
     "modelo": "Palio Attractive 2016",
     "anio": 2016,
     "km": 84000,
-    "precio": 14250000,
+    "precio": 0,
     "moneda": "ARS",
     "transmision": "Manual",
     "combustible": "Nafta",
@@ -367,7 +391,7 @@
     "modelo": "Sprinter 311",
     "anio": 2023,
     "km": 59900,
-    "precio": 56000000,
+    "precio": 53500000,
     "moneda": "ARS",
     "transmision": "Manual",
     "combustible": "Diesel",
